@@ -14,6 +14,7 @@
 		94F3D4DA1A10A4E2005422A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F3D4D91A10A4E2005422A2 /* Images.xcassets */; };
 		94F3D4DD1A10A4E2005422A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F3D4DB1A10A4E2005422A2 /* LaunchScreen.xib */; };
 		94F3D4E91A10A4E2005422A2 /* worldDSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4E81A10A4E2005422A2 /* worldDSTests.m */; };
+		94F3D4F31A10A4F7005422A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F3D4F21A10A4F7005422A2 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		94F3D4E21A10A4E2005422A2 /* worldDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = worldDSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F3D4E71A10A4E2005422A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94F3D4E81A10A4E2005422A2 /* worldDSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = worldDSTests.m; sourceTree = "<group>"; };
+		94F3D4F21A10A4F7005422A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F3D4F31A10A4F7005422A2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		94F3D4C01A10A4E2005422A2 = {
 			isa = PBXGroup;
 			children = (
+				94F3D4F21A10A4F7005422A2 /* MapKit.framework */,
 				94F3D4CB1A10A4E2005422A2 /* worldDS */,
 				94F3D4E51A10A4E2005422A2 /* worldDSTests */,
 				94F3D4CA1A10A4E2005422A2 /* Products */,
@@ -344,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = worldDS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = worldDS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +418,7 @@
 				94F3D4EE1A10A4E2005422A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94F3D4EF1A10A4E2005422A2 /* Build configuration list for PBXNativeTarget "worldDSTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				94F3D4F11A10A4E2005422A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
