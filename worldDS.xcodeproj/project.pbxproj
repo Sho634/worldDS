@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94A649C91A1323870026C864 /* DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A649C81A1323870026C864 /* DViewController.m */; };
 		94F3D4CF1A10A4E2005422A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4CE1A10A4E2005422A2 /* main.m */; };
 		94F3D4D21A10A4E2005422A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D11A10A4E2005422A2 /* AppDelegate.m */; };
 		94F3D4D51A10A4E2005422A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D41A10A4E2005422A2 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94A649C71A1323870026C864 /* DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DViewController.h; sourceTree = "<group>"; };
+		94A649C81A1323870026C864 /* DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DViewController.m; sourceTree = "<group>"; };
 		94F3D4C91A10A4E2005422A2 /* worldDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worldDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F3D4CD1A10A4E2005422A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94F3D4CE1A10A4E2005422A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 			children = (
 				94F3D4D01A10A4E2005422A2 /* AppDelegate.h */,
 				94F3D4D11A10A4E2005422A2 /* AppDelegate.m */,
+				94A649C71A1323870026C864 /* DViewController.h */,
+				94A649C81A1323870026C864 /* DViewController.m */,
 				94F3D4D31A10A4E2005422A2 /* ViewController.h */,
 				94F3D4D41A10A4E2005422A2 /* ViewController.m */,
 				94F3D4D61A10A4E2005422A2 /* Main.storyboard */,
@@ -226,6 +231,7 @@
 				94F3D4D51A10A4E2005422A2 /* ViewController.m in Sources */,
 				94F3D4D21A10A4E2005422A2 /* AppDelegate.m in Sources */,
 				94F3D4CF1A10A4E2005422A2 /* main.m in Sources */,
+				94A649C91A1323870026C864 /* DViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

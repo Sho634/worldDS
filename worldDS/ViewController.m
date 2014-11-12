@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "DViewController.h"
 @interface ViewController ()
 {
 MKMapView* _mapView;
@@ -38,7 +38,7 @@ MKMapView* _mapView;
     //現在地を表示
     _mapView.showsUserLocation = YES;
     
-[self.view addSubview:_mapView];
+    [self.view addSubview:_mapView];
 //
     _mapView.delegate = self;
 
@@ -46,8 +46,8 @@ MKMapView* _mapView;
   
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
-[_mapView addGestureRecognizer:longPressGesture];
-_mapView.delegate = self;
+    [_mapView addGestureRecognizer:longPressGesture];
+    _mapView.delegate = self;
    
     
     }
@@ -62,32 +62,33 @@ _mapView.delegate = self;
     
     //長押し検出時のみ作動
     if ([gesture state] == UIGestureRecognizerStateBegan){
-                NSLog(@"handleLongPressGesture");
+        NSLog(@"handleLongPressGesture");
         
-            }else if([gesture state] == UIGestureRecognizerStateEnded){
-            CGPoint touchedPoint = [gesture locationInView:_mapView];
+    }else if([gesture state] == UIGestureRecognizerStateEnded){
+        CGPoint touchedPoint = [gesture locationInView:_mapView];
             
-            NSLog(@"touchedPoint x:[%f]", touchedPoint.x);
-            NSLog(@"touchedPoint y:[%f]", touchedPoint.y);
+        NSLog(@"touchedPoint x:[%f]", touchedPoint.x);
+        NSLog(@"touchedPoint y:[%f]", touchedPoint.y);
             
-            CLLocationCoordinate2D touchCoordinate = [_mapView convertPoint:touchedPoint toCoordinateFromView:_mapView];
+        CLLocationCoordinate2D touchCoordinate = [_mapView convertPoint:touchedPoint toCoordinateFromView:_mapView];
             
-            NSLog(@"touchCoordinate latitude:%f  longitude:%f", touchCoordinate.latitude, touchCoordinate.longitude);
+        NSLog(@"touchCoordinate latitude:%f  longitude:%f", touchCoordinate.latitude, touchCoordinate.longitude);
             
             
-            [self setAnnotation:touchCoordinate mapMove:NO animated:NO];
+        [self setAnnotation:touchCoordinate mapMove:NO animated:NO];
             
-            CLLocation *location = [[CLLocation alloc] initWithLatitude:touchCoordinate.latitude longitude:touchCoordinate.longitude];
-            float fLat = location.coordinate.latitude;
-            float fLng = location.coordinate.longitude;
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:touchCoordinate.latitude longitude:touchCoordinate.longitude];
+        float fLat = location.coordinate.latitude;
+        float fLng = location.coordinate.longitude;
             //        NSString *str = [NSString stringWithFormat:@"緯度:%f 経度:%f",fLat,fLng];
-            NSString *str = [NSString stringWithFormat:@"<array><string>%f</string><string>%f</string></array>",fLat,fLng];
-            NSLog(@"str = %@",str);
-            NSLog(@"location = %@",location);
+        NSString *str = [NSString stringWithFormat:@"<array><string>%f</string><string>%f</string></array>",fLat,fLng];
+        NSLog(@"str = %@",str);
+        NSLog(@"location = %@",location);
             //[_allPinArray2 addObject:location];
             //[_allPinArray addObject:str];
+    }
 }
-}
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmピンが落ちてくるメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 -(void)setAnnotation:(CLLocationCoordinate2D) point mapMove:(BOOL)mapMove animated:(BOOL)animated {
     // ピンを全て削除
     //    [_mapView removeAnnotations: _mapView.annotations];
@@ -120,7 +121,7 @@ _mapView.delegate = self;
 
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-    {
+{
         static NSString *pinIndentifier = @"PinAnnotationID";
         
         //ピン情報の再利用
@@ -135,7 +136,33 @@ _mapView.delegate = self;
         }
         
         return pinView;
-    }
+   
+}
+
+- (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+            //iボタンをタップした時にしたい動作を記述するメソッド
+    DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
+    //[[self navigationController] pushViewController:dvc animated:YES];
+    [self presentViewController:dvc animated:YES completion:nil];
+    NSLog(@"%@",view.annotation.title);
+            
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 
 
 
