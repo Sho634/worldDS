@@ -32,10 +32,7 @@
 
 //mmmmmmmmmmmmmmm日記のタイトルmmmmmmmmmmmmmmm
 
-@property (weak, nonatomic) IBOutlet UILabel *DiaryTitleLabel;
-
-//mmmmmmmmmmmmmmmm日付のラベルmmmmmmmmmmmmmmm
-@property (weak, nonatomic) IBOutlet UILabel *DateLabel;
+@property (weak, nonatomic) IBOutlet UITextView *DtextView;
 
 ///////////////////////////////////////////
 

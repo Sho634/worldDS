@@ -8,25 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-@interface ViewController : UIViewController<MKMapViewDelegate>
+@interface ViewController : UIViewController<MKMapViewDelegate,UITabBarDelegate>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーのコマンドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+@property (weak, nonatomic) IBOutlet UITabBar *mainTabBar;
+@property (weak, nonatomic) IBOutlet UITabBar *TabBar;
+@property (weak, nonatomic) IBOutlet UITabBarItem *DiaryTabItem;
+@property (weak, nonatomic) IBOutlet UITabBarItem *RedPinTab;
+@property (weak, nonatomic) IBOutlet UITabBarItem *GreenPinTab;
+@property (weak, nonatomic) IBOutlet UITabBarItem *SetBarItem;
 
 @end
 

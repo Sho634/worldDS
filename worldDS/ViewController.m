@@ -122,21 +122,19 @@ MKMapView* _mapView;
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-        static NSString *pinIndentifier = @"PinAnnotationID";
+    static NSString *pinIndentifier = @"PinAnnotationID";
         
         //ピン情報の再利用
-        MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinIndentifier];
+      MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinIndentifier];
         
-        if (pinView == nil){
-            pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIndentifier];
-            pinView.animatesDrop = YES;
-            pinView.canShowCallout = YES;
-            
-            pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    if (pinView == nil){
+        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIndentifier];
+        pinView.animatesDrop = YES;
+        pinView.canShowCallout = YES;
+        pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         }
         
-        return pinView;
-   
+    return pinView;
 }
 
 - (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
@@ -149,8 +147,13 @@ MKMapView* _mapView;
             
 }
     
+ //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーでの画面遷移mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+- (void)tabBar:(UITabBar*)tabBar didSelectItem:(UITabBarItem*)item {
+    NSLog(@"tap");
+
     
     
+}
     
     
     

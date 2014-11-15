@@ -17,6 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *str_long = @"";
+    
+    for (int i = 0; i < 10; i++) {NSLog(@"%d",i);
+        str_long = [str_long stringByAppendingFormat:@"%@",@""];
+        }
+    
+    NSLog(@"%@",str_long);
+    
+    
+    self.DtextView.text = str_long;
+
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,11 +47,31 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmボタンアクションmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (IBAction)tapSaveBtn:(id)sender {
 }
+
+
 - (IBAction)tapShereBtn:(id)sender {
+    NSString *message;//シェアしたいメッセ−ジ
+    NSURL *url;//シェアしたいurl
+    message = @"これはgoogleのサイトをシェアするボタンです。";
+    url = [NSURL URLWithString:@"http://google.com"];
+    
+    //アクティビティビューに渡す情報を配列に格納
+    NSArray *actItems = @[message,url];//この配列には画像もセット可能
+    UIActivityViewController *activityView =
+    [[UIActivityViewController alloc] initWithActivityItems:actItems applicationActivities:nil];
+    //モーダル処理でアクティビティビューを表示
+    [self presentViewController:activityView animated:YES completion:nil];
 }
+
 - (IBAction)tapHomebtn:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
+
+
+
+
 @end
