@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G5I-TF-CIu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="DiaryTabItem" badgeValue="DiaryTabItem" id="mmo-Jm-eLf"/>
-                                    <tabBarItem title="RedPinTab" badgeValue="RedPinTab" id="xFl-Wm-WvO"/>
-                                    <tabBarItem tag="2" title="GreenPinTab" badgeValue="GreenPinTab" id="eMw-FD-H3r"/>
-                                    <tabBarItem tag="3" title="SetBarItem" badgeValue="SetBarItem" id="rUm-Os-NRW"/>
+                                    <tabBarItem title="Diary" id="mmo-Jm-eLf"/>
+                                    <tabBarItem title="RedPin" id="xFl-Wm-WvO"/>
+                                    <tabBarItem tag="2" title="GreenPin" id="eMw-FD-H3r"/>
+                                    <tabBarItem tag="3" title="Set" id="rUm-Os-NRW"/>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="494" width="400" height="49"/>
@@ -65,18 +65,20 @@
                     <view key="view" contentMode="scaleToFill" id="LBg-Oe-M5J">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-qT-eGb">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-7F-ldU">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="90" width="298" height="316"/>
+                                    <rect key="frame" x="7" y="84" width="255" height="30"/>
                                 </variation>
-                            </imageView>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dream" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bow-QG-yvV">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="521" width="255" height="30"/>
+                                    <rect key="frame" x="7" y="157" width="255" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-IY-aZQ">
@@ -94,7 +96,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="426" width="90" height="21"/>
+                                    <rect key="frame" x="16" y="55" width="90" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dream" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZF-hw-UTK">
@@ -103,48 +105,48 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="492" width="90" height="21"/>
+                                    <rect key="frame" x="16" y="128" width="90" height="21"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-7F-ldU">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-qT-eGb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="455" width="255" height="30"/>
+                                    <rect key="frame" x="0.0" y="195" width="298" height="316"/>
                                 </variation>
-                            </textField>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="gtm-qT-eGb"/>
+                                <exclude reference="7tc-7F-ldU"/>
                                 <exclude reference="bow-QG-yvV"/>
                                 <exclude reference="kSf-IY-aZQ"/>
                                 <exclude reference="Ype-QZ-oEG"/>
                                 <exclude reference="EZF-hw-UTK"/>
-                                <exclude reference="7tc-7F-ldU"/>
+                                <exclude reference="gtm-qT-eGb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="gtm-qT-eGb"/>
+                                <include reference="7tc-7F-ldU"/>
                                 <include reference="bow-QG-yvV"/>
                                 <include reference="kSf-IY-aZQ"/>
                                 <include reference="Ype-QZ-oEG"/>
                                 <include reference="EZF-hw-UTK"/>
-                                <include reference="7tc-7F-ldU"/>
+                                <include reference="gtm-qT-eGb"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="NameLabel" destination="Ype-QZ-oEG" id="Wgp-kg-TFq"/>
+                        <outlet property="dreamTextField" destination="bow-QG-yvV" id="K1m-fI-j19"/>
                         <outlet property="image" destination="gtm-qT-eGb" id="gr3-oE-Rem"/>
+                        <outlet property="nameTextField" destination="7tc-7F-ldU" id="x26-4s-Iej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ED5-cD-gy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="842"/>
+            <point key="canvasLocation" x="850.5" y="141"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="T2A-Cz-JCR">
@@ -179,22 +181,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="139" y="20" width="101" height="30"/>
+                                    <rect key="frame" x="111" y="20" width="101" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="tapShereBtn:" destination="fNE-Io-e2X" eventType="touchUpInside" id="8c4-gi-fqP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTq-Dg-Khp">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="BackButton">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="259" y="20" width="104" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="tapHomebtn:" destination="fNE-Io-e2X" eventType="touchUpInside" id="Crq-aF-iGn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="162-6G-d7M">
@@ -203,7 +193,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="20" width="103" height="30"/>
+                                    <rect key="frame" x="0.0" y="20" width="103" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="tapSaveBtn:" destination="fNE-Io-e2X" eventType="touchUpInside" id="2N1-Pz-cdU"/>
@@ -216,9 +206,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                     <rect key="frame" x="8" y="250" width="385" height="342"/>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTq-Dg-Khp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="BackButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="20" width="104" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="tapHomebtn:" destination="fNE-Io-e2X" eventType="touchUpInside" id="Crq-aF-iGn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -226,9 +229,9 @@
                                 <exclude reference="nlg-0A-Fkn"/>
                                 <exclude reference="pBW-zU-Hvs"/>
                                 <exclude reference="bCY-D5-leD"/>
-                                <exclude reference="YTq-Dg-Khp"/>
                                 <exclude reference="162-6G-d7M"/>
                                 <exclude reference="CFW-Qg-hai"/>
+                                <exclude reference="YTq-Dg-Khp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -236,9 +239,9 @@
                                 <include reference="nlg-0A-Fkn"/>
                                 <include reference="pBW-zU-Hvs"/>
                                 <include reference="bCY-D5-leD"/>
-                                <include reference="YTq-Dg-Khp"/>
                                 <include reference="162-6G-d7M"/>
                                 <include reference="CFW-Qg-hai"/>
+                                <include reference="YTq-Dg-Khp"/>
                             </mask>
                         </variation>
                     </view>
@@ -252,7 +255,105 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJZ-oS-eio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="166"/>
+            <point key="canvasLocation" x="-301.5" y="827"/>
+        </scene>
+        <!--Want Go View Controller-->
+        <scene sceneID="Jaf-ZF-9Nd">
+            <objects>
+                <viewController storyboardIdentifier="WantGoViewController" id="JLz-Kz-fYP" customClass="WantGoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vOR-lZ-A0M"/>
+                        <viewControllerLayoutGuide type="bottom" id="7X0-5n-3FK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ukw-67-j5g">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P1R-aU-xTy">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="73" width="400" height="253"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqv-H5-4lp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="28" width="63" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Sharetapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="Io1-JY-96Y"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVW-OW-mdq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="324" width="400" height="276"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOW-Yp-nbS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Buck">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="231" y="28" width="67" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Backtapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="2pe-qw-eWh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="P1R-aU-xTy"/>
+                                <exclude reference="Eqv-H5-4lp"/>
+                                <exclude reference="NVW-OW-mdq"/>
+                                <exclude reference="BOW-Yp-nbS"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="P1R-aU-xTy"/>
+                                <include reference="Eqv-H5-4lp"/>
+                                <include reference="NVW-OW-mdq"/>
+                                <include reference="BOW-Yp-nbS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="Buckbtn" destination="BOW-Yp-nbS" id="i7B-rV-mF4"/>
+                        <outlet property="ImageView" destination="P1R-aU-xTy" id="IZQ-TY-U4S"/>
+                        <outlet property="Sharebtn" destination="Eqv-H5-4lp" id="u57-Wp-8B9"/>
+                        <outlet property="TextView" destination="NVW-OW-mdq" id="ILr-7N-QGx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51Q-33-bTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="574.5" y="827"/>
+        </scene>
+        <!--UserD View Controller-->
+        <scene sceneID="386-zy-fAu">
+            <objects>
+                <viewController storyboardIdentifier="UserDViewController" id="lBk-Y3-u5Z" customClass="UserDViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kef-ak-hEt"/>
+                        <viewControllerLayoutGuide type="bottom" id="7wy-xw-huf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Z9-u7-1Ko">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21x-VO-ulD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420.5" y="835"/>
         </scene>
     </scenes>
 </document>

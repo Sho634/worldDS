@@ -17,9 +17,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 
 
+@property (weak, nonatomic) IBOutlet UITextField *dreamTextField;
 
 
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		949E5BF91A15EA5A00761ACA /* ProfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BF81A15EA5A00761ACA /* ProfViewController.m */; };
+		949E5BFC1A178DFE00761ACA /* WantGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFB1A178DFE00761ACA /* WantGoViewController.m */; };
+		949E5BFF1A178E4D00761ACA /* UserDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFE1A178E4D00761ACA /* UserDViewController.m */; };
 		94A649C91A1323870026C864 /* DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A649C81A1323870026C864 /* DViewController.m */; };
 		94F3D4CF1A10A4E2005422A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4CE1A10A4E2005422A2 /* main.m */; };
 		94F3D4D21A10A4E2005422A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D11A10A4E2005422A2 /* AppDelegate.m */; };
@@ -32,6 +34,10 @@
 /* Begin PBXFileReference section */
 		949E5BF71A15EA5A00761ACA /* ProfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfViewController.h; sourceTree = "<group>"; };
 		949E5BF81A15EA5A00761ACA /* ProfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfViewController.m; sourceTree = "<group>"; };
+		949E5BFA1A178DFE00761ACA /* WantGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WantGoViewController.h; sourceTree = "<group>"; };
+		949E5BFB1A178DFE00761ACA /* WantGoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WantGoViewController.m; sourceTree = "<group>"; };
+		949E5BFD1A178E4D00761ACA /* UserDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDViewController.h; sourceTree = "<group>"; };
+		949E5BFE1A178E4D00761ACA /* UserDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDViewController.m; sourceTree = "<group>"; };
 		94A649C71A1323870026C864 /* DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DViewController.h; sourceTree = "<group>"; };
 		94A649C81A1323870026C864 /* DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DViewController.m; sourceTree = "<group>"; };
 		94F3D4C91A10A4E2005422A2 /* worldDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worldDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +101,10 @@
 				94F3D4D11A10A4E2005422A2 /* AppDelegate.m */,
 				94A649C71A1323870026C864 /* DViewController.h */,
 				94A649C81A1323870026C864 /* DViewController.m */,
+				949E5BFA1A178DFE00761ACA /* WantGoViewController.h */,
+				949E5BFB1A178DFE00761ACA /* WantGoViewController.m */,
+				949E5BFD1A178E4D00761ACA /* UserDViewController.h */,
+				949E5BFE1A178E4D00761ACA /* UserDViewController.m */,
 				949E5BF71A15EA5A00761ACA /* ProfViewController.h */,
 				949E5BF81A15EA5A00761ACA /* ProfViewController.m */,
 				94F3D4D31A10A4E2005422A2 /* ViewController.h */,
@@ -233,7 +243,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949E5BFC1A178DFE00761ACA /* WantGoViewController.m in Sources */,
 				94F3D4D51A10A4E2005422A2 /* ViewController.m in Sources */,
+				949E5BFF1A178E4D00761ACA /* UserDViewController.m in Sources */,
 				94F3D4D21A10A4E2005422A2 /* AppDelegate.m in Sources */,
 				949E5BF91A15EA5A00761ACA /* ProfViewController.m in Sources */,
 				94F3D4CF1A10A4E2005422A2 /* main.m in Sources */,
