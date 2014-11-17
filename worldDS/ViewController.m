@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DViewController.h"
+#import "UserDViewController.h"
 @interface ViewController ()
 {
 MKMapView* _mapView;
@@ -49,7 +50,7 @@ MKMapView* _mapView;
     [_mapView addGestureRecognizer:longPressGesture];
     _mapView.delegate = self;
    
-    
+    _TabBar.delegate = self;
     }
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
    
@@ -139,7 +140,7 @@ MKMapView* _mapView;
 
 - (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-            //iボタンをタップした時にしたい動作を記述するメソッド
+ //mmmmmmmmmmmmmmmmmmmmmmiボタンをタップした時にしたい動作を記述するメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
     DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
     //[[self navigationController] pushViewController:dvc animated:YES];
     [self presentViewController:dvc animated:YES completion:nil];
@@ -149,11 +150,22 @@ MKMapView* _mapView;
     
  //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーでの画面遷移mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (void)tabBar:(UITabBar*)tabBar didSelectItem:(UITabBarItem*)item {
-    NSLog(@"tap");
+    NSLog(@"tap:%ld",item.tag);
+  
+    //まじ重要if文
+    if (item.tag == 2) {
+        UserDViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"UserDViewController"];
+        //[[self navigationController] pushViewController:dvc animated:YES];
+        [self presentViewController:dvc animated:YES completion:nil];
+       
+        
+    }
 
-    
-    
-}
+
+    }
+
+
+
     
     
     

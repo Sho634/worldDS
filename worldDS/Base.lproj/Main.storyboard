@@ -20,13 +20,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Diary" id="mmo-Jm-eLf"/>
                                     <tabBarItem title="RedPin" image="dream" id="xFl-Wm-WvO"/>
-                                    <tabBarItem tag="2" title="GreenPin" id="eMw-FD-H3r"/>
+                                    <tabBarItem tag="1" title="GreenPin" id="eMw-FD-H3r"/>
+                                    <tabBarItem tag="2" title="Diary" id="mmo-Jm-eLf"/>
                                     <tabBarItem tag="3" title="Set" id="rUm-Os-NRW"/>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="494" width="400" height="49"/>
+                                    <rect key="frame" x="0.0" y="495" width="400" height="49"/>
                                 </variation>
                             </tabBar>
                         </subviews>
