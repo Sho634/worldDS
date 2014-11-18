@@ -10,6 +10,7 @@
 #import "DViewController.h"
 #import "UserDViewController.h"
 #import "ProfViewController.h"
+
 @interface ViewController ()
 {
 MKMapView* _mapView;
@@ -53,13 +54,26 @@ MKMapView* _mapView;
    
     _TabBar.delegate = self;
     }
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-   
+
+
+
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmカメラロールからイメージを取り出すmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//-(void)imagePickerController :(UIImagePickerController *)picker
+//        didFinishPickingImage :(UIImage *)image editingInfo :(NSDictionary *)editingInfo {
+//    NSLog(@"selected");
+//    [self.imageView setImage:image];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
+
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//mmmmmmmmmmmmmmmmmmmmmmロングジェスチャーのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//mmmmmmmmmmmmmmmmmmmmmmロングジェスチャーのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (void)handleLongPressGesture:(UILongPressGestureRecognizer *)gesture {
     
     //長押し検出時のみ作動
@@ -90,7 +104,7 @@ MKMapView* _mapView;
             //[_allPinArray addObject:str];
     }
 }
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmピンが落ちてくるメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmピンが落ちてくるメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 -(void)setAnnotation:(CLLocationCoordinate2D) point mapMove:(BOOL)mapMove animated:(BOOL)animated {
     // ピンを全て削除
     //    [_mapView removeAnnotations: _mapView.annotations];
@@ -118,7 +132,7 @@ MKMapView* _mapView;
     //    [_mapView addOverlay:circle];
 }
 
-//mmmmmmmmmmmmmmmmmmmmmmmmピン落ちてくるアニメーションのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//mmmmmmmmmmmmmmmmmmmmmmmmピン落ちてくるアニメーションのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 
 
@@ -163,9 +177,9 @@ MKMapView* _mapView;
         
     }
     if (item.tag == 3) {
-        ProfViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfViewController"];
+        ProfViewController *pvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfViewController"];
         //[[self navigationController] pushViewController:dvc animated:YES];
-        [self presentViewController:dvc animated:YES completion:nil];
+        [self presentViewController:pvc animated:YES completion:nil];
         
 
     }
@@ -174,7 +188,13 @@ MKMapView* _mapView;
     
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmイメージに画像を添付mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
+//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+//    imagePicker.delegate = self;
+//    [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+//    [self presentViewController:imagePicker animated:YES completion:nil];
 
+    
+    
 
 
 

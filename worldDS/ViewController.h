@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-@interface ViewController : UIViewController<MKMapViewDelegate,UITabBarDelegate>
+@interface ViewController : UIViewController<MKMapViewDelegate,UITabBarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーのコマンドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
@@ -18,9 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITabBarItem *RedPinTab;
 @property (weak, nonatomic) IBOutlet UITabBarItem *GreenPinTab;
 @property (weak, nonatomic) IBOutlet UITabBarItem *SetBarItem;
-
-
-
 
 
 @end

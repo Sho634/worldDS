@@ -17,8 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,17 +25,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//mmmmmmmmmmmmmmmmmmmmmmmmカメラロールから画像を取り出す時の動作mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+-(void) imagePickerController :(UIImagePickerController *)picker
+        didFinishPickingImage :(UIImage *)image editingInfo :(NSDictionary *)editingInfo {
+    NSLog(@"selected");
+    [self.imageView setImage:image];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
 
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmボタン押した時にホームに帰るmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (IBAction)BuckTapBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmカメラロールから画像を取り出すメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+       imagePicker.delegate = self;
+       [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+       [self presentViewController:imagePicker animated:YES completion:nil];
+
+
+
+
 }
 @end

@@ -26,7 +26,7 @@
                                     <tabBarItem tag="3" title="Set" id="rUm-Os-NRW"/>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="495" width="400" height="49"/>
+                                    <rect key="frame" x="0.0" y="487" width="334" height="49"/>
                                 </variation>
                             </tabBar>
                         </subviews>
@@ -53,6 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-649.5" y="127"/>
         </scene>
         <!--Name-->
         <scene sceneID="F5E-8p-uYq">
@@ -66,14 +67,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-7F-ldU">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="7" y="84" width="255" height="30"/>
-                                </variation>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dream" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bow-QG-yvV">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -118,40 +111,49 @@
                                     <rect key="frame" x="0.0" y="195" width="298" height="316"/>
                                 </variation>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-7F-ldU">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="84" width="255" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="7tc-7F-ldU"/>
                                 <exclude reference="bow-QG-yvV"/>
                                 <exclude reference="kSf-IY-aZQ"/>
                                 <exclude reference="Ype-QZ-oEG"/>
                                 <exclude reference="EZF-hw-UTK"/>
                                 <exclude reference="gtm-qT-eGb"/>
+                                <exclude reference="7tc-7F-ldU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="7tc-7F-ldU"/>
                                 <include reference="bow-QG-yvV"/>
                                 <include reference="kSf-IY-aZQ"/>
                                 <include reference="Ype-QZ-oEG"/>
                                 <include reference="EZF-hw-UTK"/>
                                 <include reference="gtm-qT-eGb"/>
+                                <include reference="7tc-7F-ldU"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="BackBtn" destination="kSf-IY-aZQ" id="gph-Be-xba"/>
+                        <outlet property="DreamLabel" destination="EZF-hw-UTK" id="XI1-Ms-FOk"/>
                         <outlet property="NameLabel" destination="Ype-QZ-oEG" id="Wgp-kg-TFq"/>
                         <outlet property="dreamTextField" destination="bow-QG-yvV" id="K1m-fI-j19"/>
-                        <outlet property="image" destination="gtm-qT-eGb" id="gr3-oE-Rem"/>
+                        <outlet property="imageView" destination="gtm-qT-eGb" id="9yN-Tt-kFL"/>
                         <outlet property="nameTextField" destination="7tc-7F-ldU" id="x26-4s-Iej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ED5-cD-gy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850.5" y="141"/>
+            <point key="canvasLocation" x="-984" y="807"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="T2A-Cz-JCR">
@@ -260,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJZ-oS-eio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-301.5" y="827"/>
+            <point key="canvasLocation" x="-271.5" y="807"/>
         </scene>
         <!--Want Go View Controller-->
         <scene sceneID="Jaf-ZF-9Nd">
@@ -274,12 +276,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NOPHOTO　地球.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P1R-aU-xTy">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqv-H5-4lp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="73" width="400" height="253"/>
+                                    <rect key="frame" x="114" y="28" width="63" height="30"/>
                                 </variation>
-                            </imageView>
+                                <connections>
+                                    <action selector="Sharetapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="Io1-JY-96Y"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVW-OW-mdq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,34 +310,28 @@
                                     <action selector="Backtapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="2pe-qw-eWh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqv-H5-4lp">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NOPHOTO　地球.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P1R-aU-xTy">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="114" y="28" width="63" height="30"/>
+                                    <rect key="frame" x="0.0" y="73" width="400" height="253"/>
                                 </variation>
-                                <connections>
-                                    <action selector="Sharetapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="Io1-JY-96Y"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="P1R-aU-xTy"/>
+                                <exclude reference="Eqv-H5-4lp"/>
                                 <exclude reference="NVW-OW-mdq"/>
                                 <exclude reference="BOW-Yp-nbS"/>
-                                <exclude reference="Eqv-H5-4lp"/>
+                                <exclude reference="P1R-aU-xTy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="P1R-aU-xTy"/>
+                                <include reference="Eqv-H5-4lp"/>
                                 <include reference="NVW-OW-mdq"/>
                                 <include reference="BOW-Yp-nbS"/>
-                                <include reference="Eqv-H5-4lp"/>
+                                <include reference="P1R-aU-xTy"/>
                             </mask>
                         </variation>
                     </view>
@@ -342,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51Q-33-bTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574.5" y="827"/>
+            <point key="canvasLocation" x="481.5" y="807"/>
         </scene>
         <!--UserD View Controller-->
         <scene sceneID="386-zy-fAu">
@@ -387,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21x-VO-ulD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420.5" y="835"/>
+            <point key="canvasLocation" x="-1693.5" y="807"/>
         </scene>
     </scenes>
     <resources>
