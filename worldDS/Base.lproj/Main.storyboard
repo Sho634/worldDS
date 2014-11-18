@@ -84,12 +84,15 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-IY-aZQ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="239" y="28" width="46" height="30"/>
+                                    <rect key="frame" x="239" y="28" width="35" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="BuckTapBtn:" destination="G5I-TF-CIu" eventType="touchUpInside" id="HLh-Le-PjD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ype-QZ-oEG">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -109,7 +112,7 @@
                                     <rect key="frame" x="16" y="128" width="90" height="21"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-qT-eGb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophotoかミングスーン.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-qT-eGb">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="195" width="298" height="316"/>
@@ -139,6 +142,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="BackBtn" destination="kSf-IY-aZQ" id="gph-Be-xba"/>
                         <outlet property="NameLabel" destination="Ype-QZ-oEG" id="Wgp-kg-TFq"/>
                         <outlet property="dreamTextField" destination="bow-QG-yvV" id="K1m-fI-j19"/>
                         <outlet property="image" destination="gtm-qT-eGb" id="gr3-oE-Rem"/>
@@ -170,12 +174,6 @@
                                     <rect key="frame" x="182" y="81" width="212" height="29"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-zU-Hvs">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="66" width="140" height="164"/>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCY-D5-leD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="ShereButton">
@@ -223,26 +221,32 @@
                                     <action selector="tapHomebtn:" destination="fNE-Io-e2X" eventType="touchUpInside" id="Crq-aF-iGn"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophotoかミングスーン.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-zU-Hvs">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="65" width="140" height="164"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="nlg-0A-Fkn"/>
-                                <exclude reference="pBW-zU-Hvs"/>
                                 <exclude reference="bCY-D5-leD"/>
                                 <exclude reference="162-6G-d7M"/>
                                 <exclude reference="CFW-Qg-hai"/>
                                 <exclude reference="YTq-Dg-Khp"/>
+                                <exclude reference="pBW-zU-Hvs"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="nlg-0A-Fkn"/>
-                                <include reference="pBW-zU-Hvs"/>
                                 <include reference="bCY-D5-leD"/>
                                 <include reference="162-6G-d7M"/>
                                 <include reference="CFW-Qg-hai"/>
                                 <include reference="YTq-Dg-Khp"/>
+                                <include reference="pBW-zU-Hvs"/>
                             </mask>
                         </variation>
                     </view>
@@ -270,24 +274,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P1R-aU-xTy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NOPHOTO　地球.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P1R-aU-xTy">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="73" width="400" height="253"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqv-H5-4lp">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="160" y="28" width="63" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="Sharetapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="Io1-JY-96Y"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVW-OW-mdq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,14 +292,26 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOW-Yp-nbS">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Buck">
+                                <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="231" y="28" width="67" height="30"/>
+                                    <rect key="frame" x="209" y="28" width="67" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="Backtapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="2pe-qw-eWh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqv-H5-4lp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="114" y="28" width="63" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Sharetapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="Io1-JY-96Y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -315,17 +319,17 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="P1R-aU-xTy"/>
-                                <exclude reference="Eqv-H5-4lp"/>
                                 <exclude reference="NVW-OW-mdq"/>
                                 <exclude reference="BOW-Yp-nbS"/>
+                                <exclude reference="Eqv-H5-4lp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="P1R-aU-xTy"/>
-                                <include reference="Eqv-H5-4lp"/>
                                 <include reference="NVW-OW-mdq"/>
                                 <include reference="BOW-Yp-nbS"/>
+                                <include reference="Eqv-H5-4lp"/>
                             </mask>
                         </variation>
                     </view>
@@ -351,8 +355,35 @@
                     <view key="view" contentMode="scaleToFill" id="3Z9-u7-1Ko">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Np-6a-l4P">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="28" width="85" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="BackTapBtn:" destination="lBk-Y3-u5Z" eventType="touchUpInside" id="oi5-Kh-0Cz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0Np-6a-l4P"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0Np-6a-l4P"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="BackBtn" destination="0Np-6a-l4P" id="Fz1-BC-LTJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21x-VO-ulD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,6 +391,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NOPHOTO　地球.jpg" width="300" height="200"/>
         <image name="dream" width="16" height="16"/>
+        <image name="nophotoかミングスーン.jpg" width="346" height="346"/>
     </resources>
 </document>

@@ -65,7 +65,7 @@
     //モーダル処理でアクティビティビューを表示
     [self presentViewController:activityView animated:YES completion:nil];
 }
-
+    //ボタンを押したらホーム画面に戻るボタン
 - (IBAction)tapHomebtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 

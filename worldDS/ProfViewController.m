@@ -36,4 +36,7 @@
 }
 */
 
+- (IBAction)BuckTapBtn:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

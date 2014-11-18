@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "DViewController.h"
 #import "UserDViewController.h"
+#import "ProfViewController.h"
 @interface ViewController ()
 {
 MKMapView* _mapView;
@@ -141,6 +142,7 @@ MKMapView* _mapView;
 - (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
  //mmmmmmmmmmmmmmmmmmmmmmiボタンをタップした時にしたい動作を記述するメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+    
     DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
     //[[self navigationController] pushViewController:dvc animated:YES];
     [self presentViewController:dvc animated:YES completion:nil];
@@ -160,25 +162,31 @@ MKMapView* _mapView;
        
         
     }
-
+    if (item.tag == 3) {
+        ProfViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfViewController"];
+        //[[self navigationController] pushViewController:dvc animated:YES];
+        [self presentViewController:dvc animated:YES completion:nil];
+        
 
     }
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+   
+    
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmイメージに画像を添付mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
 
+
+
+
+
+
+
+
+
+}
 
 @end

@@ -19,5 +19,9 @@
 @property (weak, nonatomic) IBOutlet UITabBarItem *GreenPinTab;
 @property (weak, nonatomic) IBOutlet UITabBarItem *SetBarItem;
 
+
+
+
+
 @end
 

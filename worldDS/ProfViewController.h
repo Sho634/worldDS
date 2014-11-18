@@ -23,7 +23,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *dreamTextField;
 
+@property (weak, nonatomic) IBOutlet UIButton *BackBtn;
 
+- (IBAction)BuckTapBtn:(id)sender;
 
 
 

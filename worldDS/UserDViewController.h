@@ -10,4 +10,10 @@
 
 @interface UserDViewController : UIViewController
 
+
+@property (weak, nonatomic) IBOutlet UIButton *BackBtn;
+
+- (IBAction)BackTapBtn:(id)sender;
+
+
 @end
