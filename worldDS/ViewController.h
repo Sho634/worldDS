@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 @interface ViewController : UIViewController<MKMapViewDelegate,UITabBarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
-
-
+{
+BOOL _redpinFlag;//赤ピンのフラグ
+BOOL _greenpinFlag;//緑ピンフラグ
+}
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーのコマンドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 @property (weak, nonatomic) IBOutlet UITabBar *mainTabBar;
 @property (weak, nonatomic) IBOutlet UITabBar *TabBar;

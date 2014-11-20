@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="RedPin" image="dream" id="xFl-Wm-WvO"/>
+                                    <tabBarItem title="RedPin" id="xFl-Wm-WvO"/>
                                     <tabBarItem tag="1" title="GreenPin" id="eMw-FD-H3r"/>
                                     <tabBarItem tag="2" title="Diary" id="mmo-Jm-eLf"/>
                                     <tabBarItem tag="3" title="Set" id="rUm-Os-NRW"/>
@@ -143,7 +143,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="BackBtn" destination="kSf-IY-aZQ" id="gph-Be-xba"/>
+                        <outlet property="BackBtn" destination="kSf-IY-aZQ" id="Rzb-6k-UCB"/>
                         <outlet property="DreamLabel" destination="EZF-hw-UTK" id="XI1-Ms-FOk"/>
                         <outlet property="NameLabel" destination="Ype-QZ-oEG" id="Wgp-kg-TFq"/>
                         <outlet property="dreamTextField" destination="bow-QG-yvV" id="K1m-fI-j19"/>
@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ED5-cD-gy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-984" y="807"/>
+            <point key="canvasLocation" x="-919.5" y="807"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="T2A-Cz-JCR">
@@ -167,7 +167,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlg-0A-Fkn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlg-0A-Fkn">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -223,6 +223,14 @@
                                     <action selector="tapHomebtn:" destination="fNE-Io-e2X" eventType="touchUpInside" id="Crq-aF-iGn"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6N-GB-hEJ">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="164" y="118" width="160" height="30"/>
+                                </variation>
+                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophotoかミングスーン.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-zU-Hvs">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -238,6 +246,7 @@
                                 <exclude reference="162-6G-d7M"/>
                                 <exclude reference="CFW-Qg-hai"/>
                                 <exclude reference="YTq-Dg-Khp"/>
+                                <exclude reference="Y6N-GB-hEJ"/>
                                 <exclude reference="pBW-zU-Hvs"/>
                             </mask>
                         </variation>
@@ -248,6 +257,7 @@
                                 <include reference="162-6G-d7M"/>
                                 <include reference="CFW-Qg-hai"/>
                                 <include reference="YTq-Dg-Khp"/>
+                                <include reference="Y6N-GB-hEJ"/>
                                 <include reference="pBW-zU-Hvs"/>
                             </mask>
                         </variation>
@@ -256,13 +266,14 @@
                         <outlet property="DtextView" destination="CFW-Qg-hai" id="HOa-BT-FGR"/>
                         <outlet property="Homebtn" destination="YTq-Dg-Khp" id="jf9-3r-Hzf"/>
                         <outlet property="NameLabel" destination="nlg-0A-Fkn" id="RVy-G9-mOs"/>
+                        <outlet property="NameTextField" destination="Y6N-GB-hEJ" id="7rR-xr-Jt1"/>
                         <outlet property="SaveBtn" destination="162-6G-d7M" id="U28-QW-iJu"/>
                         <outlet property="ShereBtn" destination="bCY-D5-leD" id="SCM-BT-hFh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJZ-oS-eio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-271.5" y="807"/>
+            <point key="canvasLocation" x="-272" y="807"/>
         </scene>
         <!--Want Go View Controller-->
         <scene sceneID="Jaf-ZF-9Nd">
@@ -389,12 +400,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21x-VO-ulD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1693.5" y="807"/>
+            <point key="canvasLocation" x="-1558.5" y="807"/>
         </scene>
     </scenes>
     <resources>
         <image name="NOPHOTO　地球.jpg" width="300" height="200"/>
-        <image name="dream" width="16" height="16"/>
         <image name="nophotoかミングスーン.jpg" width="346" height="346"/>
     </resources>
 </document>

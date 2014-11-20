@@ -33,6 +33,9 @@
 //mmmmmmmmmmmmmmm日記のタイトルmmmmmmmmmmmmmmm
 
 @property (weak, nonatomic) IBOutlet UITextView *DtextView;
+//mmmmmmmmmmmmmmmテキストフィールドmmmmmmmmmmmmmm
+
+@property (weak, nonatomic) IBOutlet UITextField *NameTextField;
 
 ///////////////////////////////////////////
 

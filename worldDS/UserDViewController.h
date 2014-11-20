@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UserDViewController : UIViewController
-
+@property NSUserDefaults *userDefaults;
+@property NSMutableArray *counter;
 
 @property (weak, nonatomic) IBOutlet UIButton *BackBtn;
 

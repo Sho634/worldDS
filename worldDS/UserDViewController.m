@@ -22,17 +22,8 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-
-
-
-
-
-
-
-
-
-
 }
+
 
 /*
 #pragma mark - Navigation
@@ -46,5 +37,6 @@
 
 - (IBAction)BackTapBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+   
 }
 @end

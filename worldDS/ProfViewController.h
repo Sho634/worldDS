@@ -26,6 +26,9 @@
 //イメージビュー画像読み込み
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (weak, nonatomic) IBOutlet UIButton *BackBtn;
+
+- (IBAction)BuckTapBtn:(id)sender;
 
 
 

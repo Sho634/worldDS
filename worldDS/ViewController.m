@@ -42,7 +42,7 @@ MKMapView* _mapView;
     _mapView.showsUserLocation = YES;
     
     [self.view addSubview:_mapView];
-//
+
     _mapView.delegate = self;
 
 //mmmmmmmmmmmmmmmmmmmmmmmmロングジェスチャーの設定とアクション設定mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
@@ -53,7 +53,12 @@ MKMapView* _mapView;
     _mapView.delegate = self;
    
     _TabBar.delegate = self;
-    }
+    
+    _redpinFlag = YES;
+
+
+
+}
 
 
 
@@ -142,16 +147,31 @@ MKMapView* _mapView;
         
         //ピン情報の再利用
       MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinIndentifier];
-        
+    
+    //pinColor = MKPinAnnotationColorGreen;
+    
+    
     if (pinView == nil){
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIndentifier];
         pinView.animatesDrop = YES;
+        //pinView. pinColor = MKPinAnnotationColorGreen;
         pinView.canShowCallout = YES;
         pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        }
+
+    //ピンが赤から緑を宣言するif文
+        if (_greenpinFlag) {
+            pinView. pinColor = MKPinAnnotationColorGreen;
+        }else{
+            pinView.pinColor = MKPinAnnotationColorRed;
         
+        }
+    
+    }
+    
+    
     return pinView;
 }
+
 
 - (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
@@ -168,7 +188,7 @@ MKMapView* _mapView;
 - (void)tabBar:(UITabBar*)tabBar didSelectItem:(UITabBarItem*)item {
     NSLog(@"tap:%ld",item.tag);
   
-    //まじ重要if文
+    //重要重要重要重要　　　　if文
     if (item.tag == 2) {
         UserDViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"UserDViewController"];
         //[[self navigationController] pushViewController:dvc animated:YES];
@@ -181,9 +201,16 @@ MKMapView* _mapView;
         //[[self navigationController] pushViewController:dvc animated:YES];
         [self presentViewController:pvc animated:YES completion:nil];
         
-
     }
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+    //ピンの色を変更するif文
+    if (item.tag == 1) {
+        _redpinFlag = NO;
+       _greenpinFlag = YES;
+    }
+    if (item.tag == 0) {
+        _redpinFlag = YES;
+        _greenpinFlag = NO;
+    }
    
     
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmイメージに画像を添付mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
