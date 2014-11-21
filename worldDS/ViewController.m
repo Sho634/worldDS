@@ -10,10 +10,12 @@
 #import "DViewController.h"
 #import "UserDViewController.h"
 #import "ProfViewController.h"
+#import "WantGoViewController.h"
 
 @interface ViewController ()
 {
 MKMapView* _mapView;
+    NSInteger n;
 }
 @end
 
@@ -26,6 +28,7 @@ MKMapView* _mapView;
     _mapView = [[MKMapView alloc] init];
     _mapView.delegate = self;
     _mapView.frame = CGRectMake(0, 20, 320, 460);
+    
     CLLocationCoordinate2D co;
     co.latitude = 35.689488;       //緯度
     co.longitude = 139.691706;     //軽度
@@ -116,10 +119,11 @@ MKMapView* _mapView;
     // 新しいピンを作成
     MKPointAnnotation *anno = [[MKPointAnnotation alloc] init];
     anno.coordinate = point;
-    int n = 0;
-    anno.title = [NSString stringWithFormat:@"PIN-%d",n];
+    //int n = 0;
+ //   NSString *num = [NSString stringWithFormat:@"%ld",n];
     ++n;
-    anno.subtitle = [NSString stringWithFormat:@"緯度:%f 経度:%f",
+    anno.title = [NSString stringWithFormat:@"PIN-%ld",n];
+        anno.subtitle = [NSString stringWithFormat:@"緯度:%f 経度:%f",
                      anno.coordinate.latitude,anno.coordinate.longitude];
     
     // マップの表示を変更
@@ -177,11 +181,30 @@ MKMapView* _mapView;
 {
  //mmmmmmmmmmmmmmmmmmmmmmiボタンをタップした時にしたい動作を記述するメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
     
-    DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
-    //[[self navigationController] pushViewController:dvc animated:YES];
-    [self presentViewController:dvc animated:YES completion:nil];
-    NSLog(@"%@",view.annotation.title);
-            
+    static NSString *pinIndentifier = @"PinAnnotationID";
+    MKPinAnnotationView *pinView = [[MKPinAnnotationView alloc] initWithAnnotation:view reuseIdentifier:pinIndentifier];
+    //グリーンピンの　i ボタンを押した時に反応する　if 文
+    if (pinView.pinColor == MKPinAnnotationColorGreen) {
+       
+        WantGoViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"WantGoViewController"];
+        //[[self navigationController] pushViewController:dvc animated:YES];
+        [self presentViewController:dvc animated:YES completion:nil];
+        NSLog(@"%@",view.annotation.title);
+ 
+       
+    }else{
+        
+        DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
+        //[[self navigationController] pushViewController:dvc animated:YES];
+        [self presentViewController:dvc animated:YES completion:nil];
+        NSLog(@"%@",view.annotation.title);
+
+
+    }
+
+
+
+
 }
     
  //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーでの画面遷移mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
