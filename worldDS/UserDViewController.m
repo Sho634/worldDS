@@ -16,12 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSArray *MapDiaryTmp;
     // Do any additional setup after loading the view.
 }
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm宿敵ユーザーデフォルトmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)addFavoriteList:(id)sender {
+//手順をふもうまずは変更不可能なDictionaly型を作るselectedCoffee
+    NSDictionary *selectedCoffee = _MapDiaryArray[self.select_num];
+
 }
 
 

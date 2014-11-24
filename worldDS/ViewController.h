@@ -10,8 +10,9 @@
 #import <MapKit/MapKit.h>
 @interface ViewController : UIViewController<MKMapViewDelegate,UITabBarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
-BOOL _redpinFlag;//赤ピンのフラグ
-BOOL _greenpinFlag;//緑ピンフラグ
+    NSMutableArray *_MapDiaryArray; //メンバ変数宣言
+BOOL _redpinFlag;       //赤ピンのフラグ
+BOOL _greenpinFlag;     //緑ピンフラグ
 }
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーのコマンドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 @property (weak, nonatomic) IBOutlet UITabBar *mainTabBar;

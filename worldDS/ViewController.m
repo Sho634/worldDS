@@ -11,7 +11,7 @@
 #import "UserDViewController.h"
 #import "ProfViewController.h"
 #import "WantGoViewController.h"
-
+#import "ShoAnnotation.h"
 @interface ViewController ()
 {
 MKMapView* _mapView;
@@ -23,6 +23,11 @@ MKMapView* _mapView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _MapDiaryArray = @[@"Latitude",@"Longitude",@"pinのタイトル",@"pinの色",@"日記"];
+    
+    //UserDefaultからデータを取り出す箱を取り出す何もないがとりだす
+    
 //mmmmmmmmmmmmmmmmmmmmmmmmmmm地図の表示mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
     _mapView = [[MKMapView alloc] init];
@@ -117,7 +122,7 @@ MKMapView* _mapView;
     // ピンを全て削除
     //    [_mapView removeAnnotations: _mapView.annotations];
     // 新しいピンを作成
-    MKPointAnnotation *anno = [[MKPointAnnotation alloc] init];
+    ShoAnnotation *anno = [[ShoAnnotation alloc] init];
     anno.coordinate = point;
     //int n = 0;
  //   NSString *num = [NSString stringWithFormat:@"%ld",n];
@@ -125,6 +130,14 @@ MKMapView* _mapView;
     anno.title = [NSString stringWithFormat:@"PIN-%ld",n];
         anno.subtitle = [NSString stringWithFormat:@"緯度:%f 経度:%f",
                      anno.coordinate.latitude,anno.coordinate.longitude];
+   
+    if (_greenpinFlag) {
+        anno.pinColor = @"green";
+    }else{
+        anno.pinColor = @"red";
+        }
+    
+    
     
     // マップの表示を変更
     if (mapMove) {
@@ -139,8 +152,33 @@ MKMapView* _mapView;
     //    MKCircle* circle = [MKCircle circleWithCenterCoordinate:point radius:500];  // 半径500m
     //    [_mapView removeOverlays:_mapView.overlays];
     //    [_mapView addOverlay:circle];
-}
+    
+    
+    
+//////////////////////////////////////宿敵ユーザーでフォルト/////////////////////////////////////////////////////
+///////////////////////////////////////////データを保存////////////////////////////////////////////////////////
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+    
+    
+    //新しいピンの情報をセット
+    NSDictionary *pinInfo = @[@{@"Latitude":@"35,675621",
+                                @"Longitude":@"139,699236",
+                                @"pinのタイトル":@"",
+                                @"pinの色":@"red,green",
+                                @"日記":@""}];
+    
+    [_MapDiaryArray addObject:pinInfo];
 
+    [defaults setObject:_MapDiaryArray forKey:@"MapDiary"];//_coffeearrayをcoffeetableというキーで保存
+    [defaults synchronize];
+    
+    if (_MapDiaryArray == nil) {
+        _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
+    }
+    
+    
+}
 //mmmmmmmmmmmmmmmmmmmmmmmmピン落ちてくるアニメーションのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 
@@ -179,19 +217,19 @@ MKMapView* _mapView;
 
 - (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
- //mmmmmmmmmmmmmmmmmmmmmmiボタンをタップした時にしたい動作を記述するメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ //mmmmmmmmmmmmmmmmmmmmmmiボタンをタップした時にしたい動作を記述するメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
     
-    static NSString *pinIndentifier = @"PinAnnotationID";
-    MKPinAnnotationView *pinView = [[MKPinAnnotationView alloc] initWithAnnotation:view reuseIdentifier:pinIndentifier];
-    //グリーンピンの　i ボタンを押した時に反応する　if 文
-    if (pinView.pinColor == MKPinAnnotationColorGreen) {
+    ShoAnnotation *currentpin = (ShoAnnotation *)view.annotation;
+    
+    //グリーンピンの　i ボタンを押した時に反応する　if 文mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+    if ([currentpin.pinColor isEqualToString:@"green"]) {
        
         WantGoViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"WantGoViewController"];
         //[[self navigationController] pushViewController:dvc animated:YES];
         [self presentViewController:dvc animated:YES completion:nil];
         NSLog(@"%@",view.annotation.title);
  
-       
+    
     }else{
         
         DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
@@ -207,7 +245,7 @@ MKMapView* _mapView;
 
 }
     
- //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーでの画面遷移mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーでの画面遷移mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (void)tabBar:(UITabBar*)tabBar didSelectItem:(UITabBarItem*)item {
     NSLog(@"tap:%ld",item.tag);
   
