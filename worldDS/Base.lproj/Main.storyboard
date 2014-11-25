@@ -372,21 +372,31 @@
                                     <action selector="BackTapBtn:" destination="lBk-Y3-u5Z" eventType="touchUpInside" id="oi5-Kh-0Cz"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aqA-cc-UVl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="46" width="400" height="546"/>
+                                </variation>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="0Np-6a-l4P"/>
+                                <exclude reference="aqA-cc-UVl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="0Np-6a-l4P"/>
+                                <include reference="aqA-cc-UVl"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="BackBtn" destination="0Np-6a-l4P" id="Fz1-BC-LTJ"/>
+                        <outlet property="DiaryTableView" destination="aqA-cc-UVl" id="WS6-PU-Wic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21x-VO-ulD" userLabel="First Responder" sceneMemberID="firstResponder"/>

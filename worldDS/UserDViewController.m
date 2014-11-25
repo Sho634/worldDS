@@ -19,25 +19,62 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     NSArray *MapDiaryTmp;
-    // Do any additional setup after loading the view.
+    
+    _MapDiaryArray = [defaults objectForKey:@"MapDiary"]; //Tmp一時的な変数
+    _DiaryTableView.delegate = self;
+    _DiaryTableView.dataSource = self;
 }
+
+//行数を決定するメソッド
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _MapDiaryArray.count;
+}
+
+    // Do any additional setup after loading the view.
+
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm宿敵ユーザーデフォルトmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-
-
-
-
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+    //セルに名前を表示
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    //定数を宣言（static = 静的)
+   static NSString *CellIdentifer = @"Cell";
+    
+    //セルの再利用
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifer];
+    
+   if(cell == nil){
+    //セルの初期化とスタイルの決定
+       
+       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifer];
+}
+    //cell.textLabel.text = [NSString stringWithFormat:@"行番号=%d",indexPath.row];
+    
+    cell.textLabel.text = _MapDiaryArray[indexPath.row][@"Pintitle"];
+    
+    return cell;
+}
+//テーブルビューに_MapDiaryArrayの中身を表示する。
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+
+
+
+
+
+
+
+
+
+
 }
 
-- (IBAction)addFavoriteList:(id)sender {
-//手順をふもうまずは変更不可能なDictionaly型を作るselectedCoffee
-    NSDictionary *selectedCoffee = _MapDiaryArray[self.select_num];
-
-}
 
 
 /*

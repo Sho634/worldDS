@@ -24,11 +24,11 @@ MKMapView* _mapView;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _MapDiaryArray = @[@"Latitude",@"Longitude",@"pinのタイトル",@"pinの色",@"日記"];
+    
     
     //UserDefaultからデータを取り出す箱を取り出す何もないがとりだす
     
-//mmmmmmmmmmmmmmmmmmmmmmmmmmm地図の表示mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm地図の表示mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
     _mapView = [[MKMapView alloc] init];
     _mapView.delegate = self;
@@ -64,9 +64,44 @@ MKMapView* _mapView;
     
     _redpinFlag = YES;
 
+//    MKPointAnnotation  *pin = [self createdPin:CLLocationCoordinate2DMake(co.latitude,co.longitude) Pintitle:@"" Diary:@""];
+//    [_mapView addAnnotation:pin];
+    //表示する為にビューに追加
+//1125   [self.view addSubview:_mapView];
+   
+    
+    
+    // for文が絶対いる   MapDiayArrayの中身にあるディクショナリーに違いがないからひっぱれない
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //ユーザーデフォルトの中に保存した情報に名前をつけている
+    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
 
-
+  
+    for (int i=0; i < _MapDiaryArray.count; i++) {
+    
+    NSString *Latitude =  _MapDiaryArray[i][@"Latitude"];
+    double latitude = Latitude.doubleValue;
+    NSString *Longitude =  _MapDiaryArray[i][@"Longitude"];
+    double longitude = Longitude.doubleValue;
+    
+        
+    MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+    pin.coordinate = CLLocationCoordinate2DMake(latitude,longitude);
+    pin.title = _MapDiaryArray[i][@"Pintitle"];
+    pin.subtitle = _MapDiaryArray[i][@"Pintitle"];
+    
+    [_mapView addAnnotation:pin];
+    //表示する為にビューに追加
+    [self.view addSubview:_mapView];
+        
+    }
+    
+   
 }
+
+
+
+
 
 
 
@@ -78,7 +113,7 @@ MKMapView* _mapView;
 //    [self dismissViewControllerAnimated:YES completion:nil];
 //}
 
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 
 
@@ -137,8 +172,6 @@ MKMapView* _mapView;
         anno.pinColor = @"red";
         }
     
-    
-    
     // マップの表示を変更
     if (mapMove) {
         MKCoordinateSpan CoordinateSpan = MKCoordinateSpanMake(0.005,0.005);
@@ -158,24 +191,28 @@ MKMapView* _mapView;
 //////////////////////////////////////宿敵ユーザーでフォルト/////////////////////////////////////////////////////
 ///////////////////////////////////////////データを保存////////////////////////////////////////////////////////
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    //ユーザーデフォルトの中に保存した情報に名前をつけている
     _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
     
+    if (_MapDiaryArray == nil) {
+        _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
+    }
     
     //新しいピンの情報をセット
-    NSDictionary *pinInfo = @[@{@"Latitude":@"35,675621",
-                                @"Longitude":@"139,699236",
-                                @"pinのタイトル":@"",
-                                @"pinの色":@"red,green",
-                                @"日記":@""}];
+    NSDictionary *pinInfo = @{@"Latitude":[NSString stringWithFormat:@"%f",anno.coordinate.latitude],
+                              @"Longitude":[NSString stringWithFormat:@"%f",anno.coordinate.longitude],
+                              @"Pintitle":anno.title,
+                              @"Pincolor":anno.pinColor,
+                              @"Diary":@""};
+    
+    
+
     
     [_MapDiaryArray addObject:pinInfo];
 
     [defaults setObject:_MapDiaryArray forKey:@"MapDiary"];//_coffeearrayをcoffeetableというキーで保存
     [defaults synchronize];
-    
-    if (_MapDiaryArray == nil) {
-        _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
-    }
     
     
 }

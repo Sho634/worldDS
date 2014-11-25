@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserDViewController : UIViewController
+@interface UserDViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+{
+    NSMutableArray *_MapDiaryArray;
+}
 @property NSUserDefaults *userDefaults;
-@property NSMutableArray *counter;
-
 @property (weak, nonatomic) IBOutlet UIButton *BackBtn;
 
+
 - (IBAction)BackTapBtn:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UITableView *DiaryTableView;
 
 
 @end
