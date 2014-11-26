@@ -58,10 +58,8 @@ MKMapView* _mapView;
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
     [_mapView addGestureRecognizer:longPressGesture];
-    _mapView.delegate = self;
-   
-    _TabBar.delegate = self;
-    
+     _mapView.delegate = self;
+     _TabBar.delegate = self;
     _redpinFlag = YES;
 
 //    MKPointAnnotation  *pin = [self createdPin:CLLocationCoordinate2DMake(co.latitude,co.longitude) Pintitle:@"" Diary:@""];
@@ -76,19 +74,34 @@ MKMapView* _mapView;
     //ユーザーデフォルトの中に保存した情報に名前をつけている
     _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
 
-  
+    
+    
+    
+    //for文　ピンの数分回る
     for (int i=0; i < _MapDiaryArray.count; i++) {
     
+    // Arrayの中身を　double 型に変えている
     NSString *Latitude =  _MapDiaryArray[i][@"Latitude"];
     double latitude = Latitude.doubleValue;
     NSString *Longitude =  _MapDiaryArray[i][@"Longitude"];
     double longitude = Longitude.doubleValue;
     
-        
-    MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
-    pin.coordinate = CLLocationCoordinate2DMake(latitude,longitude);
+    //ピンを立てるコード
+    ShoAnnotation *pin = [[ShoAnnotation alloc] init];
+    pin.coordinate = CLLocationCoordinate2DMake(latitude,longitude);//()内は Double じゃないと稼働しない
     pin.title = _MapDiaryArray[i][@"Pintitle"];
-    pin.subtitle = _MapDiaryArray[i][@"Pintitle"];
+    pin.pinColor = _MapDiaryArray[i][@"Pincolor"];
+      
+       
+//        if ([_MapDiaryArray[i][@"Pincolor"] isEqualToString:@"green"]) {
+//            _greenpinFlag = YES;
+//            _redpinFlag = NO;
+//        }else{
+//            _redpinFlag = YES;
+//            _greenpinFlag = NO;
+//            
+//        }
+//      
     
     [_mapView addAnnotation:pin];
     //表示する為にビューに追加
@@ -162,7 +175,7 @@ MKMapView* _mapView;
     //int n = 0;
  //   NSString *num = [NSString stringWithFormat:@"%ld",n];
     ++n;
-    anno.title = [NSString stringWithFormat:@"PIN-%ld",n];
+    anno.title = [NSString stringWithFormat:@"PIN-%ld",(long)n];
         anno.subtitle = [NSString stringWithFormat:@"緯度:%f 経度:%f",
                      anno.coordinate.latitude,anno.coordinate.longitude];
    
@@ -217,7 +230,7 @@ MKMapView* _mapView;
     
 }
 //mmmmmmmmmmmmmmmmmmmmmmmmピン落ちてくるアニメーションのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm　pinの色決め　mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
@@ -228,8 +241,9 @@ MKMapView* _mapView;
       MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinIndentifier];
     
     //pinColor = MKPinAnnotationColorGreen;
+    ShoAnnotation *sa = (ShoAnnotation *)annotation;
     
-    
+    NSLog(@"%@",sa.pinColor);
     if (pinView == nil){
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIndentifier];
         pinView.animatesDrop = YES;
@@ -238,12 +252,19 @@ MKMapView* _mapView;
         pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 
     //ピンが赤から緑を宣言するif文
-        if (_greenpinFlag) {
-            pinView. pinColor = MKPinAnnotationColorGreen;
+        if ([sa.pinColor isEqualToString:@"green"]) {
+            pinView.pinColor = MKPinAnnotationColorGreen;
         }else{
             pinView.pinColor = MKPinAnnotationColorRed;
-        
+            
         }
+
+//        if (_greenpinFlag) {
+//            pinView.pinColor = MKPinAnnotationColorGreen;
+//        }else{
+//            pinView.pinColor = MKPinAnnotationColorRed;
+//        
+//        }
     
     }
     
@@ -284,7 +305,7 @@ MKMapView* _mapView;
     
  //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーでの画面遷移mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (void)tabBar:(UITabBar*)tabBar didSelectItem:(UITabBarItem*)item {
-    NSLog(@"tap:%ld",item.tag);
+    NSLog(@"tap:%ld",(long)item.tag);
   
     //重要重要重要重要　　　　if文
     if (item.tag == 2) {
