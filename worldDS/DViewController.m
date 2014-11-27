@@ -16,6 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     NSArray *DiaryTmp;
+    
+    
+    
+    
+    
     // Do any additional setup after loading the view.
     NSString *str_long = @"";
     
@@ -29,13 +35,35 @@
     self.DtextView.text = str_long;
 
     
-    
+//    _MapDiaryArray = *DiaryTmp.mutableCop
+//    
     
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+   
+    
     // Dispose of any resources that can be recreated.
+//
+//    _coffeeArray = coffeeTmp.mutableCopy;//coffeeTmpを改造できるようにする
+//    
+//    self.coffeeTitle.text = [NSString stringWithFormat:@"%@とは",_coffeeArray[self.select_num][@"name"]];
+//    self.descriptionText.text = _coffeeArray[self.select_num][@"desc"];
+//    
+//    id favoriteflag = _coffeeArray[self.select_num][@"favoriteflag"];//ここでfavoriteflagを取り出し
+//    //上のif文
+//    
+//    int intFavFlag = [favoriteflag intValue];//調べるintValueでfavoriteflagを整数型に変換する事
+
+
+//    
+//    _MapDiaryArray = *DiaryTmp.mutableCopy;
+//    
+//    self.
+//    
 }
 
 /*
@@ -48,7 +76,61 @@
 }
 */
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmボタンアクションmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+// save ボタンを押した時に　ユーザーデフォルトにデータを保存
 - (IBAction)tapSaveBtn:(id)sender {
+    // saveボタンのアクション
+    NSLog(@"Save");
+    
+//    //手順をふもうまずは変更不可能なDictionaly型を作るselectedCoffee
+//    NSDictionary *selectedCoffee = _coffeeArray[self.select_num];
+//    //次に変更可能なNSMutableDictionaly型をつくる上のやつを代入
+//    NSMutableDictionary *changedCoffee = selectedCoffee.mutableCopy;
+//    
+//    id favoriteflag = _coffeeArray[self.select_num][@"favoriteflag"];//ここで出とりだし
+//    
+//    int intFavFlag = [favoriteflag intValue];//int型に代入
+//    
+//    if (intFavFlag == 0) {
+//        [changedCoffee setObject:@1 forKey:@"favoriteflag"];
+//
+    //手順をふまずには変更不可能なDictionaly型を作るselectedDiary
+//    NSDictionary *selectedDiary = _MapDiaryArray[self.select_num];
+//    
+//    NSMutableDictionary *chengedDiary = selectedDiary.mutableCopy;
+//    
+//    
+//    id favoriteflag = _MapDiaryArray[][@"favoriteflag"];
+//    
+//    
+//    
+//    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    // データ保存処理
+//        
+//        // userDefaults にボタンアクションでデータを保存
+//         userDefaults = NSUserDefaults.standardUserDefaults()
+//        
+//        // キー: "saveText" , 値: "<textFieldの入力値>" を格納。（idは任意）
+//        userDefaults.setObject(textField.text?, forKey: "saveText")
+//    
+//
 }
 
 

@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface DViewController : UIViewController
+{
+    NSMutableArray *_MapDiaryArray;
+}
+@property (nonatomic,assign) int select_num;
+
 //mmmmmmmmmmmmmmセーブボタン（保存）mmmmmmmmmm
 @property (weak, nonatomic) IBOutlet UIButton *SaveBtn;
 

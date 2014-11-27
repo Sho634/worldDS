@@ -53,7 +53,7 @@ MKMapView* _mapView;
 
     _mapView.delegate = self;
 
-//mmmmmmmmmmmmmmmmmmmmmmmmロングジェスチャーの設定とアクション設定mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//mmmmmmmmmmmmmmmmmmmmmmmmロングジェスチャーの設定とアクション設定mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
   
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
@@ -62,21 +62,10 @@ MKMapView* _mapView;
      _TabBar.delegate = self;
     _redpinFlag = YES;
 
-//    MKPointAnnotation  *pin = [self createdPin:CLLocationCoordinate2DMake(co.latitude,co.longitude) Pintitle:@"" Diary:@""];
-//    [_mapView addAnnotation:pin];
-    //表示する為にビューに追加
-//1125   [self.view addSubview:_mapView];
-   
-    
-    
-    // for文が絶対いる   MapDiayArrayの中身にあるディクショナリーに違いがないからひっぱれない
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //ユーザーデフォルトの中に保存した情報に名前をつけている
     _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
 
-    
-    
-    
     //for文　ピンの数分回る
     for (int i=0; i < _MapDiaryArray.count; i++) {
     
@@ -93,16 +82,7 @@ MKMapView* _mapView;
     pin.pinColor = _MapDiaryArray[i][@"Pincolor"];
       
        
-//        if ([_MapDiaryArray[i][@"Pincolor"] isEqualToString:@"green"]) {
-//            _greenpinFlag = YES;
-//            _redpinFlag = NO;
-//        }else{
-//            _redpinFlag = YES;
-//            _greenpinFlag = NO;
-//            
-//        }
-//      
-    
+    //アノテーションを追加
     [_mapView addAnnotation:pin];
     //表示する為にビューに追加
     [self.view addSubview:_mapView];
@@ -111,21 +91,6 @@ MKMapView* _mapView;
     
    
 }
-
-
-
-
-
-
-
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmカメラロールからイメージを取り出すmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-//-(void)imagePickerController :(UIImagePickerController *)picker
-//        didFinishPickingImage :(UIImage *)image editingInfo :(NSDictionary *)editingInfo {
-//    NSLog(@"selected");
-//    [self.imageView setImage:image];
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//}
-
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 
@@ -134,7 +99,7 @@ MKMapView* _mapView;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//mmmmmmmmmmmmmmmmmmmmmmロングジェスチャーのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//mmmmmmmmmmmmmmmmmmmmmmロングジェスチャーのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (void)handleLongPressGesture:(UILongPressGestureRecognizer *)gesture {
     
     //長押し検出時のみ作動
@@ -299,8 +264,6 @@ MKMapView* _mapView;
     }
 
 
-
-
 }
     
  //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーでの画面遷移mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
@@ -317,14 +280,14 @@ MKMapView* _mapView;
     }
     if (item.tag == 3) {
         ProfViewController *pvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfViewController"];
-        //[[self navigationController] pushViewController:dvc animated:YES];
+        
         [self presentViewController:pvc animated:YES completion:nil];
         
     }
     //ピンの色を変更するif文
     if (item.tag == 1) {
         _redpinFlag = NO;
-       _greenpinFlag = YES;
+        _greenpinFlag = YES;
     }
     if (item.tag == 0) {
         _redpinFlag = YES;
@@ -332,23 +295,6 @@ MKMapView* _mapView;
     }
    
     
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmイメージに画像を添付mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-
-//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-//    imagePicker.delegate = self;
-//    [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-//    [self presentViewController:imagePicker animated:YES completion:nil];
-
-    
-    
-
-
-
-
-
-
-
-
 
 
 
