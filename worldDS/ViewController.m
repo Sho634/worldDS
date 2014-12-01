@@ -177,12 +177,23 @@ MKMapView* _mapView;
         _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
     }
     
+   //ピンを番号で管理するメソッド
+    _maxnumber = [[defaults objectForKey:@"maxnumber"] intValue];
+    
+    if (_maxnumber <=0) {
+        _maxnumber = 1;
+    }else{
+        _maxnumber =+1;
+    }
+
+    
     //新しいピンの情報をセット
     NSDictionary *pinInfo = @{@"Latitude":[NSString stringWithFormat:@"%f",anno.coordinate.latitude],
                               @"Longitude":[NSString stringWithFormat:@"%f",anno.coordinate.longitude],
                               @"Pintitle":anno.title,
                               @"Pincolor":anno.pinColor,
-                              @"Diary":@""};
+                              @"Diary":@"",
+                              @"number":[NSString stringWithFormat:@"%d",_maxnumber]};
     
     
 

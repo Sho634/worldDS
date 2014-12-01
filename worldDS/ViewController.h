@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController<MKMapViewDelegate,UITabBarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     NSMutableArray *_MapDiaryArray; //メンバ変数宣言
+int _maxnumber;
 BOOL _redpinFlag;       //赤ピンのフラグ
 BOOL _greenpinFlag;     //緑ピンフラグ
 }
