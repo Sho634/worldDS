@@ -24,7 +24,7 @@
     
     for (int i = 0; i < 10; i++) {NSLog(@"%d",i);
         str_long = [str_long stringByAppendingFormat:@"%@",@""];
-}
+    }
     
     NSLog(@"%@",str_long);
     
@@ -33,6 +33,32 @@
     //pinの番号を表示するメソッド
     
     NSLog(@"dvc-%d",self.select_num);
+    
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //ユーザーデフォルトの中に保存した情報に名前をつけている
+    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+    
+    
+    for (int i=1; i < _MapDiaryArray.count; i++) {
+        
+        
+        NSString *pinNumber =  _MapDiaryArray[i][@"number"];
+        
+        if (self.select_num == [pinNumber intValue]){
+            NSDictionary *selectedPin = _MapDiaryArray[i];
+            NSMutableDictionary *changedPin = selectedPin.mutableCopy;
+            
+            NSLog(@"%@",[changedPin objectForKey:@"Diary"]);
+            self.DtextView.text = [changedPin objectForKey:@"Diary"];
+            
+            break;
+            
+        }
+        
+    }
+
     
     
 }
@@ -84,20 +110,51 @@
     _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
 
    
-    for (int i=1; i < _MapDiaryArray.count; i++) {
+    for (int i=0; i < _MapDiaryArray.count; i++) {
         
         
-        NSString *Latitude =  _MapDiaryArray[i][@"pinNumber"];
-        double latitude = Latitude.doubleValue;
+        NSString *pinNumber = [[NSString alloc] init];
         
-               //ユーザーデフォルトの中に保存した情報に名前をつけている
-        _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+        pinNumber = _MapDiaryArray[i][@"number"];
+    
+        if (self.select_num == [pinNumber intValue]){
+            NSDictionary *selectedPin = _MapDiaryArray[i];
+            NSMutableDictionary *changedPin = selectedPin.mutableCopy;
+            
+            [changedPin setObject:self.DtextView.text forKey:@"Diary"];
+            
+            [changedPin setObject:self.NameTextField.text forKey:@"Pintitle"];
+            
+            [_MapDiaryArray replaceObjectAtIndex:i withObject:changedPin];
+            
+            break;
         
-        if (_MapDiaryArray == nil) {
-            _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
+        
+        
+        
+        
+        
+        
+        
+        
         }
+        
+//               //ユーザーデフォルトの中に保存した情報に名前をつけている
+//        _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+//        
+//        if (_MapDiaryArray == nil) {
+//            _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
+//        }
 
     }
+    
+    
+    [defaults setObject:_MapDiaryArray forKey:@"MapDiary"];
+    
+    [defaults synchronize];
+
+    
+    
     //    //手順をふもうまずは変更不可能なDictionaly型を作るselectedCoffee
 //    NSDictionary *selectedCoffee = _coffeeArray[self.select_num];
 //    //次に変更可能なNSMutableDictionaly型をつくる上のやつを代入
