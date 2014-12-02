@@ -15,7 +15,7 @@
 @interface ViewController ()
 {
 MKMapView* _mapView;
-    NSInteger n;
+NSInteger n;
 }
 @end
 
@@ -60,7 +60,7 @@ MKMapView* _mapView;
     [_mapView addGestureRecognizer:longPressGesture];
      _mapView.delegate = self;
      _TabBar.delegate = self;
-    _redpinFlag = YES;
+     _redpinFlag = YES;
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //ユーザーデフォルトの中に保存した情報に名前をつけている
@@ -69,18 +69,30 @@ MKMapView* _mapView;
     //for文　ピンの数分回る
     for (int i=0; i < _MapDiaryArray.count; i++) {
     
-    // Arrayの中身を　double 型に変えている
-    NSString *Latitude =  _MapDiaryArray[i][@"Latitude"];
-    double latitude = Latitude.doubleValue;
-    NSString *Longitude =  _MapDiaryArray[i][@"Longitude"];
-    double longitude = Longitude.doubleValue;
-    
-    //ピンを立てるコード
-    ShoAnnotation *pin = [[ShoAnnotation alloc] init];
-    pin.coordinate = CLLocationCoordinate2DMake(latitude,longitude);//()内は Double じゃないと稼働しない
-    pin.title = _MapDiaryArray[i][@"Pintitle"];
-    pin.pinColor = _MapDiaryArray[i][@"Pincolor"];
+        // Arrayの中身を　double 型に変えている
+        NSString *Latitude =  _MapDiaryArray[i][@"Latitude"];
+        double latitude = Latitude.doubleValue;
+        NSString *Longitude =  _MapDiaryArray[i][@"Longitude"];
+        double longitude = Longitude.doubleValue;
+        
+        //ピンを立てるコード
+        ShoAnnotation *pin = [[ShoAnnotation alloc] init];
+        pin.coordinate = CLLocationCoordinate2DMake(latitude,longitude);//()内は Double じゃないと稼働しない
+        pin.title = _MapDiaryArray[i][@"Pintitle"];
+        pin.pinColor = _MapDiaryArray[i][@"Pincolor"];
       
+        
+        //ユーザーデフォルトの中に保存した情報に名前をつけている
+        _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+        
+        if (_MapDiaryArray == nil) {
+            _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
+        }
+        
+        
+        
+        pin.pinNumber = _MapDiaryArray[i][@"number"];;
+        
        
     //アノテーションを追加
     [_mapView addAnnotation:pin];
@@ -138,7 +150,7 @@ MKMapView* _mapView;
     ShoAnnotation *anno = [[ShoAnnotation alloc] init];
     anno.coordinate = point;
     //int n = 0;
- //   NSString *num = [NSString stringWithFormat:@"%ld",n];
+    //NSString *num = [NSString stringWithFormat:@"%ld",n];
     ++n;
     anno.title = [NSString stringWithFormat:@"PIN-%ld",(long)n];
         anno.subtitle = [NSString stringWithFormat:@"緯度:%f 経度:%f",
@@ -149,6 +161,31 @@ MKMapView* _mapView;
     }else{
         anno.pinColor = @"red";
         }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    //ユーザーデフォルトの中に保存した情報に名前をつけている
+    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+    
+    if (_MapDiaryArray == nil) {
+        _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
+    }
+    
+    //ピンを番号で管理するメソッド
+    _maxnumber = [[defaults objectForKey:@"maxnumber"] intValue];
+    
+    if (_maxnumber <=0) {
+        _maxnumber = 1;
+    }else{
+        _maxnumber +=1;
+    }
+    
+    anno.pinNumber = [NSString stringWithFormat:@"%d",_maxnumber];
+    
+
+    
+    
+    
     
     // マップの表示を変更
     if (mapMove) {
@@ -168,25 +205,26 @@ MKMapView* _mapView;
     
 //////////////////////////////////////宿敵ユーザーでフォルト/////////////////////////////////////////////////////
 ///////////////////////////////////////////データを保存////////////////////////////////////////////////////////
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    //ユーザーデフォルトの中に保存した情報に名前をつけている
-    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
-    
-    if (_MapDiaryArray == nil) {
-        _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
-    }
-    
-   //ピンを番号で管理するメソッド
-    _maxnumber = [[defaults objectForKey:@"maxnumber"] intValue];
-    
-    if (_maxnumber <=0) {
-        _maxnumber = 1;
-    }else{
-        _maxnumber =+1;
-    }
-
-    
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    //ユーザーデフォルトの中に保存した情報に名前をつけている
+//    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+//    
+//    if (_MapDiaryArray == nil) {
+//        _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
+//    }
+//    
+//   //ピンを番号で管理するメソッド
+//    _maxnumber = [[defaults objectForKey:@"maxnumber"] intValue];
+//    
+//    if (_maxnumber <=0) {
+//        _maxnumber = 1;
+//    }else{
+//        _maxnumber =+1;
+//    }
+//
+//    anno.pinNumber = [NSString stringWithFormat:@"%d",_maxnumber];
+//    
     //新しいピンの情報をセット
     NSDictionary *pinInfo = @{@"Latitude":[NSString stringWithFormat:@"%f",anno.coordinate.latitude],
                               @"Longitude":[NSString stringWithFormat:@"%f",anno.coordinate.longitude],
@@ -201,6 +239,8 @@ MKMapView* _mapView;
     [_MapDiaryArray addObject:pinInfo];
 
     [defaults setObject:_MapDiaryArray forKey:@"MapDiary"];//_coffeearrayをcoffeetableというキーで保存
+    [defaults setObject:[NSString stringWithFormat:@"%d",_maxnumber] forKey:@"maxnumber"];
+    
     [defaults synchronize];
     
     
@@ -219,30 +259,22 @@ MKMapView* _mapView;
     //pinColor = MKPinAnnotationColorGreen;
     ShoAnnotation *sa = (ShoAnnotation *)annotation;
     
-    NSLog(@"%@",sa.pinColor);
-    if (pinView == nil){
+      NSLog(@"%@",sa.pinColor);
+      if (pinView == nil){
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pinIndentifier];
         pinView.animatesDrop = YES;
         //pinView. pinColor = MKPinAnnotationColorGreen;
         pinView.canShowCallout = YES;
         pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 
-    //ピンが赤から緑を宣言するif文
-        if ([sa.pinColor isEqualToString:@"green"]) {
+      //ピンが赤から緑を宣言するif文
+      if ([sa.pinColor isEqualToString:@"green"]) {
             pinView.pinColor = MKPinAnnotationColorGreen;
         }else{
             pinView.pinColor = MKPinAnnotationColorRed;
             
         }
-
-//        if (_greenpinFlag) {
-//            pinView.pinColor = MKPinAnnotationColorGreen;
-//        }else{
-//            pinView.pinColor = MKPinAnnotationColorRed;
-//        
-//        }
-    
-    }
+}
     
     
     return pinView;
@@ -267,6 +299,7 @@ MKMapView* _mapView;
     }else{
         
         DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
+        dvc.select_num = [currentpin.pinNumber intValue];
         //[[self navigationController] pushViewController:dvc animated:YES];
         [self presentViewController:dvc animated:YES completion:nil];
         NSLog(@"%@",view.annotation.title);

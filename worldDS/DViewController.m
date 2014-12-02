@@ -19,24 +19,21 @@
      NSArray *DiaryTmp;
     
     
-    
-    
-    
     // Do any additional setup after loading the view.
     NSString *str_long = @"";
     
     for (int i = 0; i < 10; i++) {NSLog(@"%d",i);
         str_long = [str_long stringByAppendingFormat:@"%@",@""];
-        }
+}
     
     NSLog(@"%@",str_long);
     
-    
     self.DtextView.text = str_long;
 
+    //pinの番号を表示するメソッド
     
-//    _MapDiaryArray = *DiaryTmp.mutableCop
-//    
+    NSLog(@"dvc-%d",self.select_num);
+    
     
 }
 
@@ -82,7 +79,26 @@
     // saveボタンのアクション
     NSLog(@"Save");
     
-//    //手順をふもうまずは変更不可能なDictionaly型を作るselectedCoffee
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //ユーザーデフォルトの中に保存した情報に名前をつけている
+    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+
+   
+    for (int i=1; i < _MapDiaryArray.count; i++) {
+        
+        
+        NSString *Latitude =  _MapDiaryArray[i][@"pinNumber"];
+        double latitude = Latitude.doubleValue;
+        
+               //ユーザーデフォルトの中に保存した情報に名前をつけている
+        _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+        
+        if (_MapDiaryArray == nil) {
+            _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
+        }
+
+    }
+    //    //手順をふもうまずは変更不可能なDictionaly型を作るselectedCoffee
 //    NSDictionary *selectedCoffee = _coffeeArray[self.select_num];
 //    //次に変更可能なNSMutableDictionaly型をつくる上のやつを代入
 //    NSMutableDictionary *changedCoffee = selectedCoffee.mutableCopy;

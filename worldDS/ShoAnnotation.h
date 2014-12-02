@@ -14,13 +14,14 @@
     NSString *title;
     NSString *subtitle;
     NSString *pinColor;
+    NSString *pinNumber;
 }
 
 @property(nonatomic)CLLocationCoordinate2D coordinate;
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *subtitle;
 @property(nonatomic, copy) NSString *pinColor;
-
+@property(nonatomic, copy) NSString *pinNumber;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D)co;
 

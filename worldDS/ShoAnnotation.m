@@ -14,7 +14,7 @@
 @synthesize title;
 @synthesize subtitle;
 @synthesize pinColor;
-
+@synthesize pinNumber;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D)co{
     coordinate = co;
