@@ -59,4 +59,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+- (IBAction)tapimgbtn:(id)sender {
+    
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+    imagePicker.delegate = self;
+    [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    [self presentViewController:imagePicker animated:YES completion:nil];
+
+    NSLog(@"cameratap");
+}
 @end

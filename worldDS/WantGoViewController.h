@@ -24,7 +24,9 @@
 @property (weak, nonatomic) IBOutlet UITextView *TextView;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *imgbtn;
 
+- (IBAction)tapimgbtn:(id)sender;
 
 
 

@@ -41,7 +41,7 @@
     _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
     
     
-    for (int i=1; i < _MapDiaryArray.count; i++) {
+    for (int i=0; i < _MapDiaryArray.count; i++) {
         
         
         NSString *pinNumber =  _MapDiaryArray[i][@"number"];
@@ -67,37 +67,9 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-   
-    
-    // Dispose of any resources that can be recreated.
-//
-//    _coffeeArray = coffeeTmp.mutableCopy;//coffeeTmpを改造できるようにする
-//    
-//    self.coffeeTitle.text = [NSString stringWithFormat:@"%@とは",_coffeeArray[self.select_num][@"name"]];
-//    self.descriptionText.text = _coffeeArray[self.select_num][@"desc"];
-//    
-//    id favoriteflag = _coffeeArray[self.select_num][@"favoriteflag"];//ここでfavoriteflagを取り出し
-//    //上のif文
-//    
-//    int intFavFlag = [favoriteflag intValue];//調べるintValueでfavoriteflagを整数型に変換する事
-
-
-//    
-//    _MapDiaryArray = *DiaryTmp.mutableCopy;
-//    
-//    self.
-//    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmボタンアクションmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 // save ボタンを押した時に　ユーザーデフォルトにデータを保存
@@ -107,7 +79,8 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //ユーザーデフォルトの中に保存した情報に名前をつけている
-    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+    NSArray *tmp_MapDiaryArray =[defaults objectForKey:@"MapDiary"];
+    _MapDiaryArray = tmp_MapDiaryArray.mutableCopy;
 
    
     for (int i=0; i < _MapDiaryArray.count; i++) {
@@ -127,24 +100,13 @@
             
             [_MapDiaryArray replaceObjectAtIndex:i withObject:changedPin];
             
+            // save ボタンを押すとホーム画面に戻る
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
             break;
         
         
-        
-        
-        
-        
-        
-        
-        
         }
-        
-//               //ユーザーデフォルトの中に保存した情報に名前をつけている
-//        _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
-//        
-//        if (_MapDiaryArray == nil) {
-//            _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
-//        }
 
     }
     
@@ -155,56 +117,7 @@
 
     
     
-    //    //手順をふもうまずは変更不可能なDictionaly型を作るselectedCoffee
-//    NSDictionary *selectedCoffee = _coffeeArray[self.select_num];
-//    //次に変更可能なNSMutableDictionaly型をつくる上のやつを代入
-//    NSMutableDictionary *changedCoffee = selectedCoffee.mutableCopy;
-//    
-//    id favoriteflag = _coffeeArray[self.select_num][@"favoriteflag"];//ここで出とりだし
-//    
-//    int intFavFlag = [favoriteflag intValue];//int型に代入
-//    
-//    if (intFavFlag == 0) {
-//        [changedCoffee setObject:@1 forKey:@"favoriteflag"];
-//
-    //手順をふまずには変更不可能なDictionaly型を作るselectedDiary
-//    NSDictionary *selectedDiary = _MapDiaryArray[self.select_num];
-//    
-//    NSMutableDictionary *chengedDiary = selectedDiary.mutableCopy;
-//    
-//    
-//    id favoriteflag = _MapDiaryArray[][@"favoriteflag"];
-//    
-//    
-//    
-//    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//    // データ保存処理
-//        
-//        // userDefaults にボタンアクションでデータを保存
-//         userDefaults = NSUserDefaults.standardUserDefaults()
-//        
-//        // キー: "saveText" , 値: "<textFieldの入力値>" を格納。（idは任意）
-//        userDefaults.setObject(textField.text?, forKey: "saveText")
-//    
-//
-}
+    }
 
 
 - (IBAction)tapShereBtn:(id)sender {

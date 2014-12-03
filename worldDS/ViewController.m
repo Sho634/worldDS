@@ -165,7 +165,8 @@ NSInteger n;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     //ユーザーデフォルトの中に保存した情報に名前をつけている
-    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+    NSArray *tmp_MapDiaryArray =[defaults objectForKey:@"MapDiary"];
+    _MapDiaryArray = tmp_MapDiaryArray.mutableCopy;
     
     if (_MapDiaryArray == nil) {
         _MapDiaryArray = [[NSMutableArray alloc] init];//初期化

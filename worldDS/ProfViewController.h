@@ -23,12 +23,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dreamTextField;
 
-//イメージビュー画像読み込み
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
 @property (weak, nonatomic) IBOutlet UIButton *BackBtn;
 
 - (IBAction)BuckTapBtn:(id)sender;
+
+//画像の読み込み
+@property (weak, nonatomic) IBOutlet UIImageView *profImageView;
+//押された時にカメラロールにつながるボタン
+@property (weak, nonatomic) IBOutlet UIButton *imgbtn;
+- (IBAction)cameraimgbtn:(id)sender;
 
 
 

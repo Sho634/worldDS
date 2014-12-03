@@ -113,6 +113,24 @@
                                     <action selector="BuckTapBtn:" destination="G5I-TF-CIu" eventType="touchUpInside" id="HLh-Le-PjD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophotoかミングスーン.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1Sl-Ck-i7Q">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="236" width="255" height="290"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wry-zO-Qvy">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="7" y="236" width="255" height="290"/>
+                                </variation>
+                                <connections>
+                                    <action selector="cameraimgbtn:" destination="G5I-TF-CIu" eventType="touchUpInside" id="EUE-fK-z9s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -122,6 +140,8 @@
                                 <exclude reference="EZF-hw-UTK"/>
                                 <exclude reference="7tc-7F-ldU"/>
                                 <exclude reference="kSf-IY-aZQ"/>
+                                <exclude reference="1Sl-Ck-i7Q"/>
+                                <exclude reference="Wry-zO-Qvy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -131,6 +151,8 @@
                                 <include reference="EZF-hw-UTK"/>
                                 <include reference="7tc-7F-ldU"/>
                                 <include reference="kSf-IY-aZQ"/>
+                                <include reference="1Sl-Ck-i7Q"/>
+                                <include reference="Wry-zO-Qvy"/>
                             </mask>
                         </variation>
                     </view>
@@ -139,7 +161,9 @@
                         <outlet property="DreamLabel" destination="EZF-hw-UTK" id="XI1-Ms-FOk"/>
                         <outlet property="NameLabel" destination="Ype-QZ-oEG" id="Wgp-kg-TFq"/>
                         <outlet property="dreamTextField" destination="bow-QG-yvV" id="K1m-fI-j19"/>
+                        <outlet property="imgbtn" destination="Wry-zO-Qvy" id="y6j-85-9H1"/>
                         <outlet property="nameTextField" destination="7tc-7F-ldU" id="x26-4s-Iej"/>
+                        <outlet property="profImageView" destination="1Sl-Ck-i7Q" id="fg4-Mw-Qr7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ED5-cD-gy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -158,15 +182,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlg-0A-Fkn">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="182" y="81" width="212" height="29"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCY-D5-leD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Share">
@@ -219,9 +234,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="164" y="118" width="160" height="30"/>
+                                    <rect key="frame" x="173" y="199" width="160" height="30"/>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlg-0A-Fkn">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="188" y="162" width="196" height="29"/>
+                                </variation>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophotoかミングスーン.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-zU-Hvs">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -232,23 +256,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="nlg-0A-Fkn"/>
                                 <exclude reference="bCY-D5-leD"/>
                                 <exclude reference="162-6G-d7M"/>
                                 <exclude reference="CFW-Qg-hai"/>
                                 <exclude reference="YTq-Dg-Khp"/>
                                 <exclude reference="Y6N-GB-hEJ"/>
+                                <exclude reference="nlg-0A-Fkn"/>
                                 <exclude reference="pBW-zU-Hvs"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="nlg-0A-Fkn"/>
                                 <include reference="bCY-D5-leD"/>
                                 <include reference="162-6G-d7M"/>
                                 <include reference="CFW-Qg-hai"/>
                                 <include reference="YTq-Dg-Khp"/>
                                 <include reference="Y6N-GB-hEJ"/>
+                                <include reference="nlg-0A-Fkn"/>
                                 <include reference="pBW-zU-Hvs"/>
                             </mask>
                         </variation>
@@ -264,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJZ-oS-eio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-272" y="807"/>
+            <point key="canvasLocation" x="-273" y="807"/>
         </scene>
         <!--Want Go View Controller-->
         <scene sceneID="Jaf-ZF-9Nd">
@@ -315,9 +339,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NOPHOTO　地球.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P1R-aU-xTy">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="73" width="400" height="253"/>
+                                    <rect key="frame" x="-39" y="66" width="400" height="253"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apC-gD-fzZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="75" width="361" height="244"/>
+                                </variation>
+                                <connections>
+                                    <action selector="tapimgbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="c2F-51-s7x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -326,6 +362,7 @@
                                 <exclude reference="NVW-OW-mdq"/>
                                 <exclude reference="BOW-Yp-nbS"/>
                                 <exclude reference="P1R-aU-xTy"/>
+                                <exclude reference="apC-gD-fzZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -334,6 +371,7 @@
                                 <include reference="NVW-OW-mdq"/>
                                 <include reference="BOW-Yp-nbS"/>
                                 <include reference="P1R-aU-xTy"/>
+                                <include reference="apC-gD-fzZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -342,6 +380,7 @@
                         <outlet property="ImageView" destination="P1R-aU-xTy" id="IZQ-TY-U4S"/>
                         <outlet property="Sharebtn" destination="Eqv-H5-4lp" id="u57-Wp-8B9"/>
                         <outlet property="TextView" destination="NVW-OW-mdq" id="ILr-7N-QGx"/>
+                        <outlet property="imgbtn" destination="apC-gD-fzZ" id="hKh-xs-7hg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51Q-33-bTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
