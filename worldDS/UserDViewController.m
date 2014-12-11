@@ -7,6 +7,9 @@
 //
 
 #import "UserDViewController.h"
+#import "WantGoViewController.h"
+#import "DViewController.h"
+
 
 @interface UserDViewController ()
 
@@ -16,14 +19,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
+//    
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    NSArray *gogoTmp;
+    
+    //保存されたデータを取り出す
+   // gogoTmp = [defaults objectForKey:@"PinTable"];
+
+    //UserDefaultからデータを取り出す
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    NSArray *MapDiaryTmp;
+    NSArray *gogoTmp;
+    
+    //保存されたデータを取り出す
+    gogoTmp = [defaults objectForKey:@"coffeeTable"];
+
+    
+    
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     _MapDiaryArray = [defaults objectForKey:@"MapDiary"]; //Tmp一時的な変数
+    
     _DiaryTableView.delegate = self;
     _DiaryTableView.dataSource = self;
+
 }
+
+
+
 
 //行数を決定するメソッド
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -63,29 +88,36 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
+    
+    NSLog(@"Tap:%ld",(long)indexPath.row);
+    
+   
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    
+    // if　文を使って緑ピンえお押したときはWG 赤を押したときは　DVに行く
+    if ([_MapDiaryArray[indexPath.row][@"Pincolor"] isEqualToString:@"green"]) {
+        
+        WantGoViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"WantGoViewController"];
+        dvc.select_num = (int)indexPath.row;
+        
+            [self presentViewController:dvc animated:YES completion:nil];
+        
+    }else{
+        
+        DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
+        dvc.select_num = (int)indexPath.row;
+        
+            [self presentViewController:dvc animated:YES completion:nil];
+        
+    }
 
-
-
-
-
-
-
-
-
+    
 
 }
 
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)BackTapBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

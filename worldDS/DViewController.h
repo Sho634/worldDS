@@ -7,42 +7,32 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface DViewController : UIViewController
 {
+  
     NSMutableArray *_MapDiaryArray;
+    NSString *_assetsUrl;    //assetsUrlを格納するインスタンス
+    ALAssetsLibrary *_library;  //ALAssetsLibraryのインスタンス
 }
 @property (nonatomic,assign) int select_num;
-
-//mmmmmmmmmmmmmmセーブボタン（保存）mmmmmmmmmm
 @property (weak, nonatomic) IBOutlet UIButton *SaveBtn;
-
 - (IBAction)tapSaveBtn:(id)sender;
-
-//mmmmmmmmmmmmmmシェアボタンmmmmmmmmmmmmmmmmm
 @property (weak, nonatomic) IBOutlet UIButton *ShereBtn;
-
 - (IBAction)tapShereBtn:(id)sender;
-
-//mmmmmmmmmmmmmmホームボタンmmmmmmmmmmmmmmmmm
-
 @property (weak, nonatomic) IBOutlet UIButton *Homebtn;
-
 - (IBAction)tapHomebtn:(id)sender;
-///////////////////////////////////////////
-
-
-//mmmmmmmmmmmmmmm名前ラベルmmmmmmmmmmmmmmmmmm
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
-
-//mmmmmmmmmmmmmmm日記のタイトルmmmmmmmmmmmmmmm
-
 @property (weak, nonatomic) IBOutlet UITextView *DtextView;
-//mmmmmmmmmmmmmmmテキストフィールドmmmmmmmmmmmmmm
-
 @property (weak, nonatomic) IBOutlet UITextField *NameTextField;
+//@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dreamLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *profImageView;
 
-///////////////////////////////////////////
+@property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
+
+- (IBAction)tapdeleteBtn:(id)sender;
+
 
 @end

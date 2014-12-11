@@ -17,12 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    
+    self.nameTextField.text = [defaults objectForKey:@"Name"];
+    self.dreamTextField.text = [defaults objectForKey:@"Dream"];
+    
+    if (_library ==nil) {
+        _library = [[ALAssetsLibrary alloc]init];
+    }
 
+    [self showPhoto:[defaults objectForKey:@"URL"]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+
+
 }
 
 //mmmmmmmmmmmmmmmmmmmmmmmmカメラロールから画像を取り出す時の動作mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
@@ -34,37 +48,97 @@
 
     
     
-//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-//    imagePicker.delegate = self;
-//    [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-//    [self presentViewController:imagePicker animated:YES completion:nil];
-    
-    
    
 }
 
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmボタン押した時にホームに帰るmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (IBAction)BuckTapBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-
-////mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmカメラロールから画像を取り出すメソッド
-//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-//       imagePicker.delegate = self;
-//       [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-//       [self presentViewController:imagePicker animated:YES completion:nil];
-//
-
-
-
     
     
 }
 - (IBAction)cameraimgbtn:(id)sender {
+    
+    
+    UIImagePickerControllerSourceType sourceType = -1;
+    
+    //イメージピッカーの生成
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-    imagePicker.delegate = self;
-    [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    
+    //カメラロールに起動する
+    sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    //その機能が使えなかったら、処理を中止する。
+    if(![UIImagePickerController isSourceTypeAvailable:sourceType])
+    {
+        return;
+    }
+    
+    
+    imagePicker.sourceType = sourceType;
+    imagePicker.delegate = (id)self;
+    
+    //イメージピッカー表示
     [self presentViewController:imagePicker animated:YES completion:nil];
- 
-    NSLog(@"camera");
+    
+
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    ////mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmカメラライブラリから選んだ写真のURLを取得。
+    _assetsUrl = [(NSURL *)[info objectForKey:@"UIImagePickerControllerReferenceURL"] absoluteString];
+    [self showPhoto:_assetsUrl];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];  //元の画面に戻る
+}
+
+//assetsから取得した画像を表示する
+-(void)showPhoto:(NSString *)url
+{
+   
+    //URLからALAssetを取得
+    [_library assetForURL:[NSURL URLWithString:url]
+              resultBlock:^(ALAsset *asset) {
+                  
+                  //画像があればYES、無ければNOを返す
+                  if(asset){
+                      NSLog(@"データがあります");
+                      //ALAssetRepresentationクラスのインスタンスの作成
+                      ALAssetRepresentation *assetRepresentation = [asset defaultRepresentation];
+                      
+                      //ALAssetRepresentationを使用して、フルスクリーン用の画像をUIImageに変換
+                      //fullScreenImageで元画像と同じ解像度の写真を取得する。
+                      UIImage *fullscreenImage = [UIImage imageWithCGImage:[assetRepresentation fullScreenImage]];
+                      self.profImageView.image = fullscreenImage; //イメージをセット
+                      
+                      NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                      
+                      [defaults setObject:url forKey:@"URL"];//_coffeearrayをcoffeetableというキーで保存
+                      
+                      
+                      [defaults synchronize];
+                      
+                  }else{
+                      NSLog(@"データがありません");
+                  }
+                  
+              } failureBlock: nil];
+    
+}
+- (IBAction)tapSavebtn:(id)sender {
+    
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:self.nameTextField.text forKey:@"Name"];//_coffeearrayをcoffeetableというキーで保存
+    
+    [defaults setObject:self.dreamTextField.text forKey:@"Dream"];
+
+    
+    
+    [defaults synchronize];
+    NSLog(@"tapsave");
 }
 @end

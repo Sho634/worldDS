@@ -14,6 +14,7 @@
 		949E5BF91A15EA5A00761ACA /* ProfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BF81A15EA5A00761ACA /* ProfViewController.m */; };
 		949E5BFC1A178DFE00761ACA /* WantGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFB1A178DFE00761ACA /* WantGoViewController.m */; };
 		949E5BFF1A178E4D00761ACA /* UserDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFE1A178E4D00761ACA /* UserDViewController.m */; };
+		94A1B7D51A3047300089FFA1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A1B7D41A3047300089FFA1 /* AssetsLibrary.framework */; };
 		94A649C91A1323870026C864 /* DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A649C81A1323870026C864 /* DViewController.m */; };
 		94F3D4CF1A10A4E2005422A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4CE1A10A4E2005422A2 /* main.m */; };
 		94F3D4D21A10A4E2005422A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D11A10A4E2005422A2 /* AppDelegate.m */; };
@@ -47,6 +48,7 @@
 		949E5BFB1A178DFE00761ACA /* WantGoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WantGoViewController.m; sourceTree = "<group>"; };
 		949E5BFD1A178E4D00761ACA /* UserDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDViewController.h; sourceTree = "<group>"; };
 		949E5BFE1A178E4D00761ACA /* UserDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDViewController.m; sourceTree = "<group>"; };
+		94A1B7D41A3047300089FFA1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		94A649C71A1323870026C864 /* DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DViewController.h; sourceTree = "<group>"; };
 		94A649C81A1323870026C864 /* DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DViewController.m; sourceTree = "<group>"; };
 		94F3D4C91A10A4E2005422A2 /* worldDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worldDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A1B7D51A3047300089FFA1 /* AssetsLibrary.framework in Frameworks */,
 				94F3D4F31A10A4F7005422A2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +90,7 @@
 		94F3D4C01A10A4E2005422A2 = {
 			isa = PBXGroup;
 			children = (
+				94A1B7D41A3047300089FFA1 /* AssetsLibrary.framework */,
 				94F3D4F21A10A4F7005422A2 /* MapKit.framework */,
 				94F3D4CB1A10A4E2005422A2 /* worldDS */,
 				94F3D4E51A10A4E2005422A2 /* worldDSTests */,

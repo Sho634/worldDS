@@ -7,32 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+
 
 //@interface ProfViewController : UIViewController
 @interface ProfViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-
+{
+    NSString *_assetsUrl;    //assetsUrlを格納するインスタンス
+    ALAssetsLibrary *_library;  //ALAssetsLibraryのインスタンス
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
-
-//Label
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *DreamLabel;
-
-//テキストフィールド
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dreamTextField;
-
 @property (weak, nonatomic) IBOutlet UIButton *BackBtn;
-
 - (IBAction)BuckTapBtn:(id)sender;
-
-//画像の読み込み
 @property (weak, nonatomic) IBOutlet UIImageView *profImageView;
-//押された時にカメラロールにつながるボタン
 @property (weak, nonatomic) IBOutlet UIButton *imgbtn;
 - (IBAction)cameraimgbtn:(id)sender;
-
-
+@property (weak, nonatomic) IBOutlet UIButton *saveBtn;
+- (IBAction)tapSavebtn:(id)sender;
 
 @end

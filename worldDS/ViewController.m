@@ -35,11 +35,14 @@ NSInteger n;
     _mapView.frame = CGRectMake(0, 20, 320, 460);
     
     CLLocationCoordinate2D co;
+//最初の表示画面に現在地を表示する
+    //eriko先生助けて
+    
     co.latitude = 35.689488;       //緯度
     co.longitude = 139.691706;     //軽度
     MKCoordinateRegion cr = _mapView.region;
-    cr.span.latitudeDelta = 0.05;
-    cr.span.longitudeDelta = 0.05;
+    cr.span.latitudeDelta = 0.2;
+    cr.span.longitudeDelta = 0.2;
     cr.center = co;
     [_mapView setRegion:cr];
     
@@ -53,8 +56,7 @@ NSInteger n;
 
     _mapView.delegate = self;
 
-//mmmmmmmmmmmmmmmmmmmmmmmmロングジェスチャーの設定とアクション設定mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-  
+//mmmmmmmmmmmmmmmmmmmmmmmmロングジェスチャーの設定とアクション設定mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
     [_mapView addGestureRecognizer:longPressGesture];
@@ -89,12 +91,9 @@ NSInteger n;
             _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
         }
         
-        
-        
         pin.pinNumber = _MapDiaryArray[i][@"number"];;
         
-       
-    //アノテーションを追加
+       //アノテーションを追加
     [_mapView addAnnotation:pin];
     //表示する為にビューに追加
     [self.view addSubview:_mapView];
@@ -103,7 +102,6 @@ NSInteger n;
     
    
 }
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 
 
@@ -111,7 +109,7 @@ NSInteger n;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//mmmmmmmmmmmmmmmmmmmmmmロングジェスチャーのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//mmmmmmmmmmmmmmmmmmmmmmロングジェスチャーmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (void)handleLongPressGesture:(UILongPressGestureRecognizer *)gesture {
     
     //長押し検出時のみ作動
@@ -185,9 +183,6 @@ NSInteger n;
     
 
     
-    
-    
-    
     // マップの表示を変更
     if (mapMove) {
         MKCoordinateSpan CoordinateSpan = MKCoordinateSpanMake(0.005,0.005);
@@ -206,26 +201,7 @@ NSInteger n;
     
 //////////////////////////////////////宿敵ユーザーでフォルト/////////////////////////////////////////////////////
 ///////////////////////////////////////////データを保存////////////////////////////////////////////////////////
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    //ユーザーデフォルトの中に保存した情報に名前をつけている
-//    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
-//    
-//    if (_MapDiaryArray == nil) {
-//        _MapDiaryArray = [[NSMutableArray alloc] init];//初期化
-//    }
-//    
-//   //ピンを番号で管理するメソッド
-//    _maxnumber = [[defaults objectForKey:@"maxnumber"] intValue];
-//    
-//    if (_maxnumber <=0) {
-//        _maxnumber = 1;
-//    }else{
-//        _maxnumber =+1;
-//    }
 //
-//    anno.pinNumber = [NSString stringWithFormat:@"%d",_maxnumber];
-//    
     //新しいピンの情報をセット
     NSDictionary *pinInfo = @{@"Latitude":[NSString stringWithFormat:@"%f",anno.coordinate.latitude],
                               @"Longitude":[NSString stringWithFormat:@"%f",anno.coordinate.longitude],
@@ -291,7 +267,9 @@ NSInteger n;
     //グリーンピンの　i ボタンを押した時に反応する　if 文mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
     if ([currentpin.pinColor isEqualToString:@"green"]) {
        
-        WantGoViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"WantGoViewController"];
+        WantGoViewController *dvc = [self.storyboard
+                                     instantiateViewControllerWithIdentifier:@"WantGoViewController"];
+        dvc.select_num = [currentpin.pinNumber intValue];
         //[[self navigationController] pushViewController:dvc animated:YES];
         [self presentViewController:dvc animated:YES completion:nil];
         NSLog(@"%@",view.annotation.title);

@@ -10,16 +10,16 @@
 
 @interface UserDViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
-    NSMutableArray *_MapDiaryArray;
+NSMutableArray *_MapDiaryArray;
+BOOL _redpinFlag;       //赤ピンのフラグ
+BOOL _greenpinFlag;     //緑ピンフラグ
 }
+
+
 @property NSUserDefaults *userDefaults;
 @property (weak, nonatomic) IBOutlet UIButton *BackBtn;
-
-
 - (IBAction)BackTapBtn:(id)sender;
-
-
 @property (weak, nonatomic) IBOutlet UITableView *DiaryTableView;
-
+@property (nonatomic,assign) int select_num;
 
 @end
