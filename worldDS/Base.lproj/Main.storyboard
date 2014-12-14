@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -24,12 +25,8 @@
                                     <tabBarItem tag="2" title="Diary" image="日記.png" id="mmo-Jm-eLf"/>
                                     <tabBarItem tag="3" title="Set" image="155.png" id="rUm-Os-NRW"/>
                                 </items>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
-                                </userDefinedRuntimeAttributes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="1" y="482" width="318" height="49"/>
+                                    <rect key="frame" x="2" y="492" width="318" height="49"/>
                                 </variation>
                             </tabBar>
                         </subviews>
@@ -52,7 +49,6 @@
                         <outlet property="RedPinTab" destination="xFl-Wm-WvO" id="yKn-ie-jNb"/>
                         <outlet property="SetBarItem" destination="rUm-Os-NRW" id="03f-Qk-bws"/>
                         <outlet property="TabBar" destination="ton-4f-9hy" id="XyH-FW-2V9"/>
-                        <outlet property="mainTabBar" destination="ton-4f-9hy" id="YZI-RT-Qnd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -235,12 +231,6 @@
                                     <rect key="frame" x="16" y="240" width="36" height="27"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophotoかミングスーン.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-zU-Hvs">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="65" width="137" height="125"/>
-                                </variation>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-0o-owg">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -301,6 +291,12 @@
                                     <rect key="frame" x="30" y="283" width="260" height="223"/>
                                 </variation>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophotoかミングスーン.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-zU-Hvs">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="22" y="69" width="137" height="125"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -308,13 +304,13 @@
                                 <exclude reference="bCY-D5-leD"/>
                                 <exclude reference="162-6G-d7M"/>
                                 <exclude reference="nlg-0A-Fkn"/>
-                                <exclude reference="pBW-zU-Hvs"/>
                                 <exclude reference="hjT-0o-owg"/>
                                 <exclude reference="zN1-8W-QJ3"/>
                                 <exclude reference="Y6N-GB-hEJ"/>
                                 <exclude reference="gc3-CP-PRd"/>
                                 <exclude reference="YTq-Dg-Khp"/>
                                 <exclude reference="CFW-Qg-hai"/>
+                                <exclude reference="pBW-zU-Hvs"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -322,13 +318,13 @@
                                 <include reference="bCY-D5-leD"/>
                                 <include reference="162-6G-d7M"/>
                                 <include reference="nlg-0A-Fkn"/>
-                                <include reference="pBW-zU-Hvs"/>
                                 <include reference="hjT-0o-owg"/>
                                 <include reference="zN1-8W-QJ3"/>
                                 <include reference="Y6N-GB-hEJ"/>
                                 <include reference="gc3-CP-PRd"/>
                                 <include reference="YTq-Dg-Khp"/>
                                 <include reference="CFW-Qg-hai"/>
+                                <include reference="pBW-zU-Hvs"/>
                             </mask>
                         </variation>
                     </view>
@@ -374,18 +370,6 @@
                                     <action selector="Sharetapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="Io1-JY-96Y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apC-gD-fzZ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="42" y="111" width="197" height="204"/>
-                                </variation>
-                                <connections>
-                                    <action selector="tapimgbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="c2F-51-s7x"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AG-Iz-7cc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Save">
@@ -398,12 +382,6 @@
                                     <action selector="tapSavebtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="sFc-Lc-RZ9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NOPHOTO　地球.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P1R-aU-xTy">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="121" width="221" height="184"/>
-                                </variation>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Um-aI-jj4">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -454,32 +432,36 @@
                                     <action selector="Backtapbtn:" destination="JLz-Kz-fYP" eventType="touchUpInside" id="2pe-qw-eWh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NOPHOTO　地球.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P1R-aU-xTy">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="53" y="138" width="221" height="184"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Eqv-H5-4lp"/>
-                                <exclude reference="apC-gD-fzZ"/>
                                 <exclude reference="9AG-Iz-7cc"/>
-                                <exclude reference="P1R-aU-xTy"/>
                                 <exclude reference="3Um-aI-jj4"/>
                                 <exclude reference="nFF-Tu-X4o"/>
                                 <exclude reference="NVW-OW-mdq"/>
                                 <exclude reference="1Iv-6u-Lmo"/>
                                 <exclude reference="BOW-Yp-nbS"/>
+                                <exclude reference="P1R-aU-xTy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Eqv-H5-4lp"/>
-                                <include reference="apC-gD-fzZ"/>
                                 <include reference="9AG-Iz-7cc"/>
-                                <include reference="P1R-aU-xTy"/>
                                 <include reference="3Um-aI-jj4"/>
                                 <include reference="nFF-Tu-X4o"/>
                                 <include reference="NVW-OW-mdq"/>
                                 <include reference="1Iv-6u-Lmo"/>
                                 <include reference="BOW-Yp-nbS"/>
+                                <include reference="P1R-aU-xTy"/>
                             </mask>
                         </variation>
                     </view>
@@ -492,7 +474,6 @@
                         <outlet property="deleteBtngogo" destination="1Iv-6u-Lmo" id="kDg-Y1-qc7"/>
                         <outlet property="gogoText" destination="nFF-Tu-X4o" id="zhu-7N-rQy"/>
                         <outlet property="gogoTitle" destination="3Um-aI-jj4" id="Xxi-G8-mLS"/>
-                        <outlet property="imgbtn" destination="apC-gD-fzZ" id="hKh-xs-7hg"/>
                         <outlet property="saveBtn" destination="9AG-Iz-7cc" id="Nwm-fP-GUa"/>
                     </connections>
                 </viewController>
@@ -528,7 +509,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="35" y="100" width="202" height="422"/>
+                                    <rect key="frame" x="35" y="100" width="202" height="415"/>
                                 </variation>
                             </tableView>
                         </subviews>

@@ -327,6 +327,8 @@
         
         [defaults synchronize];
 
+  //12.13      [[self presentingViewController] loadView];
+        
         [self dismissViewControllerAnimated:YES completion:nil];
         
     }else{NSLog(@"Cancel");

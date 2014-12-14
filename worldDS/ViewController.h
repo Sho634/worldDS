@@ -16,7 +16,7 @@ BOOL _redpinFlag;       //赤ピンのフラグ
 BOOL _greenpinFlag;     //緑ピンフラグ
 }
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーのコマンドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-@property (weak, nonatomic) IBOutlet UITabBar *mainTabBar;
+
 @property (weak, nonatomic) IBOutlet UITabBar *TabBar;
 @property (weak, nonatomic) IBOutlet UITabBarItem *DiaryTabItem;
 @property (weak, nonatomic) IBOutlet UITabBarItem *RedPinTab;

@@ -14,7 +14,6 @@
 		949225431A3DD30100DC808E /* gogo手紙.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492253D1A3DD30100DC808E /* gogo手紙.png */; };
 		949225441A3DD30100DC808E /* gogo背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492253E1A3DD30100DC808E /* gogo背景.png */; };
 		949225451A3DD30100DC808E /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492253F1A3DD30100DC808E /* red.png */; };
-		949225461A3DD30100DC808E /* 設定.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225401A3DD30100DC808E /* 設定.png */; };
 		949225471A3DD30100DC808E /* 日記.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225411A3DD30100DC808E /* 日記.png */; };
 		949225481A3DD30100DC808E /* 日記管理画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225421A3DD30100DC808E /* 日記管理画面.png */; };
 		9492254A1A3DD32F00DC808E /* 155.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225491A3DD32F00DC808E /* 155.png */; };
@@ -52,7 +51,6 @@
 		9492253D1A3DD30100DC808E /* gogo手紙.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gogo手紙.png"; sourceTree = "<group>"; };
 		9492253E1A3DD30100DC808E /* gogo背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gogo背景.png"; sourceTree = "<group>"; };
 		9492253F1A3DD30100DC808E /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
-		949225401A3DD30100DC808E /* 設定.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "設定.png"; sourceTree = "<group>"; };
 		949225411A3DD30100DC808E /* 日記.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日記.png"; sourceTree = "<group>"; };
 		949225421A3DD30100DC808E /* 日記管理画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日記管理画面.png"; sourceTree = "<group>"; };
 		949225491A3DD32F00DC808E /* 155.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 155.png; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				9492253D1A3DD30100DC808E /* gogo手紙.png */,
 				9492253E1A3DD30100DC808E /* gogo背景.png */,
 				9492253F1A3DD30100DC808E /* red.png */,
-				949225401A3DD30100DC808E /* 設定.png */,
 				949225411A3DD30100DC808E /* 日記.png */,
 				949225421A3DD30100DC808E /* 日記管理画面.png */,
 				9492253B1A3DD2AD00DC808E /* ごみごみ.png */,
@@ -263,7 +260,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				949225461A3DD30100DC808E /* 設定.png in Resources */,
 				94F3D4D81A10A4E2005422A2 /* Main.storyboard in Resources */,
 				94F3D4DD1A10A4E2005422A2 /* LaunchScreen.xib in Resources */,
 				949225471A3DD30100DC808E /* 日記.png in Resources */,
