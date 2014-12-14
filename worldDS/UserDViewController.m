@@ -54,7 +54,11 @@
 
 }
 
-
+//
+-(void)viewDidAppear:(BOOL)animated{
+    
+     [self.DiaryTableView reloadData];
+}
 
 
 //行数を決定するメソッド

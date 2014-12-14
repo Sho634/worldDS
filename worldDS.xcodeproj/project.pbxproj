@@ -10,13 +10,14 @@
 		94467BC71A1B12BD0025973A /* nophotoかミングスーン.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94467BC61A1B12BD0025973A /* nophotoかミングスーン.jpg */; };
 		94467BC91A1B13AB0025973A /* NOPHOTO　地球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94467BC81A1B13AB0025973A /* NOPHOTO　地球.jpg */; };
 		94467BCC1A1F18A90025973A /* ShoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94467BCB1A1F18A90025973A /* ShoAnnotation.m */; };
-		9490BD3F1A3D765900DD2374 /* 日記管理画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 9490BD3E1A3D765900DD2374 /* 日記管理画面.png */; };
-		9490BD431A3D811300DD2374 /* ごみごみ.png in Resources */ = {isa = PBXBuildFile; fileRef = 9490BD421A3D811300DD2374 /* ごみごみ.png */; };
-		9490BD491A3D855500DD2374 /* 日記.png in Resources */ = {isa = PBXBuildFile; fileRef = 9490BD481A3D855500DD2374 /* 日記.png */; };
-		9490BD4B1A3D856900DD2374 /* 155.png in Resources */ = {isa = PBXBuildFile; fileRef = 9490BD4A1A3D856900DD2374 /* 155.png */; };
-		9490BD4F1A3D94C700DD2374 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9490BD4E1A3D94C700DD2374 /* red.png */; };
-		9490BD531A3D997B00DD2374 /* gogo手紙.png in Resources */ = {isa = PBXBuildFile; fileRef = 9490BD521A3D997B00DD2374 /* gogo手紙.png */; };
-		9490BD551A3DA48D00DD2374 /* gogo背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9490BD541A3DA48D00DD2374 /* gogo背景.png */; };
+		9492253C1A3DD2AD00DC808E /* ごみごみ.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492253B1A3DD2AD00DC808E /* ごみごみ.png */; };
+		949225431A3DD30100DC808E /* gogo手紙.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492253D1A3DD30100DC808E /* gogo手紙.png */; };
+		949225441A3DD30100DC808E /* gogo背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492253E1A3DD30100DC808E /* gogo背景.png */; };
+		949225451A3DD30100DC808E /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492253F1A3DD30100DC808E /* red.png */; };
+		949225461A3DD30100DC808E /* 設定.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225401A3DD30100DC808E /* 設定.png */; };
+		949225471A3DD30100DC808E /* 日記.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225411A3DD30100DC808E /* 日記.png */; };
+		949225481A3DD30100DC808E /* 日記管理画面.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225421A3DD30100DC808E /* 日記管理画面.png */; };
+		9492254A1A3DD32F00DC808E /* 155.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225491A3DD32F00DC808E /* 155.png */; };
 		949E5BF91A15EA5A00761ACA /* ProfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BF81A15EA5A00761ACA /* ProfViewController.m */; };
 		949E5BFC1A178DFE00761ACA /* WantGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFB1A178DFE00761ACA /* WantGoViewController.m */; };
 		949E5BFF1A178E4D00761ACA /* UserDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFE1A178E4D00761ACA /* UserDViewController.m */; };
@@ -47,13 +48,14 @@
 		94467BC81A1B13AB0025973A /* NOPHOTO　地球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NOPHOTO　地球.jpg"; sourceTree = "<group>"; };
 		94467BCA1A1F18A90025973A /* ShoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoAnnotation.h; sourceTree = "<group>"; };
 		94467BCB1A1F18A90025973A /* ShoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoAnnotation.m; sourceTree = "<group>"; };
-		9490BD3E1A3D765900DD2374 /* 日記管理画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "日記管理画面.png"; path = "../../../日記管理画面.png"; sourceTree = "<group>"; };
-		9490BD421A3D811300DD2374 /* ごみごみ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ごみごみ.png"; path = "../../../ごみごみ.png"; sourceTree = "<group>"; };
-		9490BD481A3D855500DD2374 /* 日記.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "日記.png"; path = "../../../日記.png"; sourceTree = "<group>"; };
-		9490BD4A1A3D856900DD2374 /* 155.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 155.png; path = ../../../155.png; sourceTree = "<group>"; };
-		9490BD4E1A3D94C700DD2374 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = ../../../red.png; sourceTree = "<group>"; };
-		9490BD521A3D997B00DD2374 /* gogo手紙.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gogo手紙.png"; path = "../../../gogo手紙.png"; sourceTree = "<group>"; };
-		9490BD541A3DA48D00DD2374 /* gogo背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gogo背景.png"; path = "../../../gogo背景.png"; sourceTree = "<group>"; };
+		9492253B1A3DD2AD00DC808E /* ごみごみ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ごみごみ.png"; sourceTree = "<group>"; };
+		9492253D1A3DD30100DC808E /* gogo手紙.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gogo手紙.png"; sourceTree = "<group>"; };
+		9492253E1A3DD30100DC808E /* gogo背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gogo背景.png"; sourceTree = "<group>"; };
+		9492253F1A3DD30100DC808E /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		949225401A3DD30100DC808E /* 設定.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "設定.png"; sourceTree = "<group>"; };
+		949225411A3DD30100DC808E /* 日記.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日記.png"; sourceTree = "<group>"; };
+		949225421A3DD30100DC808E /* 日記管理画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日記管理画面.png"; sourceTree = "<group>"; };
+		949225491A3DD32F00DC808E /* 155.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 155.png; sourceTree = "<group>"; };
 		949E5BF71A15EA5A00761ACA /* ProfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfViewController.h; sourceTree = "<group>"; };
 		949E5BF81A15EA5A00761ACA /* ProfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfViewController.m; sourceTree = "<group>"; };
 		949E5BFA1A178DFE00761ACA /* WantGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WantGoViewController.h; sourceTree = "<group>"; };
@@ -147,13 +149,14 @@
 		94F3D4CC1A10A4E2005422A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9490BD541A3DA48D00DD2374 /* gogo背景.png */,
-				9490BD521A3D997B00DD2374 /* gogo手紙.png */,
-				9490BD4E1A3D94C700DD2374 /* red.png */,
-				9490BD4A1A3D856900DD2374 /* 155.png */,
-				9490BD481A3D855500DD2374 /* 日記.png */,
-				9490BD421A3D811300DD2374 /* ごみごみ.png */,
-				9490BD3E1A3D765900DD2374 /* 日記管理画面.png */,
+				949225491A3DD32F00DC808E /* 155.png */,
+				9492253D1A3DD30100DC808E /* gogo手紙.png */,
+				9492253E1A3DD30100DC808E /* gogo背景.png */,
+				9492253F1A3DD30100DC808E /* red.png */,
+				949225401A3DD30100DC808E /* 設定.png */,
+				949225411A3DD30100DC808E /* 日記.png */,
+				949225421A3DD30100DC808E /* 日記管理画面.png */,
+				9492253B1A3DD2AD00DC808E /* ごみごみ.png */,
 				94467BC81A1B13AB0025973A /* NOPHOTO　地球.jpg */,
 				94467BC61A1B12BD0025973A /* nophotoかミングスーン.jpg */,
 				94F3D4CD1A10A4E2005422A2 /* Info.plist */,
@@ -260,18 +263,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949225461A3DD30100DC808E /* 設定.png in Resources */,
 				94F3D4D81A10A4E2005422A2 /* Main.storyboard in Resources */,
-				9490BD4B1A3D856900DD2374 /* 155.png in Resources */,
 				94F3D4DD1A10A4E2005422A2 /* LaunchScreen.xib in Resources */,
+				949225471A3DD30100DC808E /* 日記.png in Resources */,
 				94467BC71A1B12BD0025973A /* nophotoかミングスーン.jpg in Resources */,
+				949225451A3DD30100DC808E /* red.png in Resources */,
 				94F3D4DA1A10A4E2005422A2 /* Images.xcassets in Resources */,
-				9490BD431A3D811300DD2374 /* ごみごみ.png in Resources */,
-				9490BD491A3D855500DD2374 /* 日記.png in Resources */,
-				9490BD551A3DA48D00DD2374 /* gogo背景.png in Resources */,
-				9490BD4F1A3D94C700DD2374 /* red.png in Resources */,
-				9490BD531A3D997B00DD2374 /* gogo手紙.png in Resources */,
-				9490BD3F1A3D765900DD2374 /* 日記管理画面.png in Resources */,
+				949225441A3DD30100DC808E /* gogo背景.png in Resources */,
 				94467BC91A1B13AB0025973A /* NOPHOTO　地球.jpg in Resources */,
+				9492253C1A3DD2AD00DC808E /* ごみごみ.png in Resources */,
+				949225481A3DD30100DC808E /* 日記管理画面.png in Resources */,
+				949225431A3DD30100DC808E /* gogo手紙.png in Resources */,
+				9492254A1A3DD32F00DC808E /* 155.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
