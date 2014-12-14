@@ -16,8 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    //ui　イメージを背景に設定する
+    UIImage *backimage = [UIImage imageNamed:@"gogo背景.png"];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
+
+    
+   
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     

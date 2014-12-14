@@ -22,7 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //ui　イメージを背景に設定する
+    UIImage *backimage = [UIImage imageNamed:@"gogo手紙.png"];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
    
+    
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     self.gogoText.text = [defaults objectForKey:@"Pintitle"];
@@ -38,15 +44,15 @@
     
    
     
-    NSString *str_long = @"";
-    
-    for (int i = 0; i < 10; i++) {NSLog(@"%d",i);
-        str_long = [str_long stringByAppendingFormat:@"%@",@""];
-    }
-    
-    NSLog(@"%@",str_long);
-    
-    self.gogoText.text = str_long;
+//    NSString *str_long = @"";
+//    
+//    for (int i = 0; i < 10; i++) {NSLog(@"%d",i);
+//        str_long = [str_long stringByAppendingFormat:@"%@",@""];
+//    }
+//    
+//    NSLog(@"%@",str_long);
+//    
+//    self.gogoText.text = str_long;
     
     //pinの番号を表示する
     NSLog(@"dvc-%d",self.select_num);
@@ -291,6 +297,42 @@
 
 - (IBAction)deleteBtnTapgogo:(id)sender {
     NSLog(@"delete");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"delete the history" message:@"May I delete this history?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [alert show];
     
+}
+
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 1) {
+        NSLog(@"delete");
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        //削除処理
+        
+        NSArray *checkArray = _MapDiaryArray.mutableCopy;
+        
+        for (NSDictionary *each in checkArray) {
+            if ([each[@"number"] intValue] == self.select_num) {
+                [_MapDiaryArray removeObject:each];
+                break;
+            }
+        }
+        
+        
+              
+        
+        [defaults setObject:_MapDiaryArray forKey:@"MapDiary"];
+        
+        [defaults synchronize];
+
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    }else{NSLog(@"Cancel");
+        
+    }
+    
+
 }
 @end

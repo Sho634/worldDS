@@ -19,7 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
+
+    //ui　イメージを背景に設定する
+    UIImage *backimage = [UIImage imageNamed:@"日記管理画面.png"];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
+
+    
+    //    DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
 //    
 //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //    
@@ -86,7 +93,8 @@
 }
 //テーブルビューに_MapDiaryArrayの中身を表示する。
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     
     NSLog(@"Tap:%ld",(long)indexPath.row);
@@ -100,14 +108,14 @@
     if ([_MapDiaryArray[indexPath.row][@"Pincolor"] isEqualToString:@"green"]) {
         
         WantGoViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"WantGoViewController"];
-        dvc.select_num = (int)indexPath.row;
+        dvc.select_num = [_MapDiaryArray[indexPath.row][@"number"] intValue];
         
             [self presentViewController:dvc animated:YES completion:nil];
         
     }else{
         
         DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
-        dvc.select_num = (int)indexPath.row;
+        dvc.select_num = [_MapDiaryArray[indexPath.row][@"number"] intValue];
         
             [self presentViewController:dvc animated:YES completion:nil];
         

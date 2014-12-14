@@ -7,7 +7,6 @@
 //
 
 #import "DViewController.h"
-#import "ShoAnnotation.h"
 
 
 
@@ -20,6 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    //ui　イメージを背景に設定する
+    UIImage *backimage = [UIImage imageNamed:@"gogo背景.png"];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
+
+    
+    
    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -73,6 +79,12 @@
         
     }
 
+ 
+    
+    
+    
+    
+    
     
     
 }
@@ -229,7 +241,7 @@
     if (NULL != UIGraphicsBeginImageContextWithOptions)
         UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
     else
-        UIGraphicsBeginImageContext(imageSize);
+    UIGraphicsBeginImageContext(imageSize);
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);
@@ -264,80 +276,44 @@
 
 - (IBAction)tapdeleteBtn:(id)sender {//データー削除が分からない！！！！！！！！！！！！！！！！！！！！！！！！！
     NSLog(@"delete");
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-    //宿題
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    NSString *ShoAnnotation = @"favoritelist";
-//    //番号にそった名前を代入
-//    ShoAnnotation = [self returnBoxName:app.second_select_num];
-//    NSArray *favorite;
-//    //保存されたデータを取り出す
-//    favorite = [defaults objectForKey:boxname];
-//    _MapDiaryArray = favorite.mutableCopy;
-//
-//    
-//    
-////    
-////    //ユーザーデフォルトを取得する
-////    NSUserDefaults * userDefaults;
-////    
-////    //userDefaults = [NSUserDefaults standardUserDefaults];
-////    
-////    //設定値を保存する
-////    [userDefaults setInteger:6
-////                      forKey:@"myValue"];
-////    
-////    //設定値を削除する
-////    [userDefaults removeObjectForKey:@"myValue"];
-////    
-////    //ファイルに反映する
-////    [userDefaults synchronize];
-//    
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"履歴を削除" message:@"こちらの履歴を削除してもよろしいですか？" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-//    
-//    [alert show];
-//    
-//    //ユーザーデフォルトを使えるようにする
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    //消したいデーターをセレクトナムを使って消す
-//    [_MapDiaryArray removeObject:_MapDiaryArray[_select_num]];
-//    
-//    NSString * = @"favoritelist";
-//    //グローバ変数を扱うオブジェクト
-//    //AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//    //番号にそった名前を代入
-//    boxname = [self returnBoxName:app.second_select_num];
-//    
-//    [defaults setObject:_MapDiaryArray forKey:boxname];
-//    [defaults synchronize];
-//    
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"delete the history" message:@"May I delete this history?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [alert show];
+
+}
 
     
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+        if(buttonIndex == 1) {
+            NSLog(@"delete");
+            
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];     
+            
+            NSArray *checkArray = _MapDiaryArray.mutableCopy;
+            
+            for (NSDictionary *each in checkArray) {
+                if ([each[@"number"] intValue] == self.select_num) {
+                    [_MapDiaryArray removeObject:each];
+                    break;
+                }
+            }
+            
+            
+            
+            
+            [defaults setObject:_MapDiaryArray forKey:@"MapDiary"];
+            
+            [defaults synchronize];
+            
+             [self dismissViewControllerAnimated:YES completion:nil];
+            
+            
+        }else{NSLog(@"Cancel");
+            
+                  }
     
-    
-    //
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"履歴を削除" message:@"こちらの履歴を削除してもよろしいですか？" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-//    
-//    [alert show];
-//    
-//    //ユーザーデフォルトを使えるようにする
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//   
-//    
-//    //消したいデーターをセレクトナムを使って消す
-//    [_MapDiaryArray removeObject:_MapDiaryArray[_select_num]];
-//    
-//    NSString *boxname = @"UserDViewController";
-//    
-//    //_listArray = list;
-//    
-//    [defaults setObject:_MapDiaryArray forKey:boxname];
-//    [defaults synchronize];
-//    
-//
-    
-    
+     
     
     
 }
