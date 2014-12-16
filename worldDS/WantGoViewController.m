@@ -23,7 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //ui　イメージを背景に設定する
-    UIImage *backimage = [UIImage imageNamed:@"gogo手紙.png"];
+    //ui　イメージを背景に設定する
+    UIImage *backimage = [UIImage imageNamed:@"oldpp.png"];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
+
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
    
@@ -69,10 +73,24 @@
             NSMutableDictionary *changedPin = selectedPin.mutableCopy;
             
             NSLog(@"%@",[changedPin objectForKey:@"Diary"]);
-            self.TextView.text = [changedPin objectForKey:@"Diary"];
-            self.gogoText.text = [changedPin objectForKey:@"Pintitle"];
-            break;
+            if ([[changedPin objectForKey:@"Diary"] length] > 0){
+                self.TextView.text = [changedPin objectForKey:@"Diary"];
+            }
+
             
+           // self.TextView.text = [changedPin objectForKey:@"Diary"];
+            self.gogoText.text = [changedPin objectForKey:@"Pintitle"];
+            
+            
+            
+            //色を透けさせる
+            UIColor *color = [UIColor whiteColor];
+            UIColor *acolor = [color colorWithAlphaComponent:0.2];
+            
+            _TextView.backgroundColor = acolor;
+        
+        
+            break;
         }
         
     }
@@ -203,7 +221,7 @@
     if (NULL != UIGraphicsBeginImageContextWithOptions)
         UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
     else
-        UIGraphicsBeginImageContext(imageSize);
+    UIGraphicsBeginImageContext(imageSize);
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);

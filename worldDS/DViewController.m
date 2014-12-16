@@ -20,7 +20,7 @@
     [super viewDidLoad];
    
     //ui　イメージを背景に設定する
-    UIImage *backimage = [UIImage imageNamed:@"gogo背景.png"];
+    UIImage *backimage = [UIImage imageNamed:@"oldpp.png"];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
 
@@ -41,16 +41,18 @@
     [self showPhoto:[defaults objectForKey:@"URL"]];
     
     // Do any additional setup after loading the view.
-    NSString *str_long = @"";
+//    NSString *str_long = @"";
+//    
+//    for (int i = 0; i < 10; i++) {NSLog(@"%d",i);
+//        str_long = [str_long stringByAppendingFormat:@"%@",@""];
+//    }
+//    
+//    NSLog(@"%@",str_long);
+//    
+//    if (str_long.length > 0){
+//        self.DtextView.text = str_long;
+//    }
     
-    for (int i = 0; i < 10; i++) {NSLog(@"%d",i);
-        str_long = [str_long stringByAppendingFormat:@"%@",@""];
-    }
-    
-    NSLog(@"%@",str_long);
-    
-    self.DtextView.text = str_long;
-
     //pinの番号を表示するメソッド
     NSLog(@"dvc-%d",self.select_num);
     
@@ -71,10 +73,23 @@
             NSMutableDictionary *changedPin = selectedPin.mutableCopy;
             
             NSLog(@"%@",[changedPin objectForKey:@"Diary"]);
-            self.DtextView.text = [changedPin objectForKey:@"Diary"];
-            self.NameTextField.text = [changedPin objectForKey:@"Pintitle"];
-            break;
+            if ([[changedPin objectForKey:@"Diary"] length] > 0){
+                self.DtextView.text = [changedPin objectForKey:@"Diary"];
+            }
             
+            self.NameTextField.text = [changedPin objectForKey:@"Pintitle"];
+            
+            
+            //テイストビューの色を透けさせる
+            UIColor *color = [UIColor whiteColor];
+            UIColor *acolor = [color colorWithAlphaComponent:0.2];
+            
+            _DtextView.backgroundColor = acolor;
+            
+            break;
+        
+        
+        
         }
         
     }

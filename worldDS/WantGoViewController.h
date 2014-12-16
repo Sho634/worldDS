@@ -30,5 +30,6 @@ NSMutableArray *_MapDiaryArray;
 @property (weak, nonatomic) IBOutlet UILabel *gogoTitle;
 @property (weak, nonatomic) IBOutlet UIButton *deleteBtngogo;
 - (IBAction)deleteBtnTapgogo:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *GGGimg;
 
 @end

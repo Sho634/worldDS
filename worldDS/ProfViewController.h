@@ -31,4 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveBtn;
 - (IBAction)tapSavebtn:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIImageView *GGGimg;
+
+
 @end

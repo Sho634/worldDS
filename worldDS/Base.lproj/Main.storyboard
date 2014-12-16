@@ -20,13 +20,13 @@
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ton-4f-9hy" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                 <items>
-                                    <tabBarItem title="RedPin" image="red.png" id="xFl-Wm-WvO" colorLabel="IBBuiltInLabel-Gray"/>
-                                    <tabBarItem tag="1" title="GreenPin" image="red.png" id="eMw-FD-H3r" colorLabel="IBBuiltInLabel-Green"/>
+                                    <tabBarItem title="RedPin" image="pinpinpin.png" id="xFl-Wm-WvO" colorLabel="IBBuiltInLabel-Gray"/>
+                                    <tabBarItem tag="1" title="GreenPin" image="pinpinpin.png" id="eMw-FD-H3r" colorLabel="IBBuiltInLabel-Green"/>
                                     <tabBarItem tag="2" title="Diary" image="日記.png" id="mmo-Jm-eLf"/>
                                     <tabBarItem tag="3" title="Set" image="155.png" id="rUm-Os-NRW"/>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="2" y="492" width="318" height="49"/>
+                                    <rect key="frame" x="2" y="519" width="318" height="49"/>
                                 </variation>
                             </tabBar>
                         </subviews>
@@ -72,7 +72,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="157" width="282" height="30"/>
+                                    <rect key="frame" x="12" y="478" width="286" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ype-QZ-oEG">
@@ -81,7 +81,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="55" width="90" height="21"/>
+                                    <rect key="frame" x="16" y="359" width="90" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip dream" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZF-hw-UTK">
@@ -90,7 +90,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="128" width="90" height="21"/>
+                                    <rect key="frame" x="16" y="449" width="90" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7tc-7F-ldU">
@@ -98,7 +98,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="79" width="284" height="30"/>
+                                    <rect key="frame" x="14" y="388" width="284" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wry-zO-Qvy">
@@ -107,7 +107,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="33" y="236" width="255" height="290"/>
+                                    <rect key="frame" x="30" y="63" width="255" height="255"/>
                                 </variation>
                                 <connections>
                                     <action selector="cameraimgbtn:" destination="G5I-TF-CIu" eventType="touchUpInside" id="EUE-fK-z9s"/>
@@ -128,7 +128,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophotoかミングスーン.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1Sl-Ck-i7Q">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="202" width="255" height="290"/>
+                                    <rect key="frame" x="73" y="97" width="160" height="195"/>
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-IY-aZQ">
@@ -143,6 +143,12 @@
                                     <action selector="BuckTapBtn:" destination="G5I-TF-CIu" eventType="touchUpInside" id="HLh-Le-PjD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="額縁.png" translatesAutoresizingMaskIntoConstraints="NO" id="bHn-DE-Avg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="13" width="290" height="521"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -155,6 +161,7 @@
                                 <exclude reference="s4o-et-5Fe"/>
                                 <exclude reference="1Sl-Ck-i7Q"/>
                                 <exclude reference="kSf-IY-aZQ"/>
+                                <exclude reference="bHn-DE-Avg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -167,6 +174,7 @@
                                 <include reference="s4o-et-5Fe"/>
                                 <include reference="1Sl-Ck-i7Q"/>
                                 <include reference="kSf-IY-aZQ"/>
+                                <include reference="bHn-DE-Avg"/>
                             </mask>
                         </variation>
                     </view>
@@ -174,6 +182,7 @@
                     <connections>
                         <outlet property="BackBtn" destination="kSf-IY-aZQ" id="Rzb-6k-UCB"/>
                         <outlet property="DreamLabel" destination="EZF-hw-UTK" id="XI1-Ms-FOk"/>
+                        <outlet property="GGGimg" destination="bHn-DE-Avg" id="Opp-Qu-oSR"/>
                         <outlet property="NameLabel" destination="Ype-QZ-oEG" id="Wgp-kg-TFq"/>
                         <outlet property="dreamTextField" destination="bow-QG-yvV" id="K1m-fI-j19"/>
                         <outlet property="imgbtn" destination="Wry-zO-Qvy" id="y6j-85-9H1"/>
@@ -281,22 +290,28 @@
                                     <action selector="tapHomebtn:" destination="fNE-Io-e2X" eventType="touchUpInside" id="Crq-aF-iGn"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="           Here Please write a diary" translatesAutoresizingMaskIntoConstraints="NO" id="CFW-Qg-hai">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                    <rect key="frame" x="30" y="283" width="260" height="223"/>
-                                </variation>
-                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nophotoかミングスーン.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-zU-Hvs">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="22" y="69" width="137" height="125"/>
                                 </variation>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="額縁.png" translatesAutoresizingMaskIntoConstraints="NO" id="g8q-co-ZhQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-23" y="9" width="240" height="339"/>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Here Please write a diary" translatesAutoresizingMaskIntoConstraints="NO" id="CFW-Qg-hai">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                    <rect key="frame" x="30" y="283" width="260" height="223"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -309,8 +324,9 @@
                                 <exclude reference="Y6N-GB-hEJ"/>
                                 <exclude reference="gc3-CP-PRd"/>
                                 <exclude reference="YTq-Dg-Khp"/>
-                                <exclude reference="CFW-Qg-hai"/>
                                 <exclude reference="pBW-zU-Hvs"/>
+                                <exclude reference="g8q-co-ZhQ"/>
+                                <exclude reference="CFW-Qg-hai"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -323,14 +339,16 @@
                                 <include reference="Y6N-GB-hEJ"/>
                                 <include reference="gc3-CP-PRd"/>
                                 <include reference="YTq-Dg-Khp"/>
-                                <include reference="CFW-Qg-hai"/>
                                 <include reference="pBW-zU-Hvs"/>
+                                <include reference="g8q-co-ZhQ"/>
+                                <include reference="CFW-Qg-hai"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="DtextView" destination="CFW-Qg-hai" id="HOa-BT-FGR"/>
+                        <outlet property="GGGimg" destination="g8q-co-ZhQ" id="Kzr-ys-V3R"/>
                         <outlet property="Homebtn" destination="YTq-Dg-Khp" id="jf9-3r-Hzf"/>
                         <outlet property="NameLabel" destination="nlg-0A-Fkn" id="RVy-G9-mOs"/>
                         <outlet property="NameTextField" destination="Y6N-GB-hEJ" id="7rR-xr-Jt1"/>
@@ -399,13 +417,13 @@
                                     <rect key="frame" x="53" y="88" width="211" height="30"/>
                                 </variation>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="　  Here Please write a information" translatesAutoresizingMaskIntoConstraints="NO" id="NVW-OW-mdq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Here Please write a information" translatesAutoresizingMaskIntoConstraints="NO" id="NVW-OW-mdq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="30" y="330" width="260" height="203"/>
+                                    <rect key="frame" x="30" y="340" width="260" height="203"/>
                                 </variation>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Iv-6u-Lmo">
@@ -435,7 +453,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NOPHOTO　地球.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P1R-aU-xTy">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="53" y="138" width="221" height="184"/>
+                                    <rect key="frame" x="53" y="161" width="221" height="161"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="額縁.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lw8-IE-PCs">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-45" y="88" width="426" height="420"/>
                                 </variation>
                             </imageView>
                         </subviews>
@@ -450,6 +474,7 @@
                                 <exclude reference="1Iv-6u-Lmo"/>
                                 <exclude reference="BOW-Yp-nbS"/>
                                 <exclude reference="P1R-aU-xTy"/>
+                                <exclude reference="Lw8-IE-PCs"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -462,12 +487,14 @@
                                 <include reference="1Iv-6u-Lmo"/>
                                 <include reference="BOW-Yp-nbS"/>
                                 <include reference="P1R-aU-xTy"/>
+                                <include reference="Lw8-IE-PCs"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="Buckbtn" destination="BOW-Yp-nbS" id="i7B-rV-mF4"/>
+                        <outlet property="GGGimg" destination="Lw8-IE-PCs" id="DXY-Fl-x5r"/>
                         <outlet property="ImageView" destination="P1R-aU-xTy" id="IZQ-TY-U4S"/>
                         <outlet property="Sharebtn" destination="Eqv-H5-4lp" id="u57-Wp-8B9"/>
                         <outlet property="TextView" destination="NVW-OW-mdq" id="ILr-7N-QGx"/>
@@ -479,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51Q-33-bTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="481.5" y="807"/>
+            <point key="canvasLocation" x="283.5" y="807"/>
         </scene>
         <!--UserD View Controller-->
         <scene sceneID="386-zy-fAu">
@@ -499,7 +526,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="212" y="50" width="67" height="28"/>
+                                    <rect key="frame" x="212" y="20" width="67" height="28"/>
                                 </variation>
                                 <connections>
                                     <action selector="BackTapBtn:" destination="lBk-Y3-u5Z" eventType="touchUpInside" id="oi5-Kh-0Cz"/>
@@ -509,7 +536,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="35" y="100" width="202" height="415"/>
+                                    <rect key="frame" x="26" y="56" width="268" height="480"/>
                                 </variation>
                             </tableView>
                         </subviews>
@@ -535,15 +562,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21x-VO-ulD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1558.5" y="794"/>
+            <point key="canvasLocation" x="-1539" y="831"/>
         </scene>
     </scenes>
     <resources>
         <image name="155.png" width="48" height="48"/>
         <image name="NOPHOTO　地球.jpg" width="300" height="200"/>
         <image name="nophotoかミングスーン.jpg" width="346" height="346"/>
-        <image name="red.png" width="48" height="48"/>
+        <image name="pinpinpin.png" width="50" height="50"/>
         <image name="ごみごみ.png" width="67" height="28"/>
         <image name="日記.png" width="32" height="32"/>
+        <image name="額縁.png" width="320" height="568"/>
     </resources>
 </document>

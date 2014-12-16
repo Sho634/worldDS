@@ -21,20 +21,12 @@
     [super viewDidLoad];
 
     //ui　イメージを背景に設定する
-    UIImage *backimage = [UIImage imageNamed:@"日記管理画面.png"];
+    //ui　イメージを背景に設定する
+    UIImage *backimage = [UIImage imageNamed:@"634.png"];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
 
     
-    //    DViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DViewController"];
-//    
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    NSArray *gogoTmp;
-    
-    //保存されたデータを取り出す
-   // gogoTmp = [defaults objectForKey:@"PinTable"];
-
     //UserDefaultからデータを取り出す
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -58,6 +50,19 @@
 -(void)viewDidAppear:(BOOL)animated{
     
      [self.DiaryTableView reloadData];
+
+    
+    //テーブルビューを自分好みの色にすけさせる
+    UIColor *color = [UIColor whiteColor];
+    UIColor *acolor = [color colorWithAlphaComponent:0.2];
+    
+    _DiaryTableView.backgroundColor = acolor;
+
+
+
+    
+
+
 }
 
 
@@ -93,6 +98,8 @@
     
     cell.textLabel.text = _MapDiaryArray[indexPath.row][@"Pintitle"];
     
+    cell.imageView.image = [UIImage imageNamed:@"redpppin.png"];
+    
     return cell;
 }
 //テーブルビューに_MapDiaryArrayの中身を表示する。
@@ -105,7 +112,7 @@
     
    
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     
     // if　文を使って緑ピンえお押したときはWG 赤を押したときは　DVに行く

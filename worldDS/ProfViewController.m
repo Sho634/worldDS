@@ -18,7 +18,7 @@
     [super viewDidLoad];
     
     //ui　イメージを背景に設定する
-    UIImage *backimage = [UIImage imageNamed:@"gogo背景.png"];
+    UIImage *backimage = [UIImage imageNamed:@"634.png"];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
 
@@ -35,6 +35,9 @@
     }
 
     [self showPhoto:[defaults objectForKey:@"URL"]];
+    
+    
+    
     
 }
 
@@ -146,5 +149,9 @@
     
     [defaults synchronize];
     NSLog(@"tapsave");
+
+    // save ボタンを押すとホーム画面に戻る
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 @end

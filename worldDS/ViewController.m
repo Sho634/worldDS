@@ -32,7 +32,7 @@ NSInteger n;
 
     _mapView = [[MKMapView alloc] init];
     _mapView.delegate = self;
-    _mapView.frame = CGRectMake(0, 20, 320, 460);
+    _mapView.frame = CGRectMake(0, 20, 320, 548);
     
     CLLocationCoordinate2D co;
 //最初の表示画面に現在地を表示する
