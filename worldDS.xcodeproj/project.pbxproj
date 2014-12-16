@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		94467BCC1A1F18A90025973A /* ShoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94467BCB1A1F18A90025973A /* ShoAnnotation.m */; };
 		949225741A3FFFFC00DC808E /* 155.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225691A3FFFFC00DC808E /* 155.png */; };
-		949225761A3FFFFC00DC808E /* gogo背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492256B1A3FFFFC00DC808E /* gogo背景.png */; };
 		949225771A3FFFFC00DC808E /* NOPHOTO　地球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */; };
 		949225781A3FFFFC00DC808E /* nophotoかミングスーン.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */; };
 		9492257A1A3FFFFC00DC808E /* ごみごみ.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492256F1A3FFFFC00DC808E /* ごみごみ.png */; };
@@ -17,10 +16,10 @@
 		949225801A40042B00DC808E /* 634.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492257F1A40042B00DC808E /* 634.png */; };
 		949225841A40068F00DC808E /* oldpp.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225831A40068F00DC808E /* oldpp.png */; };
 		949225861A4008E000DC808E /* pinpinpin.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225851A4008E000DC808E /* pinpinpin.png */; };
-		949225881A4012AE00DC808E /* 額縁.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225871A4012AE00DC808E /* 額縁.png */; };
-		9492258A1A40174900DC808E /* ggggggggg.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225891A40174900DC808E /* ggggggggg.png */; };
-		9492258D1A40277100DC808E /* greenpppin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492258B1A40277100DC808E /* greenpppin.png */; };
-		9492258E1A40277100DC808E /* redpppin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492258C1A40277100DC808E /* redpppin.png */; };
+		949225941A40745900DC808E /* スクリーンショット 2014-12-16 22.06.34.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225931A40745900DC808E /* スクリーンショット 2014-12-16 22.06.34.png */; };
+		949225961A40830900DC808E /* eriko.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225951A40830900DC808E /* eriko.png */; };
+		949225981A4096B000DC808E /* pikkoropin.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225971A4096B000DC808E /* pikkoropin.png */; };
+		9492259A1A4097DB00DC808E /* redred.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225991A4097DB00DC808E /* redred.png */; };
 		949E5BF91A15EA5A00761ACA /* ProfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BF81A15EA5A00761ACA /* ProfViewController.m */; };
 		949E5BFC1A178DFE00761ACA /* WantGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFB1A178DFE00761ACA /* WantGoViewController.m */; };
 		949E5BFF1A178E4D00761ACA /* UserDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFE1A178E4D00761ACA /* UserDViewController.m */; };
@@ -50,7 +49,6 @@
 		94467BCA1A1F18A90025973A /* ShoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoAnnotation.h; sourceTree = "<group>"; };
 		94467BCB1A1F18A90025973A /* ShoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoAnnotation.m; sourceTree = "<group>"; };
 		949225691A3FFFFC00DC808E /* 155.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 155.png; path = imageforder/155.png; sourceTree = "<group>"; };
-		9492256B1A3FFFFC00DC808E /* gogo背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gogo背景.png"; path = "imageforder/gogo背景.png"; sourceTree = "<group>"; };
 		9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "NOPHOTO　地球.jpg"; path = "imageforder/NOPHOTO　地球.jpg"; sourceTree = "<group>"; };
 		9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "nophotoかミングスーン.jpg"; path = "imageforder/nophotoかミングスーン.jpg"; sourceTree = "<group>"; };
 		9492256F1A3FFFFC00DC808E /* ごみごみ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ごみごみ.png"; path = "imageforder/ごみごみ.png"; sourceTree = "<group>"; };
@@ -58,10 +56,10 @@
 		9492257F1A40042B00DC808E /* 634.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 634.png; sourceTree = "<group>"; };
 		949225831A40068F00DC808E /* oldpp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oldpp.png; sourceTree = "<group>"; };
 		949225851A4008E000DC808E /* pinpinpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinpinpin.png; sourceTree = "<group>"; };
-		949225871A4012AE00DC808E /* 額縁.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "額縁.png"; sourceTree = "<group>"; };
-		949225891A40174900DC808E /* ggggggggg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ggggggggg.png; sourceTree = "<group>"; };
-		9492258B1A40277100DC808E /* greenpppin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenpppin.png; sourceTree = "<group>"; };
-		9492258C1A40277100DC808E /* redpppin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redpppin.png; sourceTree = "<group>"; };
+		949225931A40745900DC808E /* スクリーンショット 2014-12-16 22.06.34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2014-12-16 22.06.34.png"; sourceTree = "<group>"; };
+		949225951A40830900DC808E /* eriko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eriko.png; sourceTree = "<group>"; };
+		949225971A4096B000DC808E /* pikkoropin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikkoropin.png; sourceTree = "<group>"; };
+		949225991A4097DB00DC808E /* redred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redred.png; sourceTree = "<group>"; };
 		949E5BF71A15EA5A00761ACA /* ProfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfViewController.h; sourceTree = "<group>"; };
 		949E5BF81A15EA5A00761ACA /* ProfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfViewController.m; sourceTree = "<group>"; };
 		949E5BFA1A178DFE00761ACA /* WantGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WantGoViewController.h; sourceTree = "<group>"; };
@@ -155,15 +153,14 @@
 		94F3D4CC1A10A4E2005422A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9492258B1A40277100DC808E /* greenpppin.png */,
-				9492258C1A40277100DC808E /* redpppin.png */,
-				949225891A40174900DC808E /* ggggggggg.png */,
-				949225871A4012AE00DC808E /* 額縁.png */,
+				949225991A4097DB00DC808E /* redred.png */,
+				949225971A4096B000DC808E /* pikkoropin.png */,
+				949225951A40830900DC808E /* eriko.png */,
+				949225931A40745900DC808E /* スクリーンショット 2014-12-16 22.06.34.png */,
 				949225851A4008E000DC808E /* pinpinpin.png */,
 				949225831A40068F00DC808E /* oldpp.png */,
 				9492257F1A40042B00DC808E /* 634.png */,
 				949225691A3FFFFC00DC808E /* 155.png */,
-				9492256B1A3FFFFC00DC808E /* gogo背景.png */,
 				9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */,
 				9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */,
 				9492256F1A3FFFFC00DC808E /* ごみごみ.png */,
@@ -272,19 +269,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				949225881A4012AE00DC808E /* 額縁.png in Resources */,
-				9492258E1A40277100DC808E /* redpppin.png in Resources */,
 				94F3D4D81A10A4E2005422A2 /* Main.storyboard in Resources */,
 				94F3D4DD1A10A4E2005422A2 /* LaunchScreen.xib in Resources */,
-				9492258A1A40174900DC808E /* ggggggggg.png in Resources */,
+				949225941A40745900DC808E /* スクリーンショット 2014-12-16 22.06.34.png in Resources */,
 				949225781A3FFFFC00DC808E /* nophotoかミングスーン.jpg in Resources */,
 				9492257C1A3FFFFC00DC808E /* 日記.png in Resources */,
 				949225801A40042B00DC808E /* 634.png in Resources */,
 				949225771A3FFFFC00DC808E /* NOPHOTO　地球.jpg in Resources */,
-				949225761A3FFFFC00DC808E /* gogo背景.png in Resources */,
+				9492259A1A4097DB00DC808E /* redred.png in Resources */,
 				949225841A40068F00DC808E /* oldpp.png in Resources */,
 				949225741A3FFFFC00DC808E /* 155.png in Resources */,
-				9492258D1A40277100DC808E /* greenpppin.png in Resources */,
+				949225961A40830900DC808E /* eriko.png in Resources */,
+				949225981A4096B000DC808E /* pikkoropin.png in Resources */,
 				949225861A4008E000DC808E /* pinpinpin.png in Resources */,
 				94F3D4DA1A10A4E2005422A2 /* Images.xcassets in Resources */,
 				9492257A1A3FFFFC00DC808E /* ごみごみ.png in Resources */,

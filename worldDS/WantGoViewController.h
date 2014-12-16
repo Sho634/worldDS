@@ -22,14 +22,14 @@ NSMutableArray *_MapDiaryArray;
 - (IBAction)Backtapbtn:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *ImageView;
 @property (weak, nonatomic) IBOutlet UITextView *TextView;
-@property (weak, nonatomic) IBOutlet UIButton *imgbtn;
-- (IBAction)tapimgbtn:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *saveBtn;
 - (IBAction)tapSavebtn:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *gogoText;
 @property (weak, nonatomic) IBOutlet UILabel *gogoTitle;
 @property (weak, nonatomic) IBOutlet UIButton *deleteBtngogo;
 - (IBAction)deleteBtnTapgogo:(id)sender;
-@property (weak, nonatomic) IBOutlet UIImageView *GGGimg;
+@property (weak, nonatomic) IBOutlet UIButton *btnEriko;
+- (IBAction)tapErikobtn:(id)sender;
+
 
 @end

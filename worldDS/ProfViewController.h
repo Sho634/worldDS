@@ -26,12 +26,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *BackBtn;
 - (IBAction)BuckTapBtn:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *profImageView;
-@property (weak, nonatomic) IBOutlet UIButton *imgbtn;
-- (IBAction)cameraimgbtn:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *saveBtn;
 - (IBAction)tapSavebtn:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIImageView *GGGimg;
+@property (weak, nonatomic) IBOutlet UIButton *ErikoBtn;
 
+- (IBAction)tapErikobtn:(id)sender;
 
 @end

@@ -32,7 +32,7 @@ NSInteger n;
 
     _mapView = [[MKMapView alloc] init];
     _mapView.delegate = self;
-    _mapView.frame = CGRectMake(0, 20, 320, 548);
+    _mapView.frame = CGRectMake(0, 20, 320, 500);
     
     CLLocationCoordinate2D co;
 //最初の表示画面に現在地を表示する
@@ -41,15 +41,16 @@ NSInteger n;
     co.latitude = 35.689488;       //緯度
     co.longitude = 139.691706;     //軽度
     MKCoordinateRegion cr = _mapView.region;
-    cr.span.latitudeDelta = 0.2;
-    cr.span.longitudeDelta = 0.2;
+    cr.span.latitudeDelta = 3.0;
+    cr.span.longitudeDelta = 3.0;
     cr.center = co;
     [_mapView setRegion:cr];
     
     //地図の表示種類設定
-    _mapView.mapType = MKMapTypeStandard;
+    _mapView.mapType = MKMapTypeHybrid;
     
     //現在地を表示
+    
     _mapView.showsUserLocation = YES;
     
     [self.view addSubview:_mapView];
@@ -82,7 +83,9 @@ NSInteger n;
         pin.coordinate = CLLocationCoordinate2DMake(latitude,longitude);//()内は Double じゃないと稼働しない
         pin.title = _MapDiaryArray[i][@"Pintitle"];
         pin.pinColor = _MapDiaryArray[i][@"Pincolor"];
-      
+        
+        _redpinFlag = YES;
+        _greenpinFlag = NO;
         
         //ユーザーデフォルトの中に保存した情報に名前をつけている
         _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
@@ -97,13 +100,32 @@ NSInteger n;
     [_mapView addAnnotation:pin];
     //表示する為にビューに追加
     [self.view addSubview:_mapView];
-        
+     
+    [_mapView.userLocation addObserver:self
+                               forKeyPath:@"location"
+                                  options:0
+                                  context:NULL];
     }
     
    
 }
 
-
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    // 地図の中心座標に現在地を設定
+    _mapView.centerCoordinate = _mapView.userLocation.location.coordinate;
+    
+    // 表示倍率の設定
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.1, 0.1);
+    MKCoordinateRegion region = MKCoordinateRegionMake(_mapView.userLocation.coordinate, span);
+    [_mapView setRegion:region animated:YES];
+    
+    // 一度しか更新しない場合はremoveする
+    [_mapView.userLocation removeObserver:self forKeyPath:@"location"];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -229,7 +251,11 @@ NSInteger n;
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
     static NSString *pinIndentifier = @"PinAnnotationID";
-        
+    
+    
+    if ([annotation class] == MKUserLocation.class) {
+        return nil;
+    }
         //ピン情報の再利用
       MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinIndentifier];
     

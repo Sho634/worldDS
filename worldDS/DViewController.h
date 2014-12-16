@@ -34,6 +34,7 @@
 
 - (IBAction)tapdeleteBtn:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIImageView *GGGimg;
+@property (weak, nonatomic) IBOutlet UIImageView *imgEriko;
+
 
 @end

@@ -66,32 +66,32 @@
     
     
 }
-- (IBAction)cameraimgbtn:(id)sender {
-    
-    
-    UIImagePickerControllerSourceType sourceType = -1;
-    
-    //イメージピッカーの生成
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-    
-    //カメラロールに起動する
-    sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    //その機能が使えなかったら、処理を中止する。
-    if(![UIImagePickerController isSourceTypeAvailable:sourceType])
-    {
-        return;
-    }
-    
-    
-    imagePicker.sourceType = sourceType;
-    imagePicker.delegate = (id)self;
-    
-    //イメージピッカー表示
-    [self presentViewController:imagePicker animated:YES completion:nil];
-    
 
-}
+    
+    
+//    UIImagePickerControllerSourceType sourceType = -1;
+//    
+//    //イメージピッカーの生成
+//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+//    
+//    //カメラロールに起動する
+//    sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    
+//    //その機能が使えなかったら、処理を中止する。
+//    if(![UIImagePickerController isSourceTypeAvailable:sourceType])
+//    {
+//        return;
+//    }
+//    
+//    
+//    imagePicker.sourceType = sourceType;
+//    imagePicker.delegate = (id)self;
+//    
+//    //イメージピッカー表示
+//    [self presentViewController:imagePicker animated:YES completion:nil];
+//    
+//
+//}
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -154,4 +154,32 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
+- (IBAction)tapErikobtn:(id)sender;{
+    
+    UIImagePickerControllerSourceType sourceType = -1;
+    
+    //イメージピッカーの生成
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+    
+    //カメラロールに起動する
+    sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    //その機能が使えなかったら、処理を中止する。
+    if(![UIImagePickerController isSourceTypeAvailable:sourceType])
+    {
+        return;
+    }
+    
+    
+    imagePicker.sourceType = sourceType;
+    imagePicker.delegate = (id)self;
+    
+    //イメージピッカー表示
+    [self presentViewController:imagePicker animated:YES completion:nil];
+    
+    
+}
+
+
+
 @end

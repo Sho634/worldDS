@@ -89,6 +89,12 @@
     //セルの再利用
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifer];
     
+    //セル背景を透けさせる
+    UIColor *color = [UIColor whiteColor];
+    UIColor *acolor = [color colorWithAlphaComponent:0.2];
+    
+    cell.backgroundColor = acolor;
+    
    if(cell == nil){
     //セルの初期化とスタイルの決定
        
@@ -98,8 +104,37 @@
     
     cell.textLabel.text = _MapDiaryArray[indexPath.row][@"Pintitle"];
     
-    cell.imageView.image = [UIImage imageNamed:@"redpppin.png"];
     
+    
+    
+    //タイトルの前に赤ピンを表示する
+    //cell.imageView.image = [UIImage imageNamed:@"redpppin.png"];
+    
+    //タイトルの前に緑ピンを表示する
+    //cell.imageView.image = [UIImage imageNamed:@"greenpppin"];
+    
+    // if 文でタイトル前に色分けピンを設置。
+    if ([_MapDiaryArray[indexPath.row][@"Pincolor"] isEqualToString:@"green"]){
+        
+         cell.imageView.image = [UIImage imageNamed:@"pikkoropin"];
+      
+        
+        //色分けピンもすけさせるには？？？？？？？？？？？？？？？？？？？？
+//        UIColor *color = [UIColor whiteColor];
+//        UIColor *acolor = [color colorWithAlphaComponent:0.2];
+//        
+//        cell.backgroundColor = acolor;
+//
+        
+    }else{
+        
+         cell.imageView.image = [UIImage imageNamed:@"redred.png"];
+    
+    }
+    
+    
+    
+   
     return cell;
 }
 //テーブルビューに_MapDiaryArrayの中身を表示する。
