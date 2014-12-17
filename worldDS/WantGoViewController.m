@@ -24,7 +24,7 @@
     [super viewDidLoad];
     //ui　イメージを背景に設定する
     //ui　イメージを背景に設定する
-    UIImage *backimage = [UIImage imageNamed:@"oldpp.png"];
+    UIImage *backimage = [UIImage imageNamed:@"gorigori.png"];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
 
@@ -44,9 +44,9 @@
         
         }
     
-    [self showPhoto:[defaults objectForKey:@"gogoURL"]];
-    
-   
+//    [self showPhoto:[defaults objectForKey:@"gogoURL"]];
+//    
+//   
     
 //    NSString *str_long = @"";
 //    
@@ -81,6 +81,9 @@
            // self.TextView.text = [changedPin objectForKey:@"Diary"];
             self.gogoText.text = [changedPin objectForKey:@"Pintitle"];
             
+            [self showPhoto:[changedPin objectForKey:@"Picture"]];
+
+            
             
             
             //色を透けさせる
@@ -88,22 +91,38 @@
             UIColor *acolor = [color colorWithAlphaComponent:0.2];
             
             _TextView.backgroundColor = acolor;
+            _gogoText.backgroundColor = acolor;
         
-        
+            //テキストビューのデリゲートを使う時
+            self.TextView.delegate = self;
+            
             break;
         }
         
     }
     
+    _visibleflag = YES;
+
+
+   
+
+
+    // UIPanGestureRecognizer をインスタンス化します。また、イベント発生時に呼び出すメソッドを selector で指定します。
+    UISwipeGestureRecognizer* swipeDownGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(selfSwipeDownGesture:)];
+
+    // 下スワイプのイベントを指定します。
+    swipeDownGesture.direction = UISwipeGestureRecognizerDirectionDown;
+
+    // Viewへ関連付けします。
+    [self.view addGestureRecognizer:swipeDownGesture];
+
+
 
 }
 
-
-
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-////mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm カメラライブラリから選んだ写真のURLを取得。 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+////mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm カメラライブラリから選んだ写真のURLを取得。 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
     _assetsUrl = [(NSURL *)[info objectForKey:@"UIImagePickerControllerReferenceURL"] absoluteString];
     [self showPhoto:_assetsUrl];
     
@@ -114,9 +133,14 @@
 -(void)showPhoto:(NSString *)url
 {
     
+    
+    
     //URLからALAssetを取得
     [_library assetForURL:[NSURL URLWithString:url]
               resultBlock:^(ALAsset *asset) {
+                  
+                  
+                  
                   
                   //画像があればYES、無ければNOを返す
                   if(asset){
@@ -130,23 +154,57 @@
                       self.ImageView.image = fullscreenImage; //イメージをセット
                       
                       NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                     
+                      NSArray *tmp_MapDiaryArray =[defaults objectForKey:@"MapDiary"];
+                      _MapDiaryArray = tmp_MapDiaryArray.mutableCopy;
                       
-                      [defaults setObject:url forKey:@"gogoURL"];
                       
+                      for (int i=0; i < _MapDiaryArray.count; i++) {
+                          
+                          
+                          NSString *pinNumber = [[NSString alloc] init];
+                          
+                          pinNumber = _MapDiaryArray[i][@"number"];
+                          
+                          if (self.select_num == [pinNumber intValue]){
+                              NSDictionary *selectedPin = _MapDiaryArray[i];
+                              NSMutableDictionary *changedPin = selectedPin.mutableCopy;
+                              
+                              [changedPin setObject:url forKey:@"Picture"];
+                              
+                              
+                              [_MapDiaryArray replaceObjectAtIndex:i withObject:changedPin];
+                              
+                              // save ボタンを押すとホーム画面に戻る
+                              [self dismissViewControllerAnimated:YES completion:nil];
+                              
+                              break;
+                              
+                              
+                          }
+                          
+                      }
+                      
+                      
+                      [defaults setObject:_MapDiaryArray forKey:@"MapDiary"];
                       
                       [defaults synchronize];
                       
+                      
                   }else{
                       NSLog(@"no data");
-                  }
+                 }
                   
               } failureBlock: nil];
+    
+    
     
 }
 
 
 
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmボタンアクションmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//シェアボタン作成
 - (IBAction)Sharetapbtn:(id)sender {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -221,7 +279,7 @@
 
 
 
-
+//画面遷移
 - (IBAction)Backtapbtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -349,4 +407,79 @@
     //イメージピッカー表示
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
+
+
+
+
+
+
+
+//テキストビューを触った時上にスライド
+-(BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+    if (_visibleflag) {
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.3];
+        
+         _Sharebtn.frame = CGRectMake(_Sharebtn.frame.origin.x, _Sharebtn.frame.origin.y - 220, _Sharebtn.frame.size.width , _Sharebtn.frame.size.height);
+        _Buckbtn.frame = CGRectMake(_Buckbtn.frame.origin.x, _Buckbtn.frame.origin.y - 220, _Buckbtn.frame.size.width , _Buckbtn.frame.size.height);
+        _saveBtn.frame = CGRectMake(_saveBtn.frame.origin.x, _saveBtn.frame.origin.y - 220, _saveBtn.frame.size.width , _saveBtn.frame.size.height);
+        _deleteBtngogo.frame = CGRectMake(_deleteBtngogo.frame.origin.x, _deleteBtngogo.frame.origin.y - 220, _deleteBtngogo.frame.size.width , _deleteBtngogo.frame.size.height);
+        _ImageView.frame = CGRectMake(_ImageView.frame.origin.x, _ImageView.frame.origin.y - 220, _ImageView.frame.size.width , _ImageView.frame.size.height);
+        _TextView.frame = CGRectMake(_TextView.frame.origin.x, _TextView.frame.origin.y - 220, _TextView.frame.size.width , _TextView.frame.size.height);
+        _gogoText.frame = CGRectMake(_gogoText.frame.origin.x, _gogoText.frame.origin.y - 220, _gogoText.frame.size.width , _gogoText.frame.size.height);
+        _gogoTitle.frame = CGRectMake(_gogoTitle.frame.origin.x, _gogoTitle.frame.origin.y - 220, _gogoTitle.frame.size.width , _gogoTitle.frame.size.height);
+        _btnEriko.frame = CGRectMake(_btnEriko.frame.origin.x, _btnEriko.frame.origin.y - 220, _btnEriko.frame.size.width , _btnEriko.frame.size.height);
+        
+        
+        [UIView commitAnimations];
+        _visibleflag = NO;
+        
+    }
+    return YES;
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)selfSwipeDownGesture:(UISwipeGestureRecognizer *)sender {
+        // 下スワイプされた時にログに表示
+        if (!_visibleflag) {
+            NSLog(@"Notice Down Gesture");
+            [_TextView resignFirstResponder];
+            
+            _Sharebtn.frame = CGRectMake(_Sharebtn.frame.origin.x, _Sharebtn.frame.origin.y + 220, _Sharebtn.frame.size.width , _Sharebtn.frame.size.height);
+            _Buckbtn.frame = CGRectMake(_Buckbtn.frame.origin.x, _Buckbtn.frame.origin.y + 220, _Buckbtn.frame.size.width , _Buckbtn.frame.size.height);
+            _saveBtn.frame = CGRectMake(_saveBtn.frame.origin.x, _saveBtn.frame.origin.y + 220, _saveBtn.frame.size.width , _saveBtn.frame.size.height);
+            _deleteBtngogo.frame = CGRectMake(_deleteBtngogo.frame.origin.x, _deleteBtngogo.frame.origin.y + 220, _deleteBtngogo.frame.size.width , _deleteBtngogo.frame.size.height);
+            _ImageView.frame = CGRectMake(_ImageView.frame.origin.x, _ImageView.frame.origin.y + 220, _ImageView.frame.size.width , _ImageView.frame.size.height);
+            _TextView.frame = CGRectMake(_TextView.frame.origin.x, _TextView.frame.origin.y + 220, _TextView.frame.size.width , _TextView.frame.size.height);
+            _gogoText.frame = CGRectMake(_gogoText.frame.origin.x, _gogoText.frame.origin.y + 220, _gogoText.frame.size.width , _gogoText.frame.size.height);
+            _gogoTitle.frame = CGRectMake(_gogoTitle.frame.origin.x, _gogoTitle.frame.origin.y + 220, _gogoTitle.frame.size.width , _gogoTitle.frame.size.height);
+            _btnEriko.frame = CGRectMake(_btnEriko.frame.origin.x, _btnEriko.frame.origin.y + 220, _btnEriko.frame.size.width , _btnEriko.frame.size.height);
+            
+
+            
+            
+            [UIView beginAnimations:nil context:nil];
+            [UIView setAnimationDuration:0.3];
+            
+            
+            
+            [UIView commitAnimations];
+            
+            _visibleflag = YES;
+        }
+    }
+
+
+
+
+
+
+
 @end

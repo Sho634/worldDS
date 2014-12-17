@@ -22,7 +22,7 @@
 
     //ui　イメージを背景に設定する
     //ui　イメージを背景に設定する
-    UIImage *backimage = [UIImage imageNamed:@"634.png"];
+    UIImage *backimage = [UIImage imageNamed:@"omgB.png"];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:backimage];
 
@@ -54,7 +54,7 @@
     
     //テーブルビューを自分好みの色にすけさせる
     UIColor *color = [UIColor whiteColor];
-    UIColor *acolor = [color colorWithAlphaComponent:0.2];
+    UIColor *acolor = [color colorWithAlphaComponent:0.0];
     
     _DiaryTableView.backgroundColor = acolor;
 

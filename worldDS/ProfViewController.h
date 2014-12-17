@@ -11,26 +11,26 @@
 
 
 //@interface ProfViewController : UIViewController
-@interface ProfViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ProfViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 
 {
     NSString *_assetsUrl;    //assetsUrlを格納するインスタンス
     ALAssetsLibrary *_library;  //ALAssetsLibraryのインスタンス
+    BOOL _visibleflag;
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *image;
+//@property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *DreamLabel;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dreamTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *profImageView;
+
 @property (weak, nonatomic) IBOutlet UIButton *BackBtn;
 - (IBAction)BuckTapBtn:(id)sender;
-@property (weak, nonatomic) IBOutlet UIImageView *profImageView;
 @property (weak, nonatomic) IBOutlet UIButton *saveBtn;
 - (IBAction)tapSavebtn:(id)sender;
-
 @property (weak, nonatomic) IBOutlet UIButton *ErikoBtn;
-
-- (IBAction)tapErikobtn:(id)sender;
+- (IBAction)tapErikoBtn:(id)sender;
 
 @end

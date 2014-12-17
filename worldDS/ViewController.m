@@ -34,17 +34,16 @@ NSInteger n;
     _mapView.delegate = self;
     _mapView.frame = CGRectMake(0, 20, 320, 500);
     
-    CLLocationCoordinate2D co;
-//最初の表示画面に現在地を表示する
-    //eriko先生助けて
-    
-    co.latitude = 35.689488;       //緯度
-    co.longitude = 139.691706;     //軽度
-    MKCoordinateRegion cr = _mapView.region;
-    cr.span.latitudeDelta = 3.0;
-    cr.span.longitudeDelta = 3.0;
-    cr.center = co;
-    [_mapView setRegion:cr];
+//    CLLocationCoordinate2D co;
+//
+//    
+//    co.latitude = 35.689488;       //緯度
+//    co.longitude = 139.691706;     //軽度
+//    MKCoordinateRegion cr = _mapView.region;
+//    cr.span.latitudeDelta = 3.0;
+//    cr.span.longitudeDelta = 3.0;
+//    cr.center = co;
+//    [_mapView setRegion:cr];
     
     //地図の表示種類設定
     _mapView.mapType = MKMapTypeHybrid;
@@ -107,8 +106,17 @@ NSInteger n;
                                   context:NULL];
     }
     
+    //透けさせる
+//    UIColor *color = [UIColor whiteColor];
+//    UIColor *acolor = [color colorWithAlphaComponent:0.2];
+//    
+//    _TabBar.tintColor = acolor;
+//    
+  
    
 }
+
+
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
@@ -138,28 +146,28 @@ NSInteger n;
     if ([gesture state] == UIGestureRecognizerStateBegan){
         NSLog(@"handleLongPressGesture");
         
-    }else if([gesture state] == UIGestureRecognizerStateEnded){
         CGPoint touchedPoint = [gesture locationInView:_mapView];
-            
+        
         NSLog(@"touchedPoint x:[%f]", touchedPoint.x);
         NSLog(@"touchedPoint y:[%f]", touchedPoint.y);
-            
+        
         CLLocationCoordinate2D touchCoordinate = [_mapView convertPoint:touchedPoint toCoordinateFromView:_mapView];
-            
+        
         NSLog(@"touchCoordinate latitude:%f  longitude:%f", touchCoordinate.latitude, touchCoordinate.longitude);
-            
-            
+        
+        
         [self setAnnotation:touchCoordinate mapMove:NO animated:NO];
-            
+        
         CLLocation *location = [[CLLocation alloc] initWithLatitude:touchCoordinate.latitude longitude:touchCoordinate.longitude];
         float fLat = location.coordinate.latitude;
         float fLng = location.coordinate.longitude;
-            //        NSString *str = [NSString stringWithFormat:@"緯度:%f 経度:%f",fLat,fLng];
+        //        NSString *str = [NSString stringWithFormat:@"緯度:%f 経度:%f",fLat,fLng];
         NSString *str = [NSString stringWithFormat:@"<array><string>%f</string><string>%f</string></array>",fLat,fLng];
         NSLog(@"str = %@",str);
         NSLog(@"location = %@",location);
-            //[_allPinArray2 addObject:location];
-            //[_allPinArray addObject:str];
+        //[_allP
+        
+    }else if([gesture state] == UIGestureRecognizerStateEnded){
     }
 }
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmピンが落ちてくるメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
@@ -230,6 +238,7 @@ NSInteger n;
                               @"Pintitle":anno.title,
                               @"Pincolor":anno.pinColor,
                               @"Diary":@"",
+                              @"Picture":@"",
                               @"number":[NSString stringWithFormat:@"%d",_maxnumber]};
     
     
@@ -319,6 +328,13 @@ NSInteger n;
 - (void)tabBar:(UITabBar*)tabBar didSelectItem:(UITabBarItem*)item {
     NSLog(@"tap:%ld",(long)item.tag);
   
+    UIColor *color = [UIColor whiteColor];
+    UIColor *acolor = [color colorWithAlphaComponent:0.2];
+    
+    tabBar.backgroundColor = acolor;
+    
+
+    
     //重要重要重要重要　　　　if文
     if (item.tag == 2) {
         UserDViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"UserDViewController"];
@@ -343,7 +359,6 @@ NSInteger n;
         _greenpinFlag = NO;
     }
    
-    
 
 
 
