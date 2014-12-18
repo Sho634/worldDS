@@ -29,7 +29,7 @@
    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    self.NameLabel.text = [defaults objectForKey:@"Name"];
+    self.nameLabel.text = [defaults objectForKey:@"Name"];
     self.dreamLabel.text = [defaults objectForKey:@"Dream"];
     
     if (_library == nil) {
@@ -356,18 +356,20 @@
             [UIView setAnimationDuration:0.3];
             
             
-            _NameLabel.frame = CGRectMake(_NameLabel.frame.origin.x, _NameLabel.frame.origin.y - 220, _NameLabel.frame.size.width , _NameLabel.frame.size.height);
-            _ShereBtn.frame = CGRectMake(_ShereBtn.frame.origin.x, _ShereBtn.frame.origin.y - 220, _ShereBtn.frame.size.width , _ShereBtn.frame.size.height);
-            _Homebtn.frame = CGRectMake(_Homebtn.frame.origin.x, _Homebtn.frame.origin.y - 220, _Homebtn.frame.size.width , _Homebtn.frame.size.height);
-            _SaveBtn.frame = CGRectMake(_SaveBtn.frame.origin.x, _SaveBtn.frame.origin.y - 220, _SaveBtn.frame.size.width , _SaveBtn.frame.size.height);
-            _deleteBtn.frame = CGRectMake(_deleteBtn.frame.origin.x, _deleteBtn.frame.origin.y - 220, _deleteBtn.frame.size.width , _deleteBtn.frame.size.height);
-            _NameLabel.frame = CGRectMake(_NameLabel.frame.origin.x, _NameLabel.frame.origin.y - 220, _NameLabel.frame.size.width , _NameLabel.frame.size.height);
+           
+//            _ShereBtn.frame = CGRectMake(_ShereBtn.frame.origin.x, _ShereBtn.frame.origin.y - 220, _ShereBtn.frame.size.width , _ShereBtn.frame.size.height);
+//            _Homebtn.frame = CGRectMake(_Homebtn.frame.origin.x, _Homebtn.frame.origin.y - 220, _Homebtn.frame.size.width , _Homebtn.frame.size.height);
+//            _SaveBtn.frame = CGRectMake(_SaveBtn.frame.origin.x, _SaveBtn.frame.origin.y - 220, _SaveBtn.frame.size.width , _SaveBtn.frame.size.height);
+//            _deleteBtn.frame = CGRectMake(_deleteBtn.frame.origin.x, _deleteBtn.frame.origin.y - 220, _deleteBtn.frame.size.width , _deleteBtn.frame.size.height);
+            
+            _nameLabel.frame = CGRectMake(_nameLabel.frame.origin.x, _nameLabel.frame.origin.y - 220, _nameLabel.frame.size.width , _nameLabel.frame.size.height);
             _DtextView.frame = CGRectMake(_DtextView.frame.origin.x, _DtextView.frame.origin.y - 220, _DtextView.frame.size.width , _DtextView.frame.size.height);
             _NameTextField.frame = CGRectMake(_NameTextField.frame.origin.x, _NameTextField.frame.origin.y - 220, _NameTextField.frame.size.width , _NameTextField.frame.size.height);
             _dreamLabel.frame = CGRectMake(_dreamLabel.frame.origin.x, _dreamLabel.frame.origin.y - 220, _dreamLabel.frame.size.width , _dreamLabel.frame.size.height);
             _imgEriko.frame = CGRectMake(_imgEriko.frame.origin.x, _imgEriko.frame.origin.y - 220, _imgEriko.frame.size.width , _imgEriko.frame.size.height);
             _profImageView.frame = CGRectMake(_profImageView.frame.origin.x, _profImageView.frame.origin.y - 220, _profImageView.frame.size.width , _profImageView.frame.size.height);
-            
+            _TitleLabel.frame = CGRectMake(_TitleLabel.frame.origin.x, _TitleLabel.frame.origin.y - 220, _TitleLabel.frame.size.width , _TitleLabel.frame.size.height);
+
             [UIView commitAnimations];
             _visibleflag = NO;
             
@@ -388,17 +390,19 @@
             [_DtextView
              resignFirstResponder];
             
-            _ShereBtn.frame = CGRectMake(_ShereBtn.frame.origin.x, _ShereBtn.frame.origin.y + 220, _ShereBtn.frame.size.width , _ShereBtn.frame.size.height);
-            _Homebtn.frame = CGRectMake(_Homebtn.frame.origin.x, _Homebtn.frame.origin.y + 220, _Homebtn.frame.size.width , _Homebtn.frame.size.height);
-            _SaveBtn.frame = CGRectMake(_SaveBtn.frame.origin.x, _SaveBtn.frame.origin.y + 220, _SaveBtn.frame.size.width , _SaveBtn.frame.size.height);
-            _deleteBtn.frame = CGRectMake(_deleteBtn.frame.origin.x, _deleteBtn.frame.origin.y + 220, _deleteBtn.frame.size.width , _deleteBtn.frame.size.height);
-            _NameLabel.frame = CGRectMake(_NameLabel.frame.origin.x, _NameLabel.frame.origin.y + 220, _NameLabel.frame.size.width , _NameLabel.frame.size.height);
+//            _ShereBtn.frame = CGRectMake(_ShereBtn.frame.origin.x, _ShereBtn.frame.origin.y + 220, _ShereBtn.frame.size.width , _ShereBtn.frame.size.height);
+//            _Homebtn.frame = CGRectMake(_Homebtn.frame.origin.x, _Homebtn.frame.origin.y + 220, _Homebtn.frame.size.width , _Homebtn.frame.size.height);
+//            _SaveBtn.frame = CGRectMake(_SaveBtn.frame.origin.x, _SaveBtn.frame.origin.y + 220, _SaveBtn.frame.size.width , _SaveBtn.frame.size.height);
+//            _deleteBtn.frame = CGRectMake(_deleteBtn.frame.origin.x, _deleteBtn.frame.origin.y + 220, _deleteBtn.frame.size.width , _deleteBtn.frame.size.height);
+            
+            _nameLabel.frame = CGRectMake(_nameLabel.frame.origin.x, _nameLabel.frame.origin.y + 220, _nameLabel.frame.size.width , _nameLabel.frame.size.height);
             _DtextView.frame = CGRectMake(_DtextView.frame.origin.x, _DtextView.frame.origin.y + 220, _DtextView.frame.size.width , _DtextView.frame.size.height);
             _NameTextField.frame = CGRectMake(_NameTextField.frame.origin.x, _NameTextField.frame.origin.y + 220, _NameTextField.frame.size.width , _NameTextField.frame.size.height);
             _dreamLabel.frame = CGRectMake(_dreamLabel.frame.origin.x, _dreamLabel.frame.origin.y + 220, _dreamLabel.frame.size.width , _dreamLabel.frame.size.height);
             _imgEriko.frame = CGRectMake(_imgEriko.frame.origin.x, _imgEriko.frame.origin.y + 220, _imgEriko.frame.size.width , _imgEriko.frame.size.height);
             _profImageView.frame = CGRectMake(_profImageView.frame.origin.x, _profImageView.frame.origin.y + 220, _profImageView.frame.size.width , _profImageView.frame.size.height);
-            
+            _TitleLabel.frame = CGRectMake(_TitleLabel.frame.origin.x, _TitleLabel.frame.origin.y + 220, _TitleLabel.frame.size.width , _TitleLabel.frame.size.height);
+
             
             
             [UIView beginAnimations:nil context:nil];

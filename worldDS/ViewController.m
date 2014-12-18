@@ -23,9 +23,12 @@ NSInteger n;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
     
-    
-    
+
+
+- (void)viewWillAppear:(BOOL)animated{
+        NSLog(@"aaaaaaaaaaaaa");
     //UserDefaultからデータを取り出す箱を取り出す何もないがとりだす
     
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm地図の表示mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm

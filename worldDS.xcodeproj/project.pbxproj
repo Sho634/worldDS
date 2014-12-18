@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9413F9B61A415F5D007F4F21 /* kiroku.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9B51A415F5D007F4F21 /* kiroku.png */; };
-		9413F9B81A415FEB007F4F21 /* wakemasu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9B71A415FEB007F4F21 /* wakemasu.png */; };
-		9413F9BA1A415FF5007F4F21 /* bakku.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9B91A415FF5007F4F21 /* bakku.png */; };
 		9413F9BC1A41B4A9007F4F21 /* go-lll.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9BB1A41B4A9007F4F21 /* go-lll.png */; };
 		9413F9DB1A41C520007F4F21 /* iOS-8-Icon-29@2x_37.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9D11A41C520007F4F21 /* iOS-8-Icon-29@2x_37.png */; };
 		9413F9DC1A41C520007F4F21 /* iOS-8-Icon-40@2x_09.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9D21A41C520007F4F21 /* iOS-8-Icon-40@2x_09.png */; };
@@ -23,19 +20,15 @@
 		9413F9E41A41C520007F4F21 /* iOS-8-Icon-1027@2x_43.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9DA1A41C520007F4F21 /* iOS-8-Icon-1027@2x_43.png */; };
 		9413F9E61A41C6F0007F4F21 /* iOS-8-87@2xIcon-Template-2.1.1_31.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9E51A41C6F0007F4F21 /* iOS-8-87@2xIcon-Template-2.1.1_31.png */; };
 		94467BCC1A1F18A90025973A /* ShoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94467BCB1A1F18A90025973A /* ShoAnnotation.m */; };
-		949225741A3FFFFC00DC808E /* 155.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225691A3FFFFC00DC808E /* 155.png */; };
 		949225771A3FFFFC00DC808E /* NOPHOTO　地球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */; };
 		949225781A3FFFFC00DC808E /* nophotoかミングスーン.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */; };
-		9492257A1A3FFFFC00DC808E /* ごみごみ.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492256F1A3FFFFC00DC808E /* ごみごみ.png */; };
 		9492257C1A3FFFFC00DC808E /* 日記.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225711A3FFFFC00DC808E /* 日記.png */; };
 		949225801A40042B00DC808E /* 634.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492257F1A40042B00DC808E /* 634.png */; };
-		949225841A40068F00DC808E /* oldpp.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225831A40068F00DC808E /* oldpp.png */; };
 		949225861A4008E000DC808E /* pinpinpin.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225851A4008E000DC808E /* pinpinpin.png */; };
 		949225961A40830900DC808E /* eriko.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225951A40830900DC808E /* eriko.png */; };
 		949225981A4096B000DC808E /* pikkoropin.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225971A4096B000DC808E /* pikkoropin.png */; };
 		9492259A1A4097DB00DC808E /* redred.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225991A4097DB00DC808E /* redred.png */; };
 		9492259E1A40AE0400DC808E /* lalala.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492259D1A40AE0400DC808E /* lalala.png */; };
-		949225A81A41419300DC808E /* keep.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225A71A41419300DC808E /* keep.png */; };
 		949E5BF91A15EA5A00761ACA /* ProfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BF81A15EA5A00761ACA /* ProfViewController.m */; };
 		949E5BFC1A178DFE00761ACA /* WantGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFB1A178DFE00761ACA /* WantGoViewController.m */; };
 		949E5BFF1A178E4D00761ACA /* UserDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFE1A178E4D00761ACA /* UserDViewController.m */; };
@@ -45,6 +38,7 @@
 		94C9F6D91A4204DE0092EAEC /* gorigori.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6D81A4204DE0092EAEC /* gorigori.png */; };
 		94C9F6DB1A420AD20092EAEC /* omg.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6DA1A420AD20092EAEC /* omg.png */; };
 		94C9F6DD1A420B9B0092EAEC /* omgB.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6DC1A420B9B0092EAEC /* omgB.png */; };
+		94C9F6DF1A420F470092EAEC /* 155.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6DE1A420F470092EAEC /* 155.png */; };
 		94F3D4CF1A10A4E2005422A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4CE1A10A4E2005422A2 /* main.m */; };
 		94F3D4D21A10A4E2005422A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D11A10A4E2005422A2 /* AppDelegate.m */; };
 		94F3D4D51A10A4E2005422A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D41A10A4E2005422A2 /* ViewController.m */; };
@@ -66,9 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9413F9B51A415F5D007F4F21 /* kiroku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kiroku.png; sourceTree = "<group>"; };
-		9413F9B71A415FEB007F4F21 /* wakemasu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wakemasu.png; sourceTree = "<group>"; };
-		9413F9B91A415FF5007F4F21 /* bakku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bakku.png; sourceTree = "<group>"; };
 		9413F9BB1A41B4A9007F4F21 /* go-lll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "go-lll.png"; sourceTree = "<group>"; };
 		9413F9D11A41C520007F4F21 /* iOS-8-Icon-29@2x_37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS-8-Icon-29@2x_37.png"; sourceTree = "<group>"; };
 		9413F9D21A41C520007F4F21 /* iOS-8-Icon-40@2x_09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS-8-Icon-40@2x_09.png"; sourceTree = "<group>"; };
@@ -83,19 +74,15 @@
 		9413F9E51A41C6F0007F4F21 /* iOS-8-87@2xIcon-Template-2.1.1_31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS-8-87@2xIcon-Template-2.1.1_31.png"; sourceTree = "<group>"; };
 		94467BCA1A1F18A90025973A /* ShoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoAnnotation.h; sourceTree = "<group>"; };
 		94467BCB1A1F18A90025973A /* ShoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoAnnotation.m; sourceTree = "<group>"; };
-		949225691A3FFFFC00DC808E /* 155.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 155.png; path = imageforder/155.png; sourceTree = "<group>"; };
 		9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "NOPHOTO　地球.jpg"; path = "imageforder/NOPHOTO　地球.jpg"; sourceTree = "<group>"; };
 		9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "nophotoかミングスーン.jpg"; path = "imageforder/nophotoかミングスーン.jpg"; sourceTree = "<group>"; };
-		9492256F1A3FFFFC00DC808E /* ごみごみ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ごみごみ.png"; path = "imageforder/ごみごみ.png"; sourceTree = "<group>"; };
 		949225711A3FFFFC00DC808E /* 日記.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "日記.png"; path = "imageforder/日記.png"; sourceTree = "<group>"; };
 		9492257F1A40042B00DC808E /* 634.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 634.png; sourceTree = "<group>"; };
-		949225831A40068F00DC808E /* oldpp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oldpp.png; sourceTree = "<group>"; };
 		949225851A4008E000DC808E /* pinpinpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinpinpin.png; sourceTree = "<group>"; };
 		949225951A40830900DC808E /* eriko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eriko.png; sourceTree = "<group>"; };
 		949225971A4096B000DC808E /* pikkoropin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikkoropin.png; sourceTree = "<group>"; };
 		949225991A4097DB00DC808E /* redred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redred.png; sourceTree = "<group>"; };
 		9492259D1A40AE0400DC808E /* lalala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lalala.png; sourceTree = "<group>"; };
-		949225A71A41419300DC808E /* keep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keep.png; sourceTree = "<group>"; };
 		949E5BF71A15EA5A00761ACA /* ProfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfViewController.h; sourceTree = "<group>"; };
 		949E5BF81A15EA5A00761ACA /* ProfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfViewController.m; sourceTree = "<group>"; };
 		949E5BFA1A178DFE00761ACA /* WantGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WantGoViewController.h; sourceTree = "<group>"; };
@@ -109,6 +96,7 @@
 		94C9F6D81A4204DE0092EAEC /* gorigori.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gorigori.png; sourceTree = "<group>"; };
 		94C9F6DA1A420AD20092EAEC /* omg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omg.png; sourceTree = "<group>"; };
 		94C9F6DC1A420B9B0092EAEC /* omgB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omgB.png; sourceTree = "<group>"; };
+		94C9F6DE1A420F470092EAEC /* 155.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 155.png; path = imageforder/155.png; sourceTree = "<group>"; };
 		94F3D4C91A10A4E2005422A2 /* worldDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worldDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F3D4CD1A10A4E2005422A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94F3D4CE1A10A4E2005422A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -183,7 +171,6 @@
 				94467BCA1A1F18A90025973A /* ShoAnnotation.h */,
 				94467BCB1A1F18A90025973A /* ShoAnnotation.m */,
 				94F3D4D61A10A4E2005422A2 /* Main.storyboard */,
-				949225A71A41419300DC808E /* keep.png */,
 				94F3D4D91A10A4E2005422A2 /* Images.xcassets */,
 				94F3D4DB1A10A4E2005422A2 /* LaunchScreen.xib */,
 				94F3D4CC1A10A4E2005422A2 /* Supporting Files */,
@@ -194,6 +181,7 @@
 		94F3D4CC1A10A4E2005422A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94C9F6DE1A420F470092EAEC /* 155.png */,
 				94C9F6DC1A420B9B0092EAEC /* omgB.png */,
 				94C9F6DA1A420AD20092EAEC /* omg.png */,
 				94C9F6D81A4204DE0092EAEC /* gorigori.png */,
@@ -210,20 +198,14 @@
 				9413F9D91A41C520007F4F21 /* iOS-8-Icon-180@2x_15.png */,
 				9413F9DA1A41C520007F4F21 /* iOS-8-Icon-1027@2x_43.png */,
 				9413F9BB1A41B4A9007F4F21 /* go-lll.png */,
-				9413F9B91A415FF5007F4F21 /* bakku.png */,
-				9413F9B71A415FEB007F4F21 /* wakemasu.png */,
-				9413F9B51A415F5D007F4F21 /* kiroku.png */,
 				9492259D1A40AE0400DC808E /* lalala.png */,
 				949225991A4097DB00DC808E /* redred.png */,
 				949225971A4096B000DC808E /* pikkoropin.png */,
 				949225951A40830900DC808E /* eriko.png */,
 				949225851A4008E000DC808E /* pinpinpin.png */,
-				949225831A40068F00DC808E /* oldpp.png */,
 				9492257F1A40042B00DC808E /* 634.png */,
-				949225691A3FFFFC00DC808E /* 155.png */,
 				9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */,
 				9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */,
-				9492256F1A3FFFFC00DC808E /* ごみごみ.png */,
 				949225711A3FFFFC00DC808E /* 日記.png */,
 				94F3D4CD1A10A4E2005422A2 /* Info.plist */,
 				94F3D4CE1A10A4E2005422A2 /* main.m */,
@@ -330,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9413F9E61A41C6F0007F4F21 /* iOS-8-87@2xIcon-Template-2.1.1_31.png in Resources */,
+				94C9F6DF1A420F470092EAEC /* 155.png in Resources */,
 				9413F9DC1A41C520007F4F21 /* iOS-8-Icon-40@2x_09.png in Resources */,
 				94F3D4D81A10A4E2005422A2 /* Main.storyboard in Resources */,
 				9413F9DD1A41C520007F4F21 /* iOS-8-Icon-58@2x_34.png in Resources */,
@@ -347,23 +330,16 @@
 				949225801A40042B00DC808E /* 634.png in Resources */,
 				949225771A3FFFFC00DC808E /* NOPHOTO　地球.jpg in Resources */,
 				9492259A1A4097DB00DC808E /* redred.png in Resources */,
-				9413F9B81A415FEB007F4F21 /* wakemasu.png in Resources */,
 				9413F9DE1A41C520007F4F21 /* iOS-8-Icon-76@2x_24.png in Resources */,
 				94C9F6DB1A420AD20092EAEC /* omg.png in Resources */,
-				9413F9BA1A415FF5007F4F21 /* bakku.png in Resources */,
 				94C9F6D71A41FCA30092EAEC /* go---.png in Resources */,
-				949225841A40068F00DC808E /* oldpp.png in Resources */,
-				949225741A3FFFFC00DC808E /* 155.png in Resources */,
 				949225961A40830900DC808E /* eriko.png in Resources */,
 				94C9F6D91A4204DE0092EAEC /* gorigori.png in Resources */,
 				949225981A4096B000DC808E /* pikkoropin.png in Resources */,
-				9413F9B61A415F5D007F4F21 /* kiroku.png in Resources */,
 				9413F9DB1A41C520007F4F21 /* iOS-8-Icon-29@2x_37.png in Resources */,
-				949225A81A41419300DC808E /* keep.png in Resources */,
 				949225861A4008E000DC808E /* pinpinpin.png in Resources */,
 				94F3D4DA1A10A4E2005422A2 /* Images.xcassets in Resources */,
 				9413F9DF1A41C520007F4F21 /* iOS-8-Icon-80@2x_06.png in Resources */,
-				9492257A1A3FFFFC00DC808E /* ごみごみ.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -422,10 +422,10 @@
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.3];
         
-         _Sharebtn.frame = CGRectMake(_Sharebtn.frame.origin.x, _Sharebtn.frame.origin.y - 220, _Sharebtn.frame.size.width , _Sharebtn.frame.size.height);
-        _Buckbtn.frame = CGRectMake(_Buckbtn.frame.origin.x, _Buckbtn.frame.origin.y - 220, _Buckbtn.frame.size.width , _Buckbtn.frame.size.height);
-        _saveBtn.frame = CGRectMake(_saveBtn.frame.origin.x, _saveBtn.frame.origin.y - 220, _saveBtn.frame.size.width , _saveBtn.frame.size.height);
-        _deleteBtngogo.frame = CGRectMake(_deleteBtngogo.frame.origin.x, _deleteBtngogo.frame.origin.y - 220, _deleteBtngogo.frame.size.width , _deleteBtngogo.frame.size.height);
+//         _Sharebtn.frame = CGRectMake(_Sharebtn.frame.origin.x, _Sharebtn.frame.origin.y - 220, _Sharebtn.frame.size.width , _Sharebtn.frame.size.height);
+//        _Buckbtn.frame = CGRectMake(_Buckbtn.frame.origin.x, _Buckbtn.frame.origin.y - 220, _Buckbtn.frame.size.width , _Buckbtn.frame.size.height);
+//        _saveBtn.frame = CGRectMake(_saveBtn.frame.origin.x, _saveBtn.frame.origin.y - 220, _saveBtn.frame.size.width , _saveBtn.frame.size.height);
+//        _deleteBtngogo.frame = CGRectMake(_deleteBtngogo.frame.origin.x, _deleteBtngogo.frame.origin.y - 220, _deleteBtngogo.frame.size.width , _deleteBtngogo.frame.size.height);
         _ImageView.frame = CGRectMake(_ImageView.frame.origin.x, _ImageView.frame.origin.y - 220, _ImageView.frame.size.width , _ImageView.frame.size.height);
         _TextView.frame = CGRectMake(_TextView.frame.origin.x, _TextView.frame.origin.y - 220, _TextView.frame.size.width , _TextView.frame.size.height);
         _gogoText.frame = CGRectMake(_gogoText.frame.origin.x, _gogoText.frame.origin.y - 220, _gogoText.frame.size.width , _gogoText.frame.size.height);
@@ -452,10 +452,10 @@
             NSLog(@"Notice Down Gesture");
             [_TextView resignFirstResponder];
             
-            _Sharebtn.frame = CGRectMake(_Sharebtn.frame.origin.x, _Sharebtn.frame.origin.y + 220, _Sharebtn.frame.size.width , _Sharebtn.frame.size.height);
-            _Buckbtn.frame = CGRectMake(_Buckbtn.frame.origin.x, _Buckbtn.frame.origin.y + 220, _Buckbtn.frame.size.width , _Buckbtn.frame.size.height);
-            _saveBtn.frame = CGRectMake(_saveBtn.frame.origin.x, _saveBtn.frame.origin.y + 220, _saveBtn.frame.size.width , _saveBtn.frame.size.height);
-            _deleteBtngogo.frame = CGRectMake(_deleteBtngogo.frame.origin.x, _deleteBtngogo.frame.origin.y + 220, _deleteBtngogo.frame.size.width , _deleteBtngogo.frame.size.height);
+//            _Sharebtn.frame = CGRectMake(_Sharebtn.frame.origin.x, _Sharebtn.frame.origin.y + 220, _Sharebtn.frame.size.width , _Sharebtn.frame.size.height);
+//            _Buckbtn.frame = CGRectMake(_Buckbtn.frame.origin.x, _Buckbtn.frame.origin.y + 220, _Buckbtn.frame.size.width , _Buckbtn.frame.size.height);
+//            _saveBtn.frame = CGRectMake(_saveBtn.frame.origin.x, _saveBtn.frame.origin.y + 220, _saveBtn.frame.size.width , _saveBtn.frame.size.height);
+//            _deleteBtngogo.frame = CGRectMake(_deleteBtngogo.frame.origin.x, _deleteBtngogo.frame.origin.y + 220, _deleteBtngogo.frame.size.width , _deleteBtngogo.frame.size.height);
             _ImageView.frame = CGRectMake(_ImageView.frame.origin.x, _ImageView.frame.origin.y + 220, _ImageView.frame.size.width , _ImageView.frame.size.height);
             _TextView.frame = CGRectMake(_TextView.frame.origin.x, _TextView.frame.origin.y + 220, _TextView.frame.size.width , _TextView.frame.size.height);
             _gogoText.frame = CGRectMake(_gogoText.frame.origin.x, _gogoText.frame.origin.y + 220, _gogoText.frame.size.width , _gogoText.frame.size.height);

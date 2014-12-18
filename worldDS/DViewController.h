@@ -22,12 +22,13 @@
 
 
 
-@property (weak, nonatomic) IBOutlet UILabel *NameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextView *DtextView;
 @property (weak, nonatomic) IBOutlet UITextField *NameTextField;
 @property (weak, nonatomic) IBOutlet UILabel *dreamLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *imgEriko;
+@property (weak, nonatomic) IBOutlet UILabel *TitleLabel;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *SaveBtn;

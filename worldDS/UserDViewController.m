@@ -20,6 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"aaaaaaaaaaaaa");
+    
+    
+    
     //ui　イメージを背景に設定する
     //ui　イメージを背景に設定する
     UIImage *backimage = [UIImage imageNamed:@"omgB.png"];
