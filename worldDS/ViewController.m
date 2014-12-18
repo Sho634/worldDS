@@ -12,6 +12,7 @@
 #import "ProfViewController.h"
 #import "WantGoViewController.h"
 #import "ShoAnnotation.h"
+#import "ErikoViewController.h"
 @interface ViewController ()
 {
 MKMapView* _mapView;
@@ -35,7 +36,7 @@ NSInteger n;
 
     _mapView = [[MKMapView alloc] init];
     _mapView.delegate = self;
-    _mapView.frame = CGRectMake(0, 20, 320, 500);
+    _mapView.frame = CGRectMake(0, 64, 320, 508);
     
 //    CLLocationCoordinate2D co;
 //
@@ -323,9 +324,11 @@ NSInteger n;
 
 
     }
-
-
+    
 }
+
+
+
     
  //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーでの画面遷移mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 - (void)tabBar:(UITabBar*)tabBar didSelectItem:(UITabBarItem*)item {
@@ -364,8 +367,14 @@ NSInteger n;
    
 
 
+}
+
+- (IBAction)infotapBtn:(id)sender {
+    
+    ErikoViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ErikoViewController"];
+    [[self navigationController] pushViewController:tvc animated:YES];
+    
 
 
 }
-
 @end

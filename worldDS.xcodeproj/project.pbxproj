@@ -39,6 +39,13 @@
 		94C9F6DB1A420AD20092EAEC /* omg.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6DA1A420AD20092EAEC /* omg.png */; };
 		94C9F6DD1A420B9B0092EAEC /* omgB.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6DC1A420B9B0092EAEC /* omgB.png */; };
 		94C9F6DF1A420F470092EAEC /* 155.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6DE1A420F470092EAEC /* 155.png */; };
+		94C9F6F81A42F3510092EAEC /* cyu-toNo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6F41A42F3510092EAEC /* cyu-toNo1.png */; };
+		94C9F6F91A42F3510092EAEC /* cyu-toNo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6F51A42F3510092EAEC /* cyu-toNo2.png */; };
+		94C9F6FA1A42F3510092EAEC /* cyu-toNo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6F61A42F3510092EAEC /* cyu-toNo3.png */; };
+		94C9F6FB1A42F3510092EAEC /* cyu-toNo4.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6F71A42F3510092EAEC /* cyu-toNo4.png */; };
+		94C9F7011A42F8370092EAEC /* ErikoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9F7001A42F8370092EAEC /* ErikoViewController.m */; };
+		94C9F7031A4307950092EAEC /* iiiii.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F7021A4307950092EAEC /* iiiii.png */; };
+		94C9F7051A4309860092EAEC /* titleMr.PriP.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F7041A4309860092EAEC /* titleMr.PriP.png */; };
 		94F3D4CF1A10A4E2005422A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4CE1A10A4E2005422A2 /* main.m */; };
 		94F3D4D21A10A4E2005422A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D11A10A4E2005422A2 /* AppDelegate.m */; };
 		94F3D4D51A10A4E2005422A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D41A10A4E2005422A2 /* ViewController.m */; };
@@ -97,6 +104,14 @@
 		94C9F6DA1A420AD20092EAEC /* omg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omg.png; sourceTree = "<group>"; };
 		94C9F6DC1A420B9B0092EAEC /* omgB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omgB.png; sourceTree = "<group>"; };
 		94C9F6DE1A420F470092EAEC /* 155.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 155.png; path = imageforder/155.png; sourceTree = "<group>"; };
+		94C9F6F41A42F3510092EAEC /* cyu-toNo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cyu-toNo1.png"; sourceTree = "<group>"; };
+		94C9F6F51A42F3510092EAEC /* cyu-toNo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cyu-toNo2.png"; sourceTree = "<group>"; };
+		94C9F6F61A42F3510092EAEC /* cyu-toNo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cyu-toNo3.png"; sourceTree = "<group>"; };
+		94C9F6F71A42F3510092EAEC /* cyu-toNo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cyu-toNo4.png"; sourceTree = "<group>"; };
+		94C9F6FF1A42F8370092EAEC /* ErikoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErikoViewController.h; sourceTree = "<group>"; };
+		94C9F7001A42F8370092EAEC /* ErikoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErikoViewController.m; sourceTree = "<group>"; };
+		94C9F7021A4307950092EAEC /* iiiii.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iiiii.png; sourceTree = "<group>"; };
+		94C9F7041A4309860092EAEC /* titleMr.PriP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleMr.PriP.png; sourceTree = "<group>"; };
 		94F3D4C91A10A4E2005422A2 /* worldDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worldDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F3D4CD1A10A4E2005422A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94F3D4CE1A10A4E2005422A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -170,6 +185,8 @@
 				94F3D4D41A10A4E2005422A2 /* ViewController.m */,
 				94467BCA1A1F18A90025973A /* ShoAnnotation.h */,
 				94467BCB1A1F18A90025973A /* ShoAnnotation.m */,
+				94C9F6FF1A42F8370092EAEC /* ErikoViewController.h */,
+				94C9F7001A42F8370092EAEC /* ErikoViewController.m */,
 				94F3D4D61A10A4E2005422A2 /* Main.storyboard */,
 				94F3D4D91A10A4E2005422A2 /* Images.xcassets */,
 				94F3D4DB1A10A4E2005422A2 /* LaunchScreen.xib */,
@@ -181,6 +198,12 @@
 		94F3D4CC1A10A4E2005422A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94C9F7041A4309860092EAEC /* titleMr.PriP.png */,
+				94C9F7021A4307950092EAEC /* iiiii.png */,
+				94C9F6F41A42F3510092EAEC /* cyu-toNo1.png */,
+				94C9F6F51A42F3510092EAEC /* cyu-toNo2.png */,
+				94C9F6F61A42F3510092EAEC /* cyu-toNo3.png */,
+				94C9F6F71A42F3510092EAEC /* cyu-toNo4.png */,
 				94C9F6DE1A420F470092EAEC /* 155.png */,
 				94C9F6DC1A420B9B0092EAEC /* omgB.png */,
 				94C9F6DA1A420AD20092EAEC /* omg.png */,
@@ -311,22 +334,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94C9F6F91A42F3510092EAEC /* cyu-toNo2.png in Resources */,
 				9413F9E61A41C6F0007F4F21 /* iOS-8-87@2xIcon-Template-2.1.1_31.png in Resources */,
 				94C9F6DF1A420F470092EAEC /* 155.png in Resources */,
 				9413F9DC1A41C520007F4F21 /* iOS-8-Icon-40@2x_09.png in Resources */,
 				94F3D4D81A10A4E2005422A2 /* Main.storyboard in Resources */,
 				9413F9DD1A41C520007F4F21 /* iOS-8-Icon-58@2x_34.png in Resources */,
 				9413F9E21A41C520007F4F21 /* iOS-8-Icon-152@2x_18.png in Resources */,
+				94C9F7031A4307950092EAEC /* iiiii.png in Resources */,
 				9413F9BC1A41B4A9007F4F21 /* go-lll.png in Resources */,
 				94F3D4DD1A10A4E2005422A2 /* LaunchScreen.xib in Resources */,
 				9413F9E31A41C520007F4F21 /* iOS-8-Icon-180@2x_15.png in Resources */,
 				9413F9E01A41C520007F4F21 /* iOS-8-Icon-120@2x_03.png in Resources */,
+				94C9F7051A4309860092EAEC /* titleMr.PriP.png in Resources */,
 				9413F9E41A41C520007F4F21 /* iOS-8-Icon-1027@2x_43.png in Resources */,
 				949225781A3FFFFC00DC808E /* nophotoかミングスーン.jpg in Resources */,
 				94C9F6DD1A420B9B0092EAEC /* omgB.png in Resources */,
 				9492259E1A40AE0400DC808E /* lalala.png in Resources */,
 				9413F9E11A41C520007F4F21 /* iOS-8-Icon-120@2x_21.png in Resources */,
 				9492257C1A3FFFFC00DC808E /* 日記.png in Resources */,
+				94C9F6FA1A42F3510092EAEC /* cyu-toNo3.png in Resources */,
 				949225801A40042B00DC808E /* 634.png in Resources */,
 				949225771A3FFFFC00DC808E /* NOPHOTO　地球.jpg in Resources */,
 				9492259A1A4097DB00DC808E /* redred.png in Resources */,
@@ -336,6 +363,8 @@
 				949225961A40830900DC808E /* eriko.png in Resources */,
 				94C9F6D91A4204DE0092EAEC /* gorigori.png in Resources */,
 				949225981A4096B000DC808E /* pikkoropin.png in Resources */,
+				94C9F6F81A42F3510092EAEC /* cyu-toNo1.png in Resources */,
+				94C9F6FB1A42F3510092EAEC /* cyu-toNo4.png in Resources */,
 				9413F9DB1A41C520007F4F21 /* iOS-8-Icon-29@2x_37.png in Resources */,
 				949225861A4008E000DC808E /* pinpinpin.png in Resources */,
 				94F3D4DA1A10A4E2005422A2 /* Images.xcassets in Resources */,
@@ -365,6 +394,7 @@
 				94F3D4CF1A10A4E2005422A2 /* main.m in Sources */,
 				94A649C91A1323870026C864 /* DViewController.m in Sources */,
 				94467BCC1A1F18A90025973A /* ShoAnnotation.m in Sources */,
+				94C9F7011A42F8370092EAEC /* ErikoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

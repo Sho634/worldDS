@@ -309,7 +309,7 @@
 - (IBAction)tapdeleteBtn:(id)sender {//データー削除が分からない！！！！！！！！！！！！！！！！！！！！！！！！！
     NSLog(@"delete");
 
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"delete the history" message:@"May I delete this history?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"delete the history" message:@"delete this history?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
     [alert show];
 
 }

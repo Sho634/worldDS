@@ -23,6 +23,11 @@ BOOL _greenpinFlag;     //緑ピンフラグ
 @property (weak, nonatomic) IBOutlet UITabBarItem *GreenPinTab;
 @property (weak, nonatomic) IBOutlet UITabBarItem *SetBarItem;
 
+//@property (weak, nonatomic) IBOutlet UIButton *information;
+//- (IBAction)tapinformation:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *infobarBtn;
+
+- (IBAction)infotapBtn:(id)sender;
 
 @end
 
