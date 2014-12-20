@@ -17,6 +17,7 @@ NSString *_assetsUrl;    //assetsUrlを格納するインスタンス
 ALAssetsLibrary *_library;  //ALAssetsLibraryのインスタンス
 NSMutableArray *_MapDiaryArray;
     BOOL _visibleflag;
+    BOOL _titlevisibleflag;
 }
 
 @property (nonatomic,assign) int select_num;

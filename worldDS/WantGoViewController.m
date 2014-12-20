@@ -61,7 +61,7 @@
     //pinの番号を表示する
     NSLog(@"dvc-%d",self.select_num);
 
-    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+    _MapDiaryArray = [[defaults objectForKey:@"MapDiary"] mutableCopy];
     
     // pin 一つ一つを分別して for 文でまわしている
     for (int i=0; i < _MapDiaryArray.count; i++) {
@@ -106,7 +106,7 @@
     self.gogoText.delegate = self;
     
     _visibleflag = YES;
-
+    _titlevisibleflag = YES;
 
    
 
@@ -450,6 +450,18 @@
     return YES;
 }
 
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if (_visibleflag) {
+        
+        _visibleflag = NO;
+        _titlevisibleflag = NO;
+    }
+    return YES;
+}
+
+
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -460,29 +472,39 @@
         // 下スワイプされた時にログに表示
         if (!_visibleflag) {
             NSLog(@"Notice Down Gesture");
-            [_TextView resignFirstResponder];
-            
-//            _Sharebtn.frame = CGRectMake(_Sharebtn.frame.origin.x, _Sharebtn.frame.origin.y + 220, _Sharebtn.frame.size.width , _Sharebtn.frame.size.height);
-//            _Buckbtn.frame = CGRectMake(_Buckbtn.frame.origin.x, _Buckbtn.frame.origin.y + 220, _Buckbtn.frame.size.width , _Buckbtn.frame.size.height);
-//            _saveBtn.frame = CGRectMake(_saveBtn.frame.origin.x, _saveBtn.frame.origin.y + 220, _saveBtn.frame.size.width , _saveBtn.frame.size.height);
-//            _deleteBtngogo.frame = CGRectMake(_deleteBtngogo.frame.origin.x, _deleteBtngogo.frame.origin.y + 220, _deleteBtngogo.frame.size.width , _deleteBtngogo.frame.size.height);
-            _ImageView.frame = CGRectMake(_ImageView.frame.origin.x, _ImageView.frame.origin.y + 220, _ImageView.frame.size.width , _ImageView.frame.size.height);
-            _TextView.frame = CGRectMake(_TextView.frame.origin.x, _TextView.frame.origin.y + 220, _TextView.frame.size.width , _TextView.frame.size.height);
-            _gogoText.frame = CGRectMake(_gogoText.frame.origin.x, _gogoText.frame.origin.y + 220, _gogoText.frame.size.width , _gogoText.frame.size.height);
-            _gogoTitle.frame = CGRectMake(_gogoTitle.frame.origin.x, _gogoTitle.frame.origin.y + 220, _gogoTitle.frame.size.width , _gogoTitle.frame.size.height);
-            _btnEriko.frame = CGRectMake(_btnEriko.frame.origin.x, _btnEriko.frame.origin.y + 220, _btnEriko.frame.size.width , _btnEriko.frame.size.height);
-            
-
             
             
-            [UIView beginAnimations:nil context:nil];
-            [UIView setAnimationDuration:0.3];
+            if (!_titlevisibleflag) {
+                [_gogoText resignFirstResponder];
+            }else{
+                //キーボードを下げる
+                [_TextView resignFirstResponder];
+                [_gogoText resignFirstResponder];
+                //            _Sharebtn.frame = CGRectMake(_Sharebtn.frame.origin.x, _Sharebtn.frame.origin.y + 220, _Sharebtn.frame.size.width , _Sharebtn.frame.size.height);
+                //            _Buckbtn.frame = CGRectMake(_Buckbtn.frame.origin.x, _Buckbtn.frame.origin.y + 220, _Buckbtn.frame.size.width , _Buckbtn.frame.size.height);
+                //            _saveBtn.frame = CGRectMake(_saveBtn.frame.origin.x, _saveBtn.frame.origin.y + 220, _saveBtn.frame.size.width , _saveBtn.frame.size.height);
+                //            _deleteBtngogo.frame = CGRectMake(_deleteBtngogo.frame.origin.x, _deleteBtngogo.frame.origin.y + 220, _deleteBtngogo.frame.size.width , _deleteBtngogo.frame.size.height);
+                _ImageView.frame = CGRectMake(_ImageView.frame.origin.x, _ImageView.frame.origin.y + 220, _ImageView.frame.size.width , _ImageView.frame.size.height);
+                _TextView.frame = CGRectMake(_TextView.frame.origin.x, _TextView.frame.origin.y + 220, _TextView.frame.size.width , _TextView.frame.size.height);
+                _gogoText.frame = CGRectMake(_gogoText.frame.origin.x, _gogoText.frame.origin.y + 220, _gogoText.frame.size.width , _gogoText.frame.size.height);
+                _gogoTitle.frame = CGRectMake(_gogoTitle.frame.origin.x, _gogoTitle.frame.origin.y + 220, _gogoTitle.frame.size.width , _gogoTitle.frame.size.height);
+                _btnEriko.frame = CGRectMake(_btnEriko.frame.origin.x, _btnEriko.frame.origin.y + 220, _btnEriko.frame.size.width , _btnEriko.frame.size.height);
+                
+                
+                
+                
+                [UIView beginAnimations:nil context:nil];
+                [UIView setAnimationDuration:0.3];
+                
+                
+                
+                [UIView commitAnimations];
             
             
-            
-            [UIView commitAnimations];
+            }
             
             _visibleflag = YES;
+            _titlevisibleflag = YES;
         }
     
 }

@@ -40,31 +40,16 @@
     
     [self showPhoto:[defaults objectForKey:@"URL"]];
     
-    // Do any additional setup after loading the view.
-//    NSString *str_long = @"";
-//    
-//    for (int i = 0; i < 10; i++) {NSLog(@"%d",i);
-//        str_long = [str_long stringByAppendingFormat:@"%@",@""];
-//    }
-//    
-//    NSLog(@"%@",str_long);
-//    
-//    if (str_long.length > 0){
-//        self.DtextView.text = str_long;
-//    }
     
     //pinの番号を表示するメソッド
     NSLog(@"dvc-%d",self.select_num);
     
-    
-    
-   // NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    // NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //ユーザーデフォルトの中に保存した情報に名前をつけている
-    _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
+    _MapDiaryArray = [[defaults objectForKey:@"MapDiary"] mutableCopy];
     
     
     for (int i=0; i < _MapDiaryArray.count; i++) {
-        
         
         NSString *pinNumber =  _MapDiaryArray[i][@"number"];
         
@@ -304,8 +289,8 @@
 
 
 
-
-- (IBAction)tapdeleteBtn:(id)sender {//データー削除が分からない！！！！！！！！！！！！！！！！！！！！！！！！！
+    //deleteBtnでデータ削除
+- (IBAction)tapdeleteBtn:(id)sender {
     NSLog(@"delete");
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"delete the history" message:@"delete this history?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
@@ -313,7 +298,7 @@
 
 }
 
-    
+    //pinの持つ情報をデリート
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
         if(buttonIndex == 1) {
@@ -329,8 +314,6 @@
                     break;
                 }
             }
-            
-            
             
             
             [defaults setObject:_MapDiaryArray forKey:@"MapDiary"];
@@ -361,13 +344,13 @@
 //            _SaveBtn.frame = CGRectMake(_SaveBtn.frame.origin.x, _SaveBtn.frame.origin.y - 220, _SaveBtn.frame.size.width , _SaveBtn.frame.size.height);
 //            _deleteBtn.frame = CGRectMake(_deleteBtn.frame.origin.x, _deleteBtn.frame.origin.y - 220, _deleteBtn.frame.size.width , _deleteBtn.frame.size.height);
             
-            _nameLabel.frame = CGRectMake(_nameLabel.frame.origin.x, _nameLabel.frame.origin.y - 220, _nameLabel.frame.size.width , _nameLabel.frame.size.height);
-            _DtextView.frame = CGRectMake(_DtextView.frame.origin.x, _DtextView.frame.origin.y - 220, _DtextView.frame.size.width , _DtextView.frame.size.height);
-            _NameTextField.frame = CGRectMake(_NameTextField.frame.origin.x, _NameTextField.frame.origin.y - 220, _NameTextField.frame.size.width , _NameTextField.frame.size.height);
-            _dreamLabel.frame = CGRectMake(_dreamLabel.frame.origin.x, _dreamLabel.frame.origin.y - 220, _dreamLabel.frame.size.width , _dreamLabel.frame.size.height);
-            _imgEriko.frame = CGRectMake(_imgEriko.frame.origin.x, _imgEriko.frame.origin.y - 220, _imgEriko.frame.size.width , _imgEriko.frame.size.height);
-            _profImageView.frame = CGRectMake(_profImageView.frame.origin.x, _profImageView.frame.origin.y - 220, _profImageView.frame.size.width , _profImageView.frame.size.height);
-            _TitleLabel.frame = CGRectMake(_TitleLabel.frame.origin.x, _TitleLabel.frame.origin.y - 220, _TitleLabel.frame.size.width , _TitleLabel.frame.size.height);
+            _nameLabel.frame = CGRectMake(_nameLabel.frame.origin.x, _nameLabel.frame.origin.y - 200, _nameLabel.frame.size.width , _nameLabel.frame.size.height);
+            _DtextView.frame = CGRectMake(_DtextView.frame.origin.x, _DtextView.frame.origin.y - 200, _DtextView.frame.size.width , _DtextView.frame.size.height);
+            _NameTextField.frame = CGRectMake(_NameTextField.frame.origin.x, _NameTextField.frame.origin.y - 200, _NameTextField.frame.size.width , _NameTextField.frame.size.height);
+            _dreamLabel.frame = CGRectMake(_dreamLabel.frame.origin.x, _dreamLabel.frame.origin.y - 200, _dreamLabel.frame.size.width , _dreamLabel.frame.size.height);
+            _imgEriko.frame = CGRectMake(_imgEriko.frame.origin.x, _imgEriko.frame.origin.y - 200, _imgEriko.frame.size.width , _imgEriko.frame.size.height);
+            _profImageView.frame = CGRectMake(_profImageView.frame.origin.x, _profImageView.frame.origin.y - 200, _profImageView.frame.size.width , _profImageView.frame.size.height);
+            _TitleLabel.frame = CGRectMake(_TitleLabel.frame.origin.x, _TitleLabel.frame.origin.y - 200, _TitleLabel.frame.size.width , _TitleLabel.frame.size.height);
 
             [UIView commitAnimations];
             _visibleflag = NO;
@@ -376,31 +359,63 @@
         return YES;
     }
     
-    
-    - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if (_visibleflag) {
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.3];
+        
+        
+        
+        //            _ShereBtn.frame = CGRectMake(_ShereBtn.frame.origin.x, _ShereBtn.frame.origin.y - 220, _ShereBtn.frame.size.width , _ShereBtn.frame.size.height);
+        //            _Homebtn.frame = CGRectMake(_Homebtn.frame.origin.x, _Homebtn.frame.origin.y - 220, _Homebtn.frame.size.width , _Homebtn.frame.size.height);
+        //            _SaveBtn.frame = CGRectMake(_SaveBtn.frame.origin.x, _SaveBtn.frame.origin.y - 220, _SaveBtn.frame.size.width , _SaveBtn.frame.size.height);
+        //            _deleteBtn.frame = CGRectMake(_deleteBtn.frame.origin.x, _deleteBtn.frame.origin.y - 220, _deleteBtn.frame.size.width , _deleteBtn.frame.size.height);
+        
+        _nameLabel.frame = CGRectMake(_nameLabel.frame.origin.x, _nameLabel.frame.origin.y - 200, _nameLabel.frame.size.width , _nameLabel.frame.size.height);
+        _DtextView.frame = CGRectMake(_DtextView.frame.origin.x, _DtextView.frame.origin.y - 200, _DtextView.frame.size.width , _DtextView.frame.size.height);
+        _NameTextField.frame = CGRectMake(_NameTextField.frame.origin.x, _NameTextField.frame.origin.y - 200, _NameTextField.frame.size.width , _NameTextField.frame.size.height);
+        _dreamLabel.frame = CGRectMake(_dreamLabel.frame.origin.x, _dreamLabel.frame.origin.y - 200, _dreamLabel.frame.size.width , _dreamLabel.frame.size.height);
+        _imgEriko.frame = CGRectMake(_imgEriko.frame.origin.x, _imgEriko.frame.origin.y - 200, _imgEriko.frame.size.width , _imgEriko.frame.size.height);
+        _profImageView.frame = CGRectMake(_profImageView.frame.origin.x, _profImageView.frame.origin.y - 200, _profImageView.frame.size.width , _profImageView.frame.size.height);
+        _TitleLabel.frame = CGRectMake(_TitleLabel.frame.origin.x, _TitleLabel.frame.origin.y - 200, _TitleLabel.frame.size.width , _TitleLabel.frame.size.height);
+        
+        [UIView commitAnimations];
+        _visibleflag = NO;
+        
+    }
+    return YES;
+}
+
+
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
         [textField resignFirstResponder];
         return YES;
     }
     
-    - (void)selfSwipeDownGesture:(UISwipeGestureRecognizer *)sender {
+- (void)selfSwipeDownGesture:(UISwipeGestureRecognizer *)sender {
         // 下スワイプされた時にログに表示
         if (!_visibleflag) {
             NSLog(@"Notice Down Gesture");
-            [_DtextView
-             resignFirstResponder];
+            //キーボドを下げる
+            [_DtextView resignFirstResponder];
+            [_NameTextField resignFirstResponder];
             
 //            _ShereBtn.frame = CGRectMake(_ShereBtn.frame.origin.x, _ShereBtn.frame.origin.y + 220, _ShereBtn.frame.size.width , _ShereBtn.frame.size.height);
 //            _Homebtn.frame = CGRectMake(_Homebtn.frame.origin.x, _Homebtn.frame.origin.y + 220, _Homebtn.frame.size.width , _Homebtn.frame.size.height);
 //            _SaveBtn.frame = CGRectMake(_SaveBtn.frame.origin.x, _SaveBtn.frame.origin.y + 220, _SaveBtn.frame.size.width , _SaveBtn.frame.size.height);
 //            _deleteBtn.frame = CGRectMake(_deleteBtn.frame.origin.x, _deleteBtn.frame.origin.y + 220, _deleteBtn.frame.size.width , _deleteBtn.frame.size.height);
             
-            _nameLabel.frame = CGRectMake(_nameLabel.frame.origin.x, _nameLabel.frame.origin.y + 220, _nameLabel.frame.size.width , _nameLabel.frame.size.height);
-            _DtextView.frame = CGRectMake(_DtextView.frame.origin.x, _DtextView.frame.origin.y + 220, _DtextView.frame.size.width , _DtextView.frame.size.height);
-            _NameTextField.frame = CGRectMake(_NameTextField.frame.origin.x, _NameTextField.frame.origin.y + 220, _NameTextField.frame.size.width , _NameTextField.frame.size.height);
-            _dreamLabel.frame = CGRectMake(_dreamLabel.frame.origin.x, _dreamLabel.frame.origin.y + 220, _dreamLabel.frame.size.width , _dreamLabel.frame.size.height);
-            _imgEriko.frame = CGRectMake(_imgEriko.frame.origin.x, _imgEriko.frame.origin.y + 220, _imgEriko.frame.size.width , _imgEriko.frame.size.height);
-            _profImageView.frame = CGRectMake(_profImageView.frame.origin.x, _profImageView.frame.origin.y + 220, _profImageView.frame.size.width , _profImageView.frame.size.height);
-            _TitleLabel.frame = CGRectMake(_TitleLabel.frame.origin.x, _TitleLabel.frame.origin.y + 220, _TitleLabel.frame.size.width , _TitleLabel.frame.size.height);
+            _nameLabel.frame = CGRectMake(_nameLabel.frame.origin.x, _nameLabel.frame.origin.y + 200, _nameLabel.frame.size.width , _nameLabel.frame.size.height);
+            _DtextView.frame = CGRectMake(_DtextView.frame.origin.x, _DtextView.frame.origin.y + 200, _DtextView.frame.size.width , _DtextView.frame.size.height);
+            _NameTextField.frame = CGRectMake(_NameTextField.frame.origin.x, _NameTextField.frame.origin.y + 200, _NameTextField.frame.size.width , _NameTextField.frame.size.height);
+            _dreamLabel.frame = CGRectMake(_dreamLabel.frame.origin.x, _dreamLabel.frame.origin.y + 200, _dreamLabel.frame.size.width , _dreamLabel.frame.size.height);
+            _imgEriko.frame = CGRectMake(_imgEriko.frame.origin.x, _imgEriko.frame.origin.y + 200, _imgEriko.frame.size.width , _imgEriko.frame.size.height);
+            _profImageView.frame = CGRectMake(_profImageView.frame.origin.x, _profImageView.frame.origin.y + 200, _profImageView.frame.size.width , _profImageView.frame.size.height);
+            _TitleLabel.frame = CGRectMake(_TitleLabel.frame.origin.x, _TitleLabel.frame.origin.y + 200, _TitleLabel.frame.size.width , _TitleLabel.frame.size.height);
 
             
             
