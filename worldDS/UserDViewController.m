@@ -66,10 +66,6 @@
     _DiaryTableView.backgroundColor = acolor;
 
 
-
-    
-
-
 }
 
 

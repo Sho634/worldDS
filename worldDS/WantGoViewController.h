@@ -10,7 +10,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 
-@interface WantGoViewController : UIViewController<UITextViewDelegate>
+@interface WantGoViewController : UIViewController<UITextViewDelegate,UITextFieldDelegate>
 
 {
 NSString *_assetsUrl;    //assetsUrlを格納するインスタンス

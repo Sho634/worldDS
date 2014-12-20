@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface DViewController : UIViewController
+@interface DViewController : UIViewController<UITextViewDelegate, UITextFieldDelegate>
 {
   
     NSMutableArray *_MapDiaryArray;

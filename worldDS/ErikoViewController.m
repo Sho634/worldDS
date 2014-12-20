@@ -16,8 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIButton *myButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 488, 40, 20)];
+    
+    //ボタンのタイトルの名前と色の設定
+//    [myButton setTitle:@"" forState:(UIControlStateNormal)];//
+//    [myButton setTitleColor:[UIColor colorWithRed:0.192157 green:0.760784 blue:0.952941 alpha:1.0] forState:UIControlStateNormal];
+    
+    //ボタンをベースのビューに表示する設定
+    [myButton addTarget:self action:@selector(tapBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:myButton];
+    //自作のボタンに画像を貼付ける
+    UIImage *imgIbtn = [UIImage imageNamed:@"bakku.png"];
+    [myButton setBackgroundImage:imgIbtn forState:UIControlStateNormal];
+    [self.view addSubview:myButton];
+    
 
-    NSInteger pageSize = 4; // ページ数
+    
+    
+    
+
+    NSInteger pageSize = 5; // ページ数
     CGFloat width = self.view.bounds.size.width*0.8;
     CGFloat height = self.view.bounds.size.height*0.8;
     
@@ -93,20 +112,22 @@
     
     
     //    //キャンセルボタン
-    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelButton.frame = CGRectMake(10, height-40, 30, 30);
-    //    [canselButton.titleLabel setFont:[UIFont systemFontOfSize:22]];
-    //    [canselButton setTitle:@"Cansel" forState:UIControlStateNormal];
-    //    [canselButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    UIImage *img =[UIImage imageNamed:@"cancelImage"];
-    [cancelButton setImage:img forState:UIControlStateNormal];
-    [cancelButton addTarget:self action:@selector(backtoHome:)forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:cancelButton];
-    
+//    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    cancelButton.frame = CGRectMake(10, height-40, 30, 30);
+//    //    [canselButton.titleLabel setFont:[UIFont systemFontOfSize:22]];
+//    //    [canselButton setTitle:@"Cansel" forState:UIControlStateNormal];
+//    //    [canselButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+//    UIImage *img =[UIImage imageNamed:@"cancelImage"];
+//    [cancelButton setImage:img forState:UIControlStateNormal];
+//    [cancelButton addTarget:self action:@selector(backtoHome:)forControlEvents:UIControlEventTouchDown];
+//    [self.view addSubview:cancelButton];
+//    
     
     // ページコントロールを貼付ける
     [self.view addSubview:self.pageControl];
     
+
+    [self.view bringSubviewToFront:myButton];
 }
 
 
@@ -129,11 +150,29 @@
 }
 
 
--(void)backtoHome:(UIButton*)cancelButton{
-    NSLog(@"%@",cancelButton);
-    //modalを閉じる
-    [self dismissViewControllerAnimated:YES completion:NULL];
+//-(void)backtoHome:(UIButton*)cancelButton{
+//    NSLog(@"%@",cancelButton);
+//    //modalを閉じる
+//    [self dismissViewControllerAnimated:YES completion:NULL];
+//}
+
+
+//バックボタンの設定
+-(void)tapBtn:(UIButton *)myButton{
+    NSLog(@"bakkuTap");
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.3];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+
+    
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

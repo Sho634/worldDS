@@ -32,15 +32,33 @@ NSInteger n;
         NSLog(@"aaaaaaaaaaaaa");
     //UserDefaultからデータを取り出す箱を取り出す何もないがとりだす
     
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm地図の表示mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+   
+    //チュートリアル（I）ボタンの作成
+    UIButton *myButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 488, 40, 20)];
+    
+    //ボタンのタイトルの名前と色の設定
+    //[myButton setTitle:@"" forState:(UIControlStateNormal)];//
+    //[myButton setTitleColor:[UIColor colorWithRed:0.192157 green:0.760784 blue:0.952941 alpha:1.0] forState:UIControlStateNormal];
+    
+    //ボタンをベースのビューに表示する設定
+    [myButton addTarget:self action:@selector(tapBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:myButton];
+    //自作のボタンに画像を貼付ける
+    UIImage *imgIbtn = [UIImage imageNamed:@"iiiii.png"];
+    [myButton setBackgroundImage:imgIbtn forState:UIControlStateNormal];
+    [self.view addSubview:myButton];
+
+
+    
+    //地図の表示xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
     _mapView = [[MKMapView alloc] init];
     _mapView.delegate = self;
-    _mapView.frame = CGRectMake(0, 64, 320, 508);
+    _mapView.frame = CGRectMake(0, 0, 320, 518);
+ 
     
+    //東京の中心座標
 //    CLLocationCoordinate2D co;
-//
-//    
 //    co.latitude = 35.689488;       //緯度
 //    co.longitude = 139.691706;     //軽度
 //    MKCoordinateRegion cr = _mapView.region;
@@ -51,16 +69,12 @@ NSInteger n;
     
     //地図の表示種類設定
     _mapView.mapType = MKMapTypeHybrid;
-    
     //現在地を表示
-    
     _mapView.showsUserLocation = YES;
-    
     [self.view addSubview:_mapView];
-
     _mapView.delegate = self;
 
-//mmmmmmmmmmmmmmmmmmmmmmmmロングジェスチャーの設定とアクション設定mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  
+//ロングジェスチャーの設定とアクション設定xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     
     UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
     [_mapView addGestureRecognizer:longPressGesture];
@@ -71,15 +85,16 @@ NSInteger n;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //ユーザーデフォルトの中に保存した情報に名前をつけている
     _MapDiaryArray = [defaults objectForKey:@"MapDiary"];
-
-    //for文　ピンの数分回る
-    for (int i=0; i < _MapDiaryArray.count; i++) {
+    NSLog(@"%ld",_MapDiaryArray.count);
     
-        // Arrayの中身を　double 型に変えている
-        NSString *Latitude =  _MapDiaryArray[i][@"Latitude"];
-        double latitude = Latitude.doubleValue;
-        NSString *Longitude =  _MapDiaryArray[i][@"Longitude"];
-        double longitude = Longitude.doubleValue;
+    //for文　ピンの数分回る
+        for (int i=0; i < _MapDiaryArray.count; i++) {
+    
+            // Arrayの中身を　double 型に変えている
+            NSString *Latitude =  _MapDiaryArray[i][@"Latitude"];
+            double latitude = Latitude.doubleValue;
+            NSString *Longitude =  _MapDiaryArray[i][@"Longitude"];
+            double longitude = Longitude.doubleValue;
         
         //ピンを立てるコード
         ShoAnnotation *pin = [[ShoAnnotation alloc] init];
@@ -100,34 +115,30 @@ NSInteger n;
         pin.pinNumber = _MapDiaryArray[i][@"number"];;
         
        //アノテーションを追加
-    [_mapView addAnnotation:pin];
-    //表示する為にビューに追加
-    [self.view addSubview:_mapView];
+        [_mapView addAnnotation:pin];
+        //表示する為にビューに追加
+        [self.view addSubview:_mapView];
      
-    [_mapView.userLocation addObserver:self
+        [_mapView.userLocation addObserver:self
                                forKeyPath:@"location"
                                   options:0
                                   context:NULL];
     }
     
-    //透けさせる
-//    UIColor *color = [UIColor whiteColor];
-//    UIColor *acolor = [color colorWithAlphaComponent:0.2];
-//    
-//    _TabBar.tintColor = acolor;
-//    
-  
-   
+    
+    
+    //指定したメンバ変数を最前面に持ってくる(ここでは i ボタン)
+    [self.view bringSubviewToFront:myButton];
+
 }
-
-
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary *)change
                        context:(void *)context
 {
-    // 地図の中心座標に現在地を設定
+
+// 地図の中心座標に現在地を設定
     _mapView.centerCoordinate = _mapView.userLocation.location.coordinate;
     
     // 表示倍率の設定
@@ -139,11 +150,28 @@ NSInteger n;
     [_mapView.userLocation removeObserver:self forKeyPath:@"location"];
 }
 
+//マップ上のボタン（ i ボタン）アクションの設定。
+-(void)tapBtn:(UIButton *)myButton{
+    NSLog(@"Tap");
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.3];
+ 
+    //ErikoViewControllerに画面遷移
+    ErikoViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ErikoViewController"];
+    [self presentViewController:tvc animated:YES completion:nil];
+    
+}
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
-//mmmmmmmmmmmmmmmmmmmmmmロングジェスチャーmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+
+//ロングジェスチャーxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - (void)handleLongPressGesture:(UILongPressGestureRecognizer *)gesture {
     
     //長押し検出時のみ作動
@@ -172,9 +200,11 @@ NSInteger n;
         //[_allP
         
     }else if([gesture state] == UIGestureRecognizerStateEnded){
-    }
 }
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmピンが落ちてくるメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+}
+
+
+//ピンが落ちてくるxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 -(void)setAnnotation:(CLLocationCoordinate2D) point mapMove:(BOOL)mapMove animated:(BOOL)animated {
     // ピンを全て削除
     //    [_mapView removeAnnotations: _mapView.annotations];
@@ -232,10 +262,7 @@ NSInteger n;
     //    [_mapView addOverlay:circle];
     
     
-    
-//////////////////////////////////////宿敵ユーザーでフォルト/////////////////////////////////////////////////////
-///////////////////////////////////////////データを保存////////////////////////////////////////////////////////
-//
+    //ユーザーデフォルト　＊データを保存xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     //新しいピンの情報をセット
     NSDictionary *pinInfo = @{@"Latitude":[NSString stringWithFormat:@"%f",anno.coordinate.latitude],
                               @"Longitude":[NSString stringWithFormat:@"%f",anno.coordinate.longitude],
@@ -257,8 +284,8 @@ NSInteger n;
     
     
 }
-//mmmmmmmmmmmmmmmmmmmmmmmmピン落ちてくるアニメーションのメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm　pinの色決め　mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+//　ピン落ちてくるアニメーションのメソッドxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//　pinの色決め
 
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
@@ -299,11 +326,9 @@ NSInteger n;
 
 - (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
- //mmmmmmmmmmmmmmmmmmmmmmiボタンをタップした時にしたい動作を記述するメソッドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-    
+ //ピンのiボタンをタップした時にしたい動作を記述するメソッド
     ShoAnnotation *currentpin = (ShoAnnotation *)view.annotation;
-    
-    //グリーンピンの　i ボタンを押した時に反応する　if 文mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+    //グリーンピンの　i ボタンを押した時に反応する　if 文
     if ([currentpin.pinColor isEqualToString:@"green"]) {
        
         WantGoViewController *dvc = [self.storyboard
@@ -330,7 +355,7 @@ NSInteger n;
 
 
     
- //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーでの画面遷移mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ //タブバーでの画面遷移xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - (void)tabBar:(UITabBar*)tabBar didSelectItem:(UITabBarItem*)item {
     NSLog(@"tap:%ld",(long)item.tag);
   
@@ -369,12 +394,10 @@ NSInteger n;
 
 }
 
-- (IBAction)infotapBtn:(id)sender {
-    
-    ErikoViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ErikoViewController"];
-    [[self navigationController] pushViewController:tvc animated:YES];
-    
 
 
-}
+
+
+
+
 @end

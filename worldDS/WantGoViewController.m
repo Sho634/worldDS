@@ -101,6 +101,10 @@
         
     }
     
+    
+    self.TextView.delegate = self;
+    self.gogoText.delegate = self;
+    
     _visibleflag = YES;
 
 
@@ -117,6 +121,12 @@
     [self.view addGestureRecognizer:swipeDownGesture];
 
 
+    
+    
+    
+    
+    
+    
 
 }
 
@@ -474,12 +484,14 @@
             
             _visibleflag = YES;
         }
-    }
-
-
-
-
-
-
+    
+}
+//- (void)selfSwipeDownGesture:(UISwipeGestureRecognizer *)sender {
+//    // 下スワイプされた時にログに表示
+//    if (!_visibleflag) {
+//        NSLog(@"Notice Down Gesture");
+//        [_gogoText resignFirstResponder];
+//
+//
 
 @end

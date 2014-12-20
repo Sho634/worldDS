@@ -20,6 +20,10 @@
 		9413F9E41A41C520007F4F21 /* iOS-8-Icon-1027@2x_43.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9DA1A41C520007F4F21 /* iOS-8-Icon-1027@2x_43.png */; };
 		9413F9E61A41C6F0007F4F21 /* iOS-8-87@2xIcon-Template-2.1.1_31.png in Resources */ = {isa = PBXBuildFile; fileRef = 9413F9E51A41C6F0007F4F21 /* iOS-8-87@2xIcon-Template-2.1.1_31.png */; };
 		94467BCC1A1F18A90025973A /* ShoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94467BCB1A1F18A90025973A /* ShoAnnotation.m */; };
+		9475B3A41A43EB0D005985EF /* ryoumaXY.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3A31A43EB0D005985EF /* ryoumaXY.png */; };
+		9475B3A61A4543F6005985EF /* bakku.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3A51A4543F6005985EF /* bakku.png */; };
+		9475B3AA1A4550BA005985EF /* cyu-toNo5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3A91A4550BA005985EF /* cyu-toNo5.png */; };
+		9475B3AC1A458FFA005985EF /* raberu634.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3AB1A458FFA005985EF /* raberu634.png */; };
 		949225771A3FFFFC00DC808E /* NOPHOTO　地球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */; };
 		949225781A3FFFFC00DC808E /* nophotoかミングスーン.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */; };
 		9492257C1A3FFFFC00DC808E /* 日記.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225711A3FFFFC00DC808E /* 日記.png */; };
@@ -45,7 +49,6 @@
 		94C9F6FB1A42F3510092EAEC /* cyu-toNo4.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F6F71A42F3510092EAEC /* cyu-toNo4.png */; };
 		94C9F7011A42F8370092EAEC /* ErikoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9F7001A42F8370092EAEC /* ErikoViewController.m */; };
 		94C9F7031A4307950092EAEC /* iiiii.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F7021A4307950092EAEC /* iiiii.png */; };
-		94C9F7051A4309860092EAEC /* titleMr.PriP.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C9F7041A4309860092EAEC /* titleMr.PriP.png */; };
 		94F3D4CF1A10A4E2005422A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4CE1A10A4E2005422A2 /* main.m */; };
 		94F3D4D21A10A4E2005422A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D11A10A4E2005422A2 /* AppDelegate.m */; };
 		94F3D4D51A10A4E2005422A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F3D4D41A10A4E2005422A2 /* ViewController.m */; };
@@ -81,6 +84,10 @@
 		9413F9E51A41C6F0007F4F21 /* iOS-8-87@2xIcon-Template-2.1.1_31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS-8-87@2xIcon-Template-2.1.1_31.png"; sourceTree = "<group>"; };
 		94467BCA1A1F18A90025973A /* ShoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoAnnotation.h; sourceTree = "<group>"; };
 		94467BCB1A1F18A90025973A /* ShoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoAnnotation.m; sourceTree = "<group>"; };
+		9475B3A31A43EB0D005985EF /* ryoumaXY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ryoumaXY.png; sourceTree = "<group>"; };
+		9475B3A51A4543F6005985EF /* bakku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bakku.png; sourceTree = "<group>"; };
+		9475B3A91A4550BA005985EF /* cyu-toNo5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cyu-toNo5.png"; sourceTree = "<group>"; };
+		9475B3AB1A458FFA005985EF /* raberu634.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raberu634.png; sourceTree = "<group>"; };
 		9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "NOPHOTO　地球.jpg"; path = "imageforder/NOPHOTO　地球.jpg"; sourceTree = "<group>"; };
 		9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "nophotoかミングスーン.jpg"; path = "imageforder/nophotoかミングスーン.jpg"; sourceTree = "<group>"; };
 		949225711A3FFFFC00DC808E /* 日記.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "日記.png"; path = "imageforder/日記.png"; sourceTree = "<group>"; };
@@ -111,7 +118,6 @@
 		94C9F6FF1A42F8370092EAEC /* ErikoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErikoViewController.h; sourceTree = "<group>"; };
 		94C9F7001A42F8370092EAEC /* ErikoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErikoViewController.m; sourceTree = "<group>"; };
 		94C9F7021A4307950092EAEC /* iiiii.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iiiii.png; sourceTree = "<group>"; };
-		94C9F7041A4309860092EAEC /* titleMr.PriP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleMr.PriP.png; sourceTree = "<group>"; };
 		94F3D4C91A10A4E2005422A2 /* worldDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worldDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F3D4CD1A10A4E2005422A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94F3D4CE1A10A4E2005422A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -198,12 +204,15 @@
 		94F3D4CC1A10A4E2005422A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				94C9F7041A4309860092EAEC /* titleMr.PriP.png */,
+				9475B3AB1A458FFA005985EF /* raberu634.png */,
+				9475B3A51A4543F6005985EF /* bakku.png */,
+				9475B3A31A43EB0D005985EF /* ryoumaXY.png */,
 				94C9F7021A4307950092EAEC /* iiiii.png */,
 				94C9F6F41A42F3510092EAEC /* cyu-toNo1.png */,
 				94C9F6F51A42F3510092EAEC /* cyu-toNo2.png */,
 				94C9F6F61A42F3510092EAEC /* cyu-toNo3.png */,
 				94C9F6F71A42F3510092EAEC /* cyu-toNo4.png */,
+				9475B3A91A4550BA005985EF /* cyu-toNo5.png */,
 				94C9F6DE1A420F470092EAEC /* 155.png */,
 				94C9F6DC1A420B9B0092EAEC /* omgB.png */,
 				94C9F6DA1A420AD20092EAEC /* omg.png */,
@@ -306,6 +315,7 @@
 					};
 					94F3D4E11A10A4E2005422A2 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = RBXMAFF3SB;
 						TestTargetID = 94F3D4C81A10A4E2005422A2;
 					};
 				};
@@ -342,16 +352,18 @@
 				9413F9DD1A41C520007F4F21 /* iOS-8-Icon-58@2x_34.png in Resources */,
 				9413F9E21A41C520007F4F21 /* iOS-8-Icon-152@2x_18.png in Resources */,
 				94C9F7031A4307950092EAEC /* iiiii.png in Resources */,
+				9475B3AC1A458FFA005985EF /* raberu634.png in Resources */,
+				9475B3A41A43EB0D005985EF /* ryoumaXY.png in Resources */,
 				9413F9BC1A41B4A9007F4F21 /* go-lll.png in Resources */,
 				94F3D4DD1A10A4E2005422A2 /* LaunchScreen.xib in Resources */,
 				9413F9E31A41C520007F4F21 /* iOS-8-Icon-180@2x_15.png in Resources */,
 				9413F9E01A41C520007F4F21 /* iOS-8-Icon-120@2x_03.png in Resources */,
-				94C9F7051A4309860092EAEC /* titleMr.PriP.png in Resources */,
 				9413F9E41A41C520007F4F21 /* iOS-8-Icon-1027@2x_43.png in Resources */,
 				949225781A3FFFFC00DC808E /* nophotoかミングスーン.jpg in Resources */,
 				94C9F6DD1A420B9B0092EAEC /* omgB.png in Resources */,
 				9492259E1A40AE0400DC808E /* lalala.png in Resources */,
 				9413F9E11A41C520007F4F21 /* iOS-8-Icon-120@2x_21.png in Resources */,
+				9475B3A61A4543F6005985EF /* bakku.png in Resources */,
 				9492257C1A3FFFFC00DC808E /* 日記.png in Resources */,
 				94C9F6FA1A42F3510092EAEC /* cyu-toNo3.png in Resources */,
 				949225801A40042B00DC808E /* 634.png in Resources */,
@@ -364,6 +376,7 @@
 				94C9F6D91A4204DE0092EAEC /* gorigori.png in Resources */,
 				949225981A4096B000DC808E /* pikkoropin.png in Resources */,
 				94C9F6F81A42F3510092EAEC /* cyu-toNo1.png in Resources */,
+				9475B3AA1A4550BA005985EF /* cyu-toNo5.png in Resources */,
 				94C9F6FB1A42F3510092EAEC /* cyu-toNo4.png in Resources */,
 				9413F9DB1A41C520007F4F21 /* iOS-8-Icon-29@2x_37.png in Resources */,
 				949225861A4008E000DC808E /* pinpinpin.png in Resources */,
@@ -473,6 +486,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "8f9a0f31-f41c-4b97-9afa-103388d570ed";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -494,7 +508,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sho Ueda (RBXMAFF3SB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sho Ueda (RBXMAFF3SB)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -507,6 +522,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "8f9a0f31-f41c-4b97-9afa-103388d570ed";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -517,10 +533,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sho Ueda (ZPBPFB93CA)";
 				INFOPLIST_FILE = worldDS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "69af641c-7d9e-4819-8c3e-b26a12ddfb83";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -530,10 +548,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sho Ueda (ZPBPFB93CA)";
 				INFOPLIST_FILE = worldDS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "69af641c-7d9e-4819-8c3e-b26a12ddfb83";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -542,6 +562,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -553,6 +575,7 @@
 				INFOPLIST_FILE = worldDSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/worldDS.app/worldDS";
 			};
 			name = Debug;
@@ -561,6 +584,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -568,6 +593,7 @@
 				INFOPLIST_FILE = worldDSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/worldDS.app/worldDS";
 			};
 			name = Release;

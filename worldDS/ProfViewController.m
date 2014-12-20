@@ -73,6 +73,25 @@
     [self.view addGestureRecognizer:swipeDownGesture];
     
 
+
+    
+    
+    
+    self.nameTextField.delegate = self;
+    self.dreamTextField.delegate = self;
+    
+    
+    
+    // UIPanGestureRecognizer をインスタンス化します。また、イベント発生時に呼び出すメソッドを selector で指定します。
+//    UISwipeGestureRecognizer* swipeDownGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(selfSwipeDownGesture:)];
+//    
+//    // 下スワイプのイベントを指定します。
+//    swipeDownGesture.direction = UISwipeGestureRecognizerDirectionDown;
+//    
+//    // Viewへ関連付けします。
+//    [self.view addGestureRecognizer:swipeDownGesture];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,35 +120,10 @@
     
 }
 
-    
-    
-//    UIImagePickerControllerSourceType sourceType = -1;
-//    
-//    //イメージピッカーの生成
-//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-//    
-//    //カメラロールに起動する
-//    sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-//    
-//    //その機能が使えなかったら、処理を中止する。
-//    if(![UIImagePickerController isSourceTypeAvailable:sourceType])
-//    {
-//        return;
-//    }
-//    
-//    
-//    imagePicker.sourceType = sourceType;
-//    imagePicker.delegate = (id)self;
-//    
-//    //イメージピッカー表示
-//    [self presentViewController:imagePicker animated:YES completion:nil];
-//    
-//
-//}
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    ////mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmカメラライブラリから選んだ写真のURLを取得。
+    //カメラライブラリから選んだ写真のURLを取得。
     _assetsUrl = [(NSURL *)[info objectForKey:@"UIImagePickerControllerReferenceURL"] absoluteString];
     [self showPhoto:_assetsUrl];
     

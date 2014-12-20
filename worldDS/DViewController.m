@@ -96,6 +96,8 @@
 
     
     
+    
+    self.NameTextField.delegate = self;
     self.DtextView.delegate = self;
     
     _visibleflag = YES;
@@ -114,10 +116,7 @@
     [self.view addGestureRecognizer:swipeDownGesture];
     
     
-    
-    
-    
-    
+
     
 }
 

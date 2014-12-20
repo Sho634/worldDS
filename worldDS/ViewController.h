@@ -11,23 +11,21 @@
 @interface ViewController : UIViewController<MKMapViewDelegate,UITabBarDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     NSMutableArray *_MapDiaryArray; //メンバ変数宣言
+
+    
 int _maxnumber;
 BOOL _redpinFlag;       //赤ピンのフラグ
 BOOL _greenpinFlag;     //緑ピンフラグ
 }
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーのコマンドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
+
 @property (weak, nonatomic) IBOutlet UITabBar *TabBar;
-@property (weak, nonatomic) IBOutlet UITabBarItem *DiaryTabItem;
 @property (weak, nonatomic) IBOutlet UITabBarItem *RedPinTab;
 @property (weak, nonatomic) IBOutlet UITabBarItem *GreenPinTab;
+@property (weak, nonatomic) IBOutlet UITabBarItem *DiaryTabItem;
 @property (weak, nonatomic) IBOutlet UITabBarItem *SetBarItem;
 
-//@property (weak, nonatomic) IBOutlet UIButton *information;
-//- (IBAction)tapinformation:(id)sender;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *infobarBtn;
-
-- (IBAction)infotapBtn:(id)sender;
 
 @end
 

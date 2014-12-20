@@ -17,7 +17,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="titleMr.PriP.png" translatesAutoresizingMaskIntoConstraints="NO" id="teO-Qg-1de">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ryoumaXY.png" translatesAutoresizingMaskIntoConstraints="NO" id="teO-Qg-1de">
                     <rect key="frame" x="0.0" y="-5" width="320" height="573"/>
                 </imageView>
             </subviews>
@@ -33,6 +33,6 @@
         </view>
     </objects>
     <resources>
-        <image name="titleMr.PriP.png" width="320" height="568"/>
+        <image name="ryoumaXY.png" width="320" height="568"/>
     </resources>
 </document>
