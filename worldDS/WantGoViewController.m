@@ -44,20 +44,6 @@
         
         }
     
-//    [self showPhoto:[defaults objectForKey:@"gogoURL"]];
-//    
-//   
-    
-//    NSString *str_long = @"";
-//    
-//    for (int i = 0; i < 10; i++) {NSLog(@"%d",i);
-//        str_long = [str_long stringByAppendingFormat:@"%@",@""];
-//    }
-//    
-//    NSLog(@"%@",str_long);
-//    
-//    self.gogoText.text = str_long;
-    
     //pinの番号を表示する
     NSLog(@"dvc-%d",self.select_num);
 
@@ -508,12 +494,6 @@
         }
     
 }
-//- (void)selfSwipeDownGesture:(UISwipeGestureRecognizer *)sender {
-//    // 下スワイプされた時にログに表示
-//    if (!_visibleflag) {
-//        NSLog(@"Notice Down Gesture");
-//        [_gogoText resignFirstResponder];
-//
-//
+
 
 @end

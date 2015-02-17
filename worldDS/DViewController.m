@@ -31,6 +31,7 @@
     
     self.nameLabel.text = [defaults objectForKey:@"Name"];
     self.dreamLabel.text = [defaults objectForKey:@"Dream"];
+       
     
     if (_library == nil) {
         _library = [[ALAssetsLibrary alloc]init];
@@ -71,6 +72,7 @@
             
             _DtextView.backgroundColor = acolor;
             _NameTextField.backgroundColor = acolor;
+            
             break;
         
         

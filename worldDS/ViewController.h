@@ -17,6 +17,8 @@ int _maxnumber;
 BOOL _redpinFlag;       //赤ピンのフラグ
 BOOL _greenpinFlag;     //緑ピンフラグ
 }
+
+@property (nonatomic) CLLocationManager *locationManager;
 //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmタブバーのコマンドmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 

@@ -24,6 +24,10 @@
 		9475B3A61A4543F6005985EF /* bakku.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3A51A4543F6005985EF /* bakku.png */; };
 		9475B3AA1A4550BA005985EF /* cyu-toNo5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3A91A4550BA005985EF /* cyu-toNo5.png */; };
 		9475B3AC1A458FFA005985EF /* raberu634.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3AB1A458FFA005985EF /* raberu634.png */; };
+		9475B3AE1A47FAC5005985EF /* チュートリアルバックアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3AD1A47FAC5005985EF /* チュートリアルバックアイコン.png */; };
+		9475B3B01A4800DF005985EF /* redredred.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3AF1A4800DF005985EF /* redredred.png */; };
+		9475B3B21A4800EE005985EF /* greengreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3B11A4800EE005985EF /* greengreen.png */; };
+		9475B3B41A493F22005985EF /* Mr.png in Resources */ = {isa = PBXBuildFile; fileRef = 9475B3B31A493F22005985EF /* Mr.png */; };
 		949225771A3FFFFC00DC808E /* NOPHOTO　地球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */; };
 		949225781A3FFFFC00DC808E /* nophotoかミングスーン.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */; };
 		9492257C1A3FFFFC00DC808E /* 日記.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225711A3FFFFC00DC808E /* 日記.png */; };
@@ -33,6 +37,7 @@
 		949225981A4096B000DC808E /* pikkoropin.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225971A4096B000DC808E /* pikkoropin.png */; };
 		9492259A1A4097DB00DC808E /* redred.png in Resources */ = {isa = PBXBuildFile; fileRef = 949225991A4097DB00DC808E /* redred.png */; };
 		9492259E1A40AE0400DC808E /* lalala.png in Resources */ = {isa = PBXBuildFile; fileRef = 9492259D1A40AE0400DC808E /* lalala.png */; };
+		9494845C1A9368EA0023AF42 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9494845B1A9368EA0023AF42 /* CoreLocation.framework */; };
 		949E5BF91A15EA5A00761ACA /* ProfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BF81A15EA5A00761ACA /* ProfViewController.m */; };
 		949E5BFC1A178DFE00761ACA /* WantGoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFB1A178DFE00761ACA /* WantGoViewController.m */; };
 		949E5BFF1A178E4D00761ACA /* UserDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949E5BFE1A178E4D00761ACA /* UserDViewController.m */; };
@@ -88,6 +93,10 @@
 		9475B3A51A4543F6005985EF /* bakku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bakku.png; sourceTree = "<group>"; };
 		9475B3A91A4550BA005985EF /* cyu-toNo5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cyu-toNo5.png"; sourceTree = "<group>"; };
 		9475B3AB1A458FFA005985EF /* raberu634.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raberu634.png; sourceTree = "<group>"; };
+		9475B3AD1A47FAC5005985EF /* チュートリアルバックアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "チュートリアルバックアイコン.png"; sourceTree = "<group>"; };
+		9475B3AF1A4800DF005985EF /* redredred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redredred.png; sourceTree = "<group>"; };
+		9475B3B11A4800EE005985EF /* greengreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greengreen.png; sourceTree = "<group>"; };
+		9475B3B31A493F22005985EF /* Mr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mr.png; sourceTree = "<group>"; };
 		9492256C1A3FFFFC00DC808E /* NOPHOTO　地球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "NOPHOTO　地球.jpg"; path = "imageforder/NOPHOTO　地球.jpg"; sourceTree = "<group>"; };
 		9492256D1A3FFFFC00DC808E /* nophotoかミングスーン.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "nophotoかミングスーン.jpg"; path = "imageforder/nophotoかミングスーン.jpg"; sourceTree = "<group>"; };
 		949225711A3FFFFC00DC808E /* 日記.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "日記.png"; path = "imageforder/日記.png"; sourceTree = "<group>"; };
@@ -97,6 +106,7 @@
 		949225971A4096B000DC808E /* pikkoropin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikkoropin.png; sourceTree = "<group>"; };
 		949225991A4097DB00DC808E /* redred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redred.png; sourceTree = "<group>"; };
 		9492259D1A40AE0400DC808E /* lalala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lalala.png; sourceTree = "<group>"; };
+		9494845B1A9368EA0023AF42 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		949E5BF71A15EA5A00761ACA /* ProfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfViewController.h; sourceTree = "<group>"; };
 		949E5BF81A15EA5A00761ACA /* ProfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfViewController.m; sourceTree = "<group>"; };
 		949E5BFA1A178DFE00761ACA /* WantGoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WantGoViewController.h; sourceTree = "<group>"; };
@@ -139,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9494845C1A9368EA0023AF42 /* CoreLocation.framework in Frameworks */,
 				94A1B7D51A3047300089FFA1 /* AssetsLibrary.framework in Frameworks */,
 				94F3D4F31A10A4F7005422A2 /* MapKit.framework in Frameworks */,
 			);
@@ -157,6 +168,7 @@
 		94F3D4C01A10A4E2005422A2 = {
 			isa = PBXGroup;
 			children = (
+				9494845B1A9368EA0023AF42 /* CoreLocation.framework */,
 				94A1B7D41A3047300089FFA1 /* AssetsLibrary.framework */,
 				94F3D4F21A10A4F7005422A2 /* MapKit.framework */,
 				94F3D4CB1A10A4E2005422A2 /* worldDS */,
@@ -204,6 +216,10 @@
 		94F3D4CC1A10A4E2005422A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9475B3B31A493F22005985EF /* Mr.png */,
+				9475B3B11A4800EE005985EF /* greengreen.png */,
+				9475B3AF1A4800DF005985EF /* redredred.png */,
+				9475B3AD1A47FAC5005985EF /* チュートリアルバックアイコン.png */,
 				9475B3AB1A458FFA005985EF /* raberu634.png */,
 				9475B3A51A4543F6005985EF /* bakku.png */,
 				9475B3A31A43EB0D005985EF /* ryoumaXY.png */,
@@ -347,11 +363,14 @@
 				94C9F6F91A42F3510092EAEC /* cyu-toNo2.png in Resources */,
 				9413F9E61A41C6F0007F4F21 /* iOS-8-87@2xIcon-Template-2.1.1_31.png in Resources */,
 				94C9F6DF1A420F470092EAEC /* 155.png in Resources */,
+				9475B3AE1A47FAC5005985EF /* チュートリアルバックアイコン.png in Resources */,
 				9413F9DC1A41C520007F4F21 /* iOS-8-Icon-40@2x_09.png in Resources */,
 				94F3D4D81A10A4E2005422A2 /* Main.storyboard in Resources */,
+				9475B3B41A493F22005985EF /* Mr.png in Resources */,
 				9413F9DD1A41C520007F4F21 /* iOS-8-Icon-58@2x_34.png in Resources */,
 				9413F9E21A41C520007F4F21 /* iOS-8-Icon-152@2x_18.png in Resources */,
 				94C9F7031A4307950092EAEC /* iiiii.png in Resources */,
+				9475B3B01A4800DF005985EF /* redredred.png in Resources */,
 				9475B3AC1A458FFA005985EF /* raberu634.png in Resources */,
 				9475B3A41A43EB0D005985EF /* ryoumaXY.png in Resources */,
 				9413F9BC1A41B4A9007F4F21 /* go-lll.png in Resources */,
@@ -368,6 +387,7 @@
 				94C9F6FA1A42F3510092EAEC /* cyu-toNo3.png in Resources */,
 				949225801A40042B00DC808E /* 634.png in Resources */,
 				949225771A3FFFFC00DC808E /* NOPHOTO　地球.jpg in Resources */,
+				9475B3B21A4800EE005985EF /* greengreen.png in Resources */,
 				9492259A1A4097DB00DC808E /* redred.png in Resources */,
 				9413F9DE1A41C520007F4F21 /* iOS-8-Icon-76@2x_24.png in Resources */,
 				94C9F6DB1A420AD20092EAEC /* omg.png in Resources */,
@@ -548,7 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sho Ueda (ZPBPFB93CA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sho Ueda (RBXMAFF3SB)";
 				INFOPLIST_FILE = worldDS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

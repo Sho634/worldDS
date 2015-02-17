@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *myButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 488, 40, 20)];
+    UIButton *myButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 488, 50, 50)];
     
     //ボタンのタイトルの名前と色の設定
 //    [myButton setTitle:@"" forState:(UIControlStateNormal)];//
@@ -27,7 +27,7 @@
     [myButton addTarget:self action:@selector(tapBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:myButton];
     //自作のボタンに画像を貼付ける
-    UIImage *imgIbtn = [UIImage imageNamed:@"bakku.png"];
+    UIImage *imgIbtn = [UIImage imageNamed:@"チュートリアルバックアイコン.png"];
     [myButton setBackgroundImage:imgIbtn forState:UIControlStateNormal];
     [self.view addSubview:myButton];
     

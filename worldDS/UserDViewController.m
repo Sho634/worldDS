@@ -119,7 +119,7 @@
     // if 文でタイトル前に色分けピンを設置。
     if ([_MapDiaryArray[indexPath.row][@"Pincolor"] isEqualToString:@"green"]){
         
-         cell.imageView.image = [UIImage imageNamed:@"pikkoropin"];
+         cell.imageView.image = [UIImage imageNamed:@"greengreen.png"];
       
         
         //色分けピンもすけさせるには？？？？？？？？？？？？？？？？？？？？
@@ -131,7 +131,7 @@
         
     }else{
         
-         cell.imageView.image = [UIImage imageNamed:@"redred.png"];
+         cell.imageView.image = [UIImage imageNamed:@"redredred.png"];
     
     }
     

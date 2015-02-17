@@ -17,6 +17,8 @@
 {
 MKMapView* _mapView;
 NSInteger n;
+BOOL alreadyStartingCordinateSet_;
+
 }
 @end
 
@@ -24,8 +26,74 @@ NSInteger n;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
     
+    alreadyStartingCordinateSet_ = NO;
+    
+    
+    //ローケーション設定
+    //ユーザーによる位置情報サービスの許可状態を許可
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted ||
+        [CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
+        
+    {
+        //ユーザーはこのサービスの位置情報のサービスを利用できるまたは無効にできる
+        NSLog(@"Location services is unauthorized.");
+    }else{
+        //位置情報サービスを利用できる、またはまだ利用許可要求を行っていない
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        
+    }
+    //利用許可要求をまだ行っていない状態であれば要求
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        //許可の要求
+        //アプリがフォアグラウンドにある間のみ位置情報サービスを使用する許可を要求
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    //精度要求
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    //最小移動間隔
+    self.locationManager.distanceFilter = 100.0;                    //100m 移動ごとに通知
+    //        self.locationManager.distanceFilter = kCLDistanceFilterNone;    //全ての動きを通知（デフォルト）
+    
+    //測位開始
+    [self.locationManager startUpdatingLocation];
+    
+
+
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    
+    //ユーザの位置を表示するかどうか
+    _mapView.showsUserLocation = YES;
+    
+    
+    
+    
+    CLLocation *currentLocation = locations.lastObject;
+    CLLocationCoordinate2D centerCoordinate = currentLocation.coordinate;
+    //縮尺度を指定
+    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.1, 0.1); //数が小さいほど拡大率アップ
+    
+    
+    
+    
+    //マップキットとひも付け
+    
+    if (alreadyStartingCordinateSet_ == NO) {
+        MKCoordinateRegion newRegion = MKCoordinateRegionMake(centerCoordinate, coordinateSpan);
+        [_mapView setRegion:newRegion animated:YES];
+        alreadyStartingCordinateSet_ = YES;
+    }
+    
+}
+
+
+
+
 
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -34,7 +102,7 @@ NSInteger n;
     
    
     //チュートリアル（I）ボタンの作成
-    UIButton *myButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 488, 40, 20)];
+    UIButton *myButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width-60, self.view.bounds.size.height-100, 40, 40)];
     
     //ボタンのタイトルの名前と色の設定
     //[myButton setTitle:@"" forState:(UIControlStateNormal)];//
@@ -54,7 +122,7 @@ NSInteger n;
 
     _mapView = [[MKMapView alloc] init];
     _mapView.delegate = self;
-    _mapView.frame = CGRectMake(0, 0, 320, 518);
+    _mapView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-50);
  
     
     //東京の中心座標
